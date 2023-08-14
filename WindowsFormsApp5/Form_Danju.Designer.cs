@@ -140,6 +140,7 @@
             this.uiButton_bc.TabIndex = 2;
             this.uiButton_bc.Text = "保存";
             this.uiButton_bc.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton_bc.Click += new System.EventHandler(this.uiButton_bc_Click);
             // 
             // uiButton_xd
             // 
@@ -371,7 +372,6 @@
             // 
             // uiPanel13
             // 
-            this.uiPanel13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.uiPanel13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel13.Location = new System.Drawing.Point(1111, 63);
             this.uiPanel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -386,7 +386,6 @@
             // 
             // uiPanel14
             // 
-            this.uiPanel14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.uiPanel14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel14.Location = new System.Drawing.Point(853, 63);
             this.uiPanel14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -401,7 +400,6 @@
             // 
             // uiPanel15
             // 
-            this.uiPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.uiPanel15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel15.Location = new System.Drawing.Point(684, 63);
             this.uiPanel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -458,7 +456,6 @@
             // 
             // uiPanel4
             // 
-            this.uiPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.uiPanel4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel4.Location = new System.Drawing.Point(1111, 9);
             this.uiPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -473,7 +470,6 @@
             // 
             // uiPanel3
             // 
-            this.uiPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.uiPanel3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel3.Location = new System.Drawing.Point(939, 9);
             this.uiPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -488,7 +484,6 @@
             // 
             // uiPanel2
             // 
-            this.uiPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.uiPanel2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel2.Location = new System.Drawing.Point(837, 9);
             this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -534,7 +529,6 @@
             // 
             this.uiLabel_djtype.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel_djtype.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel_djtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.uiLabel_djtype.Location = new System.Drawing.Point(6, -9);
             this.uiLabel_djtype.Name = "uiLabel_djtype";
             this.uiLabel_djtype.Size = new System.Drawing.Size(221, 71);

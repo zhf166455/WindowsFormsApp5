@@ -42,9 +42,10 @@
             // grid_ruku
             // 
             this.grid_ruku.AllowUserSort = true;
-            this.grid_ruku.BackColorActiveCellSel = System.Drawing.SystemColors.Highlight;
+            this.grid_ruku.BackColorActiveCellSel = System.Drawing.SystemColors.Desktop;
             this.grid_ruku.BackColorBkg = System.Drawing.Color.Transparent;
-            this.grid_ruku.BackColorScrollBar = System.Drawing.SystemColors.Highlight;
+            this.grid_ruku.BackColorScrollBar = System.Drawing.SystemColors.Desktop;
+            this.grid_ruku.BackColorSel = System.Drawing.SystemColors.Desktop;
             this.grid_ruku.BorderColor = System.Drawing.SystemColors.AppWorkspace;
             this.grid_ruku.ClearBlankArea = true;
             this.grid_ruku.Cols = 15;

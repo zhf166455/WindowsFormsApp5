@@ -1,4 +1,6 @@
 ﻿using FlexCell;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +22,9 @@ namespace WindowsFormsApp5
 
         private void Form_Danju_Load(object sender, EventArgs e)
         {
+            uiPanel_der.Text = Util.G_dname;
+            uiLabel_bzdr.Text = Util.G_name;
+            uiLabel_bzdt.Text = "2023/08/14";
             init_grid();
             
         }
@@ -31,18 +36,18 @@ namespace WindowsFormsApp5
             grid_danju.Range(0, 1, 2, 12).ClearAll();
 
             grid_danju.Column(0).Width = 10;
-            grid_danju.Column(1).Width = 30;
-            grid_danju.Column(2).Width = 30;
-            grid_danju.Column(3).Width = 100;
-            grid_danju.Column(4).Width = 100;
-            grid_danju.Column(5).Width = 140;
-            grid_danju.Column(6).Width = 200;
-            grid_danju.Column(7).Width = 80;
+            grid_danju.Column(1).Width = 40;
+            grid_danju.Column(2).Width = 120;
+            grid_danju.Column(3).Width = 60;
+            grid_danju.Column(4).Width = 120;
+            grid_danju.Column(5).Width = 60;
+            grid_danju.Column(6).Width = 120;
+            grid_danju.Column(7).Width = 120;
             grid_danju.Column(8).Width = 80;
-            grid_danju.Column(9).Width = 120;
+            grid_danju.Column(9).Width = 80;
             grid_danju.Column(10).Width = 80;
-            grid_danju.Column(11).Width = 80;
-            grid_danju.Column(12).Width = 80;
+            grid_danju.Column(11).Width = 100;
+            grid_danju.Column(12).Width = 100;
 
             grid_danju.Cell(0, 1).Text = "类型";
             grid_danju.Cell(0, 2).Text = "商品编码";
@@ -64,9 +69,9 @@ namespace WindowsFormsApp5
             grid_danju.Column(9).Mask = FlexCell.MaskEnum.Numeric;
             grid_danju.Column(9).DecimalLength = 2;
 
-            grid_danju.Cell(2, 7).Text = "0";
             grid_danju.Cell(2, 8).Text = "0";
             grid_danju.Cell(2, 9).Text = "0";
+            grid_danju.Cell(2, 10).Text = "0";
             grid_danju.Range(2, 1, 2, 12).Locked = true;
             grid_danju.AutoRedraw = true;
             grid_danju.Refresh();
@@ -134,6 +139,55 @@ namespace WindowsFormsApp5
         {
             Cell ac = grid_danju.ActiveCell;
             MessageBox.Show(ac.Row.ToString());
+        }
+
+        private void uiButton_bc_Click(object sender, EventArgs e)
+        {
+            JObject job = new JObject();
+            JArray jArray = new JArray();
+            job["type"] = "CG";
+            string cliid = uiPanel_client.Text;
+            job["client_id"] =Util.midstr(ref cliid ,"(",")");
+            job["custom_id"] = "";
+            job["note"] = uiTextBox_note.Text;
+            job["create"] = uiLabel_bzdr.Text;
+            job["unorder"] = uiPanel_order.Text;
+            job["trans"] = uiPanel_trans.Text;
+            job["special_num"] = 1;
+            job["normal_num"] = 1;
+            int n = grid_danju.Rows - 2;
+            for (int i = 0; i < n; i++)
+            {
+                JObject cjob = new JObject();
+                cjob["customid"] = grid_danju.Cell(i + 1, 2).Text;
+                cjob["type"] = grid_danju.Cell(i + 1, 1).Text=="串码"?0:1;
+                cjob["imei"] = grid_danju.Cell(i + 1, 7).Text;
+                cjob["num"] = grid_danju.Cell(i + 1, 8).Text;
+                cjob["price"] = grid_danju.Cell(i + 1, 9).Text;
+                cjob["sum"] = grid_danju.Cell(i + 1, 10).Text;
+                jArray.Add(cjob);
+            }
+            job["items"] = jArray;
+
+            string body = job.ToString();
+            string rel = Util.httppost("/stock/v2/add", ref body, Util.G_token);
+            JObject rjob = (JObject)JsonConvert.DeserializeObject(rel);
+
+            // 访问解析后的JSON数据
+            int code = ((int)rjob["code"]);
+            string msg = ((string)rjob["msg"]);
+            if (code == -1)
+            {
+                MessageBox.Show(msg);
+            }
+            else
+            {
+                string doc_id= ((string)rjob["doc_id"]);
+                string doc_time = "2023-08-14";
+                uiPanel_djid.Text = doc_id;
+                uiPanel_djday.Text= doc_time;
+            }
+               
         }
     }
 }
