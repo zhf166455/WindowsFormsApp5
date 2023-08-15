@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.uiTextBox_kwd = new Sunny.UI.UITextBox();
             this.grid1 = new FlexCell.Grid();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.SuspendLayout();
@@ -44,25 +44,26 @@
             this.uiLabel1.Text = "IMEI";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiTextBox1
+            // uiTextBox_kwd
             // 
-            this.uiTextBox1.ButtonForeColor = System.Drawing.Color.Khaki;
-            this.uiTextBox1.ButtonSymbol = 61452;
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.FillColor = System.Drawing.Color.Yellow;
-            this.uiTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTextBox1.Location = new System.Drawing.Point(58, 12);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Radius = 0;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(258, 27);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
-            this.uiTextBox1.TabIndex = 1;
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "";
+            this.uiTextBox_kwd.ButtonForeColor = System.Drawing.Color.Khaki;
+            this.uiTextBox_kwd.ButtonSymbol = 61452;
+            this.uiTextBox_kwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.uiTextBox_kwd.FillColor = System.Drawing.Color.Yellow;
+            this.uiTextBox_kwd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiTextBox_kwd.Location = new System.Drawing.Point(58, 12);
+            this.uiTextBox_kwd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTextBox_kwd.MinimumSize = new System.Drawing.Size(1, 16);
+            this.uiTextBox_kwd.Name = "uiTextBox_kwd";
+            this.uiTextBox_kwd.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_kwd.Radius = 0;
+            this.uiTextBox_kwd.ShowText = false;
+            this.uiTextBox_kwd.Size = new System.Drawing.Size(258, 27);
+            this.uiTextBox_kwd.Style = Sunny.UI.UIStyle.Custom;
+            this.uiTextBox_kwd.TabIndex = 1;
+            this.uiTextBox_kwd.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiTextBox_kwd.Watermark = "";
+            this.uiTextBox_kwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uiTextBox1_KeyPress);
             // 
             // grid1
             // 
@@ -93,7 +94,7 @@
             this.ClientSize = new System.Drawing.Size(1894, 887);
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.grid1);
-            this.Controls.Add(this.uiTextBox1);
+            this.Controls.Add(this.uiTextBox_kwd);
             this.Controls.Add(this.uiLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Track";
@@ -106,7 +107,7 @@
         #endregion
 
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UITextBox uiTextBox_kwd;
         private FlexCell.Grid grid1;
         private Sunny.UI.UILabel uiLabel2;
     }

@@ -121,6 +121,12 @@
     <Compile Include="FormChoseClient.Designer.cs">
       <DependentUpon>FormChoseClient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Addnr_Dj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Addnr_Dj.Designer.cs">
+      <DependentUpon>Form_Addnr_Dj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Addsp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,12 @@
     </Compile>
     <Compile Include="Form_caiwu.Designer.cs">
       <DependentUpon>Form_caiwu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Chose_Pro_Dj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Chose_Pro_Dj.Designer.cs">
+      <DependentUpon>Form_Chose_Pro_Dj.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Client.cs">
       <SubType>Form</SubType>
@@ -229,6 +241,9 @@
     <EmbeddedResource Include="FormChoseClient.resx">
       <DependentUpon>FormChoseClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Addnr_Dj.resx">
+      <DependentUpon>Form_Addnr_Dj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Addsp.resx">
       <DependentUpon>Form_Addsp.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_caiwu.resx">
       <DependentUpon>Form_caiwu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Chose_Pro_Dj.resx">
+      <DependentUpon>Form_Chose_Pro_Dj.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Client.resx">
       <DependentUpon>Form_Client.cs</DependentUpon>

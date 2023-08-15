@@ -139,5 +139,32 @@ namespace WindowsFormsApp5
             return str.Substring(str.Length - len, len);
         }
         
+        public static string getshortcode()
+        {
+            string str = G_page;
+            string rel = "";
+            switch (str)
+            {
+                case "采购入库单":
+                    rel = "CG";
+                    break;
+                case "采购退库单":
+                    rel = "CT";
+                    break;
+                case "零售出库单":
+                    rel = "LS";
+                    break;
+                case "零售退库单":
+                    rel = "LT";
+                    break;
+                case "内部分销但":
+                    rel = "FX";
+                    break;
+                case "内部退销单":
+                    rel = "TX";
+                    break;
+            }
+            return rel;
+        }
     }
 }

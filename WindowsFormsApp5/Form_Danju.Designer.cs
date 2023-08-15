@@ -54,7 +54,6 @@
             this.uiTextBox_note = new Sunny.UI.UITextBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel_djtype = new Sunny.UI.UILabel();
-            this.grid_danju = new FlexCell.Grid();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel5 = new Sunny.UI.UILabel();
@@ -68,6 +67,7 @@
             this.uiLabel_bgzr = new Sunny.UI.UILabel();
             this.uiLabel_bzdt = new Sunny.UI.UILabel();
             this.uiLabel_gzt = new Sunny.UI.UILabel();
+            this.grid_danju = new FlexCell.Grid();
             this.uiPanel1.SuspendLayout();
             this.uiPanel_client.SuspendLayout();
             this.SuspendLayout();
@@ -372,6 +372,7 @@
             // 
             // uiPanel13
             // 
+            this.uiPanel13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.uiPanel13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel13.Location = new System.Drawing.Point(1111, 63);
             this.uiPanel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -386,6 +387,7 @@
             // 
             // uiPanel14
             // 
+            this.uiPanel14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.uiPanel14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel14.Location = new System.Drawing.Point(853, 63);
             this.uiPanel14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -400,6 +402,7 @@
             // 
             // uiPanel15
             // 
+            this.uiPanel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.uiPanel15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel15.Location = new System.Drawing.Point(684, 63);
             this.uiPanel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -456,6 +459,7 @@
             // 
             // uiPanel4
             // 
+            this.uiPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.uiPanel4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel4.Location = new System.Drawing.Point(1111, 9);
             this.uiPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -470,6 +474,7 @@
             // 
             // uiPanel3
             // 
+            this.uiPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.uiPanel3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel3.Location = new System.Drawing.Point(939, 9);
             this.uiPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -484,6 +489,7 @@
             // 
             // uiPanel2
             // 
+            this.uiPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.uiPanel2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiPanel2.Location = new System.Drawing.Point(837, 9);
             this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -529,6 +535,7 @@
             // 
             this.uiLabel_djtype.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel_djtype.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel_djtype.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.uiLabel_djtype.Location = new System.Drawing.Point(6, -9);
             this.uiLabel_djtype.Name = "uiLabel_djtype";
             this.uiLabel_djtype.Size = new System.Drawing.Size(221, 71);
@@ -536,23 +543,6 @@
             this.uiLabel_djtype.TabIndex = 0;
             this.uiLabel_djtype.Text = "采 购 入 库 单";
             this.uiLabel_djtype.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // grid_danju
-            // 
-            this.grid_danju.BackColorBkg = System.Drawing.Color.White;
-            this.grid_danju.BorderColor = System.Drawing.Color.Silver;
-            this.grid_danju.CellBorderColorFixed = System.Drawing.SystemColors.ActiveBorder;
-            this.grid_danju.ClearBlankArea = true;
-            this.grid_danju.Cols = 13;
-            this.grid_danju.DefaultFont = new System.Drawing.Font("宋体", 9F);
-            this.grid_danju.DisplayRowArrow = true;
-            this.grid_danju.FrozenBottomRows = 1;
-            this.grid_danju.Location = new System.Drawing.Point(6, 200);
-            this.grid_danju.Name = "grid_danju";
-            this.grid_danju.Rows = 3;
-            this.grid_danju.Size = new System.Drawing.Size(1242, 436);
-            this.grid_danju.TabIndex = 10;
-            this.grid_danju.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid_danju_MouseDoubleClick);
             // 
             // uiLabel3
             // 
@@ -633,6 +623,7 @@
             this.uiButton_bnr_add.TabIndex = 17;
             this.uiButton_bnr_add.Text = "增加普通商品";
             this.uiButton_bnr_add.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton_bnr_add.Click += new System.EventHandler(this.uiButton_bnr_add_Click);
             // 
             // uiButton_bmod
             // 
@@ -695,6 +686,24 @@
             this.uiLabel_gzt.Size = new System.Drawing.Size(162, 24);
             this.uiLabel_gzt.TabIndex = 23;
             this.uiLabel_gzt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // grid_danju
+            // 
+            this.grid_danju.BackColorBkg = System.Drawing.Color.White;
+            this.grid_danju.BorderColor = System.Drawing.Color.Silver;
+            this.grid_danju.CellBorderColorFixed = System.Drawing.SystemColors.ActiveBorder;
+            this.grid_danju.ClearBlankArea = true;
+            this.grid_danju.Cols = 13;
+            this.grid_danju.DefaultFont = new System.Drawing.Font("宋体", 9F);
+            this.grid_danju.DisplayFocusRect = false;
+            this.grid_danju.DisplayRowArrow = true;
+            this.grid_danju.FrozenBottomRows = 1;
+            this.grid_danju.Location = new System.Drawing.Point(6, 200);
+            this.grid_danju.Name = "grid_danju";
+            this.grid_danju.Rows = 3;
+            this.grid_danju.Size = new System.Drawing.Size(1242, 436);
+            this.grid_danju.TabIndex = 10;
+            this.grid_danju.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid_danju_MouseDoubleClick);
             // 
             // Form_Danju
             // 

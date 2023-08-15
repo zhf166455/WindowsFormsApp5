@@ -32,7 +32,6 @@ namespace WindowsFormsApp5
         {
             grid_danju.AutoRedraw = false;
             grid_danju.Rows = 3;
-            grid_danju.Range(0, 1, 2, 12).Locked = false;
             grid_danju.Range(0, 1, 2, 12).ClearAll();
 
             grid_danju.Column(0).Width = 10;
@@ -72,7 +71,6 @@ namespace WindowsFormsApp5
             grid_danju.Cell(2, 8).Text = "0";
             grid_danju.Cell(2, 9).Text = "0";
             grid_danju.Cell(2, 10).Text = "0";
-            grid_danju.Range(2, 1, 2, 12).Locked = true;
             grid_danju.AutoRedraw = true;
             grid_danju.Refresh();
         }
@@ -80,7 +78,7 @@ namespace WindowsFormsApp5
         private void uiButton11_Click(object sender, EventArgs e)
         {
             Form_Addsp_Dj formspdj = new Form_Addsp_Dj(this);
-            formspdj.Text = "增加串码商品--新增";
+            formspdj.Text = "串码商品--新增";
             formspdj.ShowDialog();
         }
         public void add_grid_new(string pro_type,string pro_id,string name,string color,string code,string imei,int num,float price,float sum,string note,string cname,string oname)
@@ -109,12 +107,46 @@ namespace WindowsFormsApp5
             grid_danju.Cell(n, 10).Text = sum.ToString();
             grid_danju.Cell(n, 11).Text = note;
             grid_danju.Cell(n, 12).Text = oname;
+            CalculateSummary_grid();
+        }
+        private void CalculateSummary_grid()
+        {
+            int n = grid_danju.Rows - 2;
+            int sum_n = 0;
+            int sum_num = 0;
+            float sum_price = 0;
+            float sum_sum = 0;
+
+            int ls_zs = 0;
+            float ls_xs = 0;
+            string tx = "";
+            for (int i = 0; i < n; i++)
+            {
+                tx = grid_danju.Cell(n + 1, 2).Text;
+                if (tx != "")
+                {
+                    sum_n++;
+                    tx = grid_danju.Cell(n + 1, 8).Text;
+                    ls_zs = Convert.ToInt32(tx);
+                    sum_num += ls_zs;
+                    tx = grid_danju.Cell(n + 1, 9).Text;
+                    ls_xs = Convert.ToSingle(tx);
+                    sum_price += ls_xs;
+                    tx = grid_danju.Cell(n + 1, 10).Text;
+                    ls_xs = Convert.ToSingle(tx);
+                    sum_sum += ls_xs;
+                }
+
+            }
+
+            MessageBox.Show(sum_n.ToString());
         }
         private void Form_Danju_Shown(object sender, EventArgs e)
         {
             if (uiPanel_client.Text == null)
             {
                 FormChoseClient formChoseClient = new FormChoseClient(this);
+                formChoseClient.Text = "选择供应商";
                 formChoseClient.ShowDialog();
             }
         }
@@ -122,6 +154,7 @@ namespace WindowsFormsApp5
         private void uiLabel7_Click(object sender, EventArgs e)
         {
             FormChoseClient formChoseClient = new FormChoseClient(this);
+            formChoseClient.Text = "选择供应商";
             formChoseClient.ShowDialog();
         }
 
@@ -145,7 +178,7 @@ namespace WindowsFormsApp5
         {
             JObject job = new JObject();
             JArray jArray = new JArray();
-            job["type"] = "CG";
+            job["type"] = Util.getshortcode();
             string cliid = uiPanel_client.Text;
             job["client_id"] =Util.midstr(ref cliid ,"(",")");
             job["custom_id"] = "";
@@ -188,6 +221,13 @@ namespace WindowsFormsApp5
                 uiPanel_djday.Text= doc_time;
             }
                
+        }
+
+        private void uiButton_bnr_add_Click(object sender, EventArgs e)
+        {
+            Form_Addnr_Dj formspdj = new Form_Addnr_Dj(this);
+            formspdj.Text = "普通商品--新增";
+            formspdj.ShowDialog();
         }
     }
 }

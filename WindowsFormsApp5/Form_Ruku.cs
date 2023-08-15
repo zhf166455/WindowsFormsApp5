@@ -167,13 +167,38 @@ namespace WindowsFormsApp5
 
         private void uiButton3_Click(object sender, EventArgs e)
         {
-            init_gridruku();
+            MessageBox.Show(Util.G_page);
         }
 
         private void uiButton2_Click(object sender, EventArgs e)
         {
+            string tit="";
+            switch(Util.G_page)
+            {
+                case "采购入库单":
+                    tit = "采 购 入 库 单";
+                    break;
+                case "采购退库单":
+                    tit = "采 购 退 库 单";
+                    break;
+                case "零售出库单":
+                    tit = "零 售 出 库 单";
+                    break;
+                case "零售退库单":
+                    tit = "零 售 退 库 单";
+                    break;
+                case "内部分销单":
+                    tit = "内 部 分 销 单";
+                    break;
+                case "内部退销单":
+                    tit = "内 部 退 销 单";
+                    break;
+            }
             Form_Danju mainForm = new Form_Danju();
+            mainForm.Text=Util.G_page;
+            mainForm.uiLabel_djtype.Text= tit;
             mainForm.ShowDialog();
         }
+       
     }
 }

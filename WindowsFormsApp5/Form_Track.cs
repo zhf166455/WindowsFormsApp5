@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.Devices;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 
 namespace WindowsFormsApp5
 {
@@ -51,5 +55,61 @@ namespace WindowsFormsApp5
             grid1.AutoRedraw = true;
             grid1.Refresh();
         }
+
+        private void uiTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '\r')
+            {
+                string kwd = uiTextBox_kwd.Text;
+                if (kwd != "")
+                {
+                    string pram = "?keyword=" + kwd;
+                    string rel = Util.httpget("/track/get"+pram, Util.G_token);
+                    JObject job = (JObject)JsonConvert.DeserializeObject(rel);
+
+                    // 访问解析后的JSON数据
+                    int code = ((int)job["code"]);
+                    string msg = ((string)job["msg"]);
+                    if (code == -1)
+                    {
+                        MessageBox.Show(msg);
+                    }
+                    else
+                    {
+                        
+                        int n = job["items"].Count();
+                        init_grid();
+                        if (n > 0)
+                        {
+                            grid1.Rows = n + 1;
+                            grid1.AutoRedraw = false;
+                            for(int i = 0; i < n; i++)
+                            {
+                                string doc_id = (string)(job["items"][i]["doc_id"]);
+                                int doc_type = (int)(job["items"][i]["doc_type"]);
+                                string doc_time = (string)(job["items"][i]["doc_time"]);
+                                string name = (string)(job["items"][i]["name"]);
+                                float price = (float)(job["items"][i]["price"]);
+                                string client = (string)(job["items"][i]["client"]);
+                                string note = (string)(job["items"][i]["note"]);
+
+                                grid1.Cell(i + 1, 1).Text = doc_id;
+                                grid1.Cell(i + 1, 2).Text = "采购入库单";
+                                grid1.Cell(i + 1, 3).Text = "2023/07/18";
+                                grid1.Cell(i + 1, 4).Text = name; 
+                                grid1.Cell(i + 1, 5).Text = price.ToString();
+                                grid1.Cell(i + 1, 6).Text = "true";
+                                grid1.Cell(i + 1, 7).Text = client;
+                                grid1.Cell(i + 1, 8).Text = note;
+                                grid1.Cell(i + 1, 9).Text = "13:54";
+                            }
+                            grid1.AutoRedraw = true;
+                            grid1.Refresh();
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
