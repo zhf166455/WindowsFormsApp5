@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sunny.UI;
 using System.Diagnostics;
+using FlexCell;
 
 namespace WindowsFormsApp5
 {
@@ -115,17 +116,15 @@ namespace WindowsFormsApp5
             TreeNode node = uiTreeView1.SelectedNode;
             string tx = node.Text;
             tx = Util.midstr(ref tx, "(", ")");
-            string max = Util.leftstr(ref tx, 1);
-            string min = Util.rightstr(ref tx, 3);
-            string pram = "?max=" + max + "&min=" + min;
+            string pram = "?class=" + tx ;
             string rel;
             if (Util.G_page == "串码商品管理")
             {
-                rel = Util.httpget("/special/getByClass" + pram, Util.G_token);
+                rel = Util.httpget("/special/getByClass/detail" + pram, Util.G_token);
             }
             else
             {
-                rel = Util.httpget("/normal/getByClass" + pram, Util.G_token);
+                rel = Util.httpget("/normal/getByClass/detail" + pram, Util.G_token);
             }
 
             JObject job = (JObject)JsonConvert.DeserializeObject(rel);
@@ -151,12 +150,8 @@ namespace WindowsFormsApp5
                         string classname = (string)(job["items"][i]["classname"]);
                         string name = (string)(job["items"][i]["name"]);
                         string oname = (string)(job["items"][i]["oname"]);
-                        int bit = (int)(job["items"][i]["bit"]);
-                        int mbit = (int)(job["items"][i]["mbit"]);
-                        string org = (string)(job["items"][i]["org"]);
-                        string keyword = (string)(job["items"][i]["keyword"]);
-                        bool check = (bool)(job["items"][i]["check"]);
                         string color = (string)(job["items"][i]["color"]);
+                        string rcode = (string)(job["items"][i]["rcode"]);
 
                         Debug.WriteLine(cid);
 
@@ -165,7 +160,7 @@ namespace WindowsFormsApp5
                         grid1.Cell(i + 1, 3).Text = name;
                         grid1.Cell(i + 1, 4).Text = color;
                         grid1.Cell(i + 1, 5).Text = oname;
-                        grid1.Cell(i + 1, 6).Text = "";
+                        grid1.Cell(i + 1, 6).Text = rcode;
                         grid1.Cell(i + 1, 7).Text = "";
 
                     }
@@ -177,6 +172,17 @@ namespace WindowsFormsApp5
                 {
                     init_grid();
                 }
+            }
+        }
+
+        private void grid1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Cell ac = grid1.ActiveCell;
+            int n = ac.Row;
+            if(n>1)
+            {
+                string tx = grid1.Cell(n, 1).Text;
+                MessageBox.Show(tx);
             }
         }
     }

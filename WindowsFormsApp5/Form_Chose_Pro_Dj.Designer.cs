@@ -120,6 +120,7 @@
             this.grid1.Rows = 2;
             this.grid1.Size = new System.Drawing.Size(866, 564);
             this.grid1.TabIndex = 5;
+            this.grid1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid1_MouseDoubleClick);
             // 
             // uiLabel3
             // 
