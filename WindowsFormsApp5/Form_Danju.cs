@@ -122,24 +122,28 @@ namespace WindowsFormsApp5
             string tx = "";
             for (int i = 0; i < n; i++)
             {
-                tx = grid_danju.Cell(n + 1, 2).Text;
+                tx = grid_danju.Cell(n , 2).Text;
                 if (tx != "")
                 {
                     sum_n++;
-                    tx = grid_danju.Cell(n + 1, 8).Text;
+                    tx = grid_danju.Cell(n , 8).Text;
                     ls_zs = Convert.ToInt32(tx);
                     sum_num += ls_zs;
-                    tx = grid_danju.Cell(n + 1, 9).Text;
+                    tx = grid_danju.Cell(n , 9).Text;
                     ls_xs = Convert.ToSingle(tx);
                     sum_price += ls_xs;
-                    tx = grid_danju.Cell(n + 1, 10).Text;
+                    tx = grid_danju.Cell(n , 10).Text;
                     ls_xs = Convert.ToSingle(tx);
                     sum_sum += ls_xs;
                 }
 
             }
 
-            MessageBox.Show(sum_n.ToString());
+            n = grid_danju.Rows - 1;
+            grid_danju.Cell(n, 5).Text ="记录数:"+ sum_n.ToString();
+            grid_danju.Cell(n, 8).Text = sum_num.ToString();
+            grid_danju.Cell(n, 9).Text = sum_price + sum_n.ToString();
+            grid_danju.Cell(n, 10).Text = sum_sum.ToString();
         }
         private void Form_Danju_Shown(object sender, EventArgs e)
         {

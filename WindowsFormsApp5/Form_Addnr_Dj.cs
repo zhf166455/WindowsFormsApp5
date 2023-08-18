@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sunny.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,10 +32,15 @@ namespace WindowsFormsApp5
 
         private void uiTextBox_cid_ButtonClick(object sender, EventArgs e)
         {
-            Form_Chose_Pro_Dj mainfrom = new Form_Chose_Pro_Dj();
+            Form_Chose_Pro_Dj mainfrom = new Form_Chose_Pro_Dj(this);
             mainfrom.from_type = "普通";
             mainfrom.Text = "选择普通商品";
             mainfrom.ShowDialog();
+        }
+
+        private void uiSymbolButton_ok_Click(object sender, EventArgs e)
+        {
+            pfrom.add_grid_new("普通", uiTextBox_cid.Text, uiTextBox_name.Text, uiTextBox_color.Text, "", "",uiTextBox_num.Text.ToInt(), uiTextBox_price.Text.ToFloat(), uiTextBox_price.Text.ToFloat(), "", uiTextBox_class.Text, "");
         }
     }
 }

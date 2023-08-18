@@ -18,9 +18,11 @@ namespace WindowsFormsApp5
     public partial class Form_Chose_Pro_Dj : Form
     {
         public string from_type;
-        public Form_Chose_Pro_Dj()
+        private Form_Addnr_Dj pfrom;
+        public Form_Chose_Pro_Dj(Form_Addnr_Dj pfrom)
         {
             InitializeComponent();
+            this.pfrom = pfrom;
         }
 
         private void Form_Chose_Pro_Dj_Load(object sender, EventArgs e)
@@ -165,6 +167,7 @@ namespace WindowsFormsApp5
 
                     }
                     grid1.AutoRedraw = true;
+                    grid1.Locked = true;
                     grid1.Refresh();
 
                 }
@@ -177,12 +180,31 @@ namespace WindowsFormsApp5
 
         private void grid1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            proischose();
+            this.Close();
+        }
+
+        private void uiSymbolButton_ok_Click(object sender, EventArgs e)
+        {
+            proischose();
+            this.Close();
+        }
+        private void proischose()
+        {
             Cell ac = grid1.ActiveCell;
             int n = ac.Row;
-            if(n>1)
+            if (n > 1)
             {
                 string tx = grid1.Cell(n, 1).Text;
-                MessageBox.Show(tx);
+                pfrom.uiTextBox_cid.Text= tx;
+                tx=grid1.Cell(n, 2).Text;
+                pfrom.uiTextBox_class.Text= tx;
+                tx = grid1.Cell(n, 3).Text;
+                pfrom.uiTextBox_name.Text = tx;
+                tx = grid1.Cell(n, 4).Text;
+                pfrom.uiTextBox_color.Text = tx;
+                tx = grid1.Cell(n, 5).Text;
+                pfrom.uiTextBox_oname.Text = tx;
             }
         }
     }

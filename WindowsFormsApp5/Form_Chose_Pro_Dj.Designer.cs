@@ -115,9 +115,11 @@
             this.grid1.DefaultFont = new System.Drawing.Font("宋体", 9F);
             this.grid1.DisplayFocusRect = false;
             this.grid1.DisplayRowArrow = true;
+            this.grid1.EnterKeyMoveTo = FlexCell.MoveToEnum.NextRow;
             this.grid1.Location = new System.Drawing.Point(259, 60);
             this.grid1.Name = "grid1";
             this.grid1.Rows = 2;
+            this.grid1.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid1.Size = new System.Drawing.Size(866, 564);
             this.grid1.TabIndex = 5;
             this.grid1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid1_MouseDoubleClick);
@@ -143,6 +145,7 @@
             this.uiSymbolButton_ok.TabIndex = 7;
             this.uiSymbolButton_ok.Text = "确认";
             this.uiSymbolButton_ok.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton_ok.Click += new System.EventHandler(this.uiSymbolButton_ok_Click);
             // 
             // uiSymbolButton_exit
             // 

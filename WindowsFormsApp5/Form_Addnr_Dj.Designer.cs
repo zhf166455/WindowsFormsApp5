@@ -314,6 +314,7 @@
             this.uiSymbolButton_ok.TabIndex = 19;
             this.uiSymbolButton_ok.Text = "确定";
             this.uiSymbolButton_ok.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton_ok.Click += new System.EventHandler(this.uiSymbolButton_ok_Click);
             // 
             // uiSymbolButton_exit
             // 
@@ -365,26 +366,26 @@
 
         #endregion
 
-        private Sunny.UI.UILine uiLine1;
-        private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox uiTextBox_cid;
-        private Sunny.UI.UITextBox uiTextBox_class;
-        private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UITextBox uiTextBox_name;
-        private Sunny.UI.UILabel uiLabel3;
-        private Sunny.UI.UITextBox uiTextBox_color;
-        private Sunny.UI.UILabel uiLabel4;
-        private Sunny.UI.UITextBox uiTextBox_oname;
-        private Sunny.UI.UILabel uiLabel5;
-        private Sunny.UI.UITextBox uiTextBox_num;
-        private Sunny.UI.UILabel uiLabel6;
-        private Sunny.UI.UITextBox uiTextBox_price;
-        private Sunny.UI.UILabel uiLabel7;
-        private Sunny.UI.UITextBox uiTextBox_note;
-        private Sunny.UI.UILabel uiLabel8;
-        private Sunny.UI.UILine uiLine2;
-        private Sunny.UI.UILine uiLine3;
-        private Sunny.UI.UISymbolButton uiSymbolButton_ok;
-        private Sunny.UI.UISymbolButton uiSymbolButton_exit;
+        public Sunny.UI.UILine uiLine1;
+        public Sunny.UI.UILabel uiLabel1;
+        public Sunny.UI.UITextBox uiTextBox_cid;
+        public Sunny.UI.UITextBox uiTextBox_class;
+        public Sunny.UI.UILabel uiLabel2;
+        public Sunny.UI.UITextBox uiTextBox_name;
+        public Sunny.UI.UILabel uiLabel3;
+        public Sunny.UI.UITextBox uiTextBox_color;
+        public Sunny.UI.UILabel uiLabel4;
+        public Sunny.UI.UITextBox uiTextBox_oname;
+        public Sunny.UI.UILabel uiLabel5;
+        public Sunny.UI.UITextBox uiTextBox_num;
+        public Sunny.UI.UILabel uiLabel6;
+        public Sunny.UI.UITextBox uiTextBox_price;
+        public Sunny.UI.UILabel uiLabel7;
+        public Sunny.UI.UITextBox uiTextBox_note;
+        public Sunny.UI.UILabel uiLabel8;
+        public Sunny.UI.UILine uiLine2;
+        public Sunny.UI.UILine uiLine3;
+        public Sunny.UI.UISymbolButton uiSymbolButton_ok;
+        public Sunny.UI.UISymbolButton uiSymbolButton_exit;
     }
 }

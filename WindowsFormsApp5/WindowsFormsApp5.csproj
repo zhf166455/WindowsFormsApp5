@@ -139,6 +139,18 @@
     <Compile Include="Form_Addsp_Dj.Designer.cs">
       <DependentUpon>Form_Addsp_Dj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Business.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Business.Designer.cs">
+      <DependentUpon>Form_Business.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Business_Child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Business_Child.Designer.cs">
+      <DependentUpon>Form_Business_Child.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_caiwu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +261,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Addsp_Dj.resx">
       <DependentUpon>Form_Addsp_Dj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Business.resx">
+      <DependentUpon>Form_Business.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Business_Child.resx">
+      <DependentUpon>Form_Business_Child.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_caiwu.resx">
       <DependentUpon>Form_caiwu.cs</DependentUpon>
@@ -384,6 +402,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alrong.ico" />
+    <None Include="Resources\零售业.png" />
+    <None Include="Resources\分销系统.png" />
+    <None Include="Resources\仓库管理1.png" />
+    <None Include="Resources\收款.png" />
+    <None Include="Resources\付款.png" />
+    <None Include="Resources\往来明细账.png" />
+    <None Include="Resources\客户.png" />
+    <None Include="Resources\仓库管理.png" />
+    <None Include="Resources\地图监控.png" />
+    <None Include="Resources\集中监控.png" />
+    <None Include="Resources\备件管理.png" />
+    <None Include="Resources\统计分析.png" />
+    <None Include="Resources\公司管理.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
