@@ -19,9 +19,11 @@ namespace WindowsFormsApp5
 {
     public partial class Form_product : Form
     {
-        public Form_product()
+        private string from_type;
+        public Form_product(string from_type)
         {
             InitializeComponent();
+            this.from_type = from_type;
         }
 
         private void Form_product_Load(object sender, EventArgs e)
@@ -82,6 +84,7 @@ namespace WindowsFormsApp5
             else
             {
                 TreeNode root = uiTreeView1.Nodes[0];
+                root.Tag = 0;
                 root.Nodes.Clear();
                 int n=job["items"].Count();
                 string te_k,te_v,te_t;
@@ -103,7 +106,7 @@ namespace WindowsFormsApp5
                     }
                 }
                 
-                //root.Expand();
+                root.Expand();
             }
         }
 
@@ -200,6 +203,60 @@ namespace WindowsFormsApp5
                 }
             }
          }
+
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            TreeNode sn= uiTreeView1.SelectedNode;
+            if (uiNavMenu1.Visible == false)
+            {
+                uiNavMenu1.SelectedNode = null;
+                uiNavMenu1.Visible = true;
+            }
+            else
+            {
+                uiNavMenu1.Visible = false;
+            }
+        }
+
+
+        private void uiNavMenu1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            uiNavMenu1.SelectedNode= e.Node;
+            int an = e.Node.Index;
+            uiNavMenu1.Visible = false;
+            if (an == 0)
+            {
+                //刷新
+                init_tree();
+            }
+            if (an == 1)
+            {
+                //新建
+                TreeNode tn = uiTreeView1.SelectedNode;
+                if (tn == null) return;
+                if ((int)tn.Tag == 1)
+                {
+                    Form_Pro_Class_Min mainfrom = new Form_Pro_Class_Min();
+                    mainfrom.ShowDialog();
+                }
+                if ((int)tn.Tag == 0)
+                {
+                    Form_Pro_Class_Max mainfrom = new Form_Pro_Class_Max("串码");
+                    mainfrom.Text = "串码大类--新建";
+                    mainfrom.ShowDialog();
+                }
+            }
+            if (an == 1)
+            {
+                //删除
+
+            }
+            if (an == 1)
+            {
+                //修改
+            }
+            
+        }
     }
      
 }

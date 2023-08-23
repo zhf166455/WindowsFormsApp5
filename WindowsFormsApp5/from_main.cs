@@ -157,7 +157,7 @@ namespace WindowsFormsApp5
                 tabPage.Text = "串码商品管理";
                 Util.G_page = tabPage.Text;
                 tabPage.Name = "page_spro";
-                Form_product from_cg = new Form_product();
+                Form_product from_cg = new Form_product("串码");
                 from_cg.Name = "from_spro";
                 from_cg.TopLevel = false;
                 tabPage.Controls.Add(from_cg);
@@ -358,7 +358,7 @@ namespace WindowsFormsApp5
                 tabPage.Text = "普通商品管理";
                 Util.G_page = tabPage.Text;
                 tabPage.Name = "page_npro";
-                Form_product from_cg = new Form_product();
+                Form_product from_cg = new Form_product("普通");
                 from_cg.Name = "from_npro";
                 from_cg.TopLevel = false;
                 tabPage.Controls.Add(from_cg);

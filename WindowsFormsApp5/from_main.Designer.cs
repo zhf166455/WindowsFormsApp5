@@ -60,12 +60,6 @@
             this.tabPage_nav = new System.Windows.Forms.TabPage();
             this.uiTabControlMenu1 = new Sunny.UI.UITabControlMenu();
             this.tabPage20 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.uiButton5 = new Sunny.UI.UIButton();
-            this.uiButton6 = new Sunny.UI.UIButton();
             this.uiImageButton15 = new Sunny.UI.UIImageButton();
             this.uiImageButton16 = new Sunny.UI.UIImageButton();
             this.uiImageButton14 = new Sunny.UI.UIImageButton();
@@ -78,18 +72,24 @@
             this.uiImageButton4 = new Sunny.UI.UIImageButton();
             this.uiImageButton2 = new Sunny.UI.UIImageButton();
             this.uiImageButton1 = new Sunny.UI.UIImageButton();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.uiImageButton9 = new Sunny.UI.UIImageButton();
             this.uiImageButton8 = new Sunny.UI.UIImageButton();
             this.uiImageButton7 = new Sunny.UI.UIImageButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.uiImageButton3 = new Sunny.UI.UIImageButton();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.uiButton5 = new Sunny.UI.UIButton();
+            this.uiButton6 = new Sunny.UI.UIButton();
+            this.uiImageButton17 = new Sunny.UI.UIImageButton();
+            this.uiImageButton18 = new Sunny.UI.UIImageButton();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.uiTabControl1.SuspendLayout();
             this.tabPage_nav.SuspendLayout();
             this.uiTabControlMenu1.SuspendLayout();
             this.tabPage20.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton14)).BeginInit();
@@ -102,10 +102,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).BeginInit();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton7)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton18)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -397,69 +401,6 @@
             this.tabPage20.TabIndex = 0;
             this.tabPage20.Text = "进销存";
             // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.tabPage1.Controls.Add(this.uiImageButton9);
-            this.tabPage1.Controls.Add(this.uiImageButton8);
-            this.tabPage1.Controls.Add(this.uiImageButton7);
-            this.tabPage1.Location = new System.Drawing.Point(201, 0);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1523, 926);
-            this.tabPage1.TabIndex = 1;
-            this.tabPage1.Text = "财务管理";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.tabPage2.Controls.Add(this.uiImageButton3);
-            this.tabPage2.Location = new System.Drawing.Point(201, 0);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1523, 926);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "基础资料";
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.tabPage9.Location = new System.Drawing.Point(201, 0);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1523, 690);
-            this.tabPage9.TabIndex = 1;
-            this.tabPage9.Text = "tabPage9";
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.tabPage8.Location = new System.Drawing.Point(201, 0);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1523, 690);
-            this.tabPage8.TabIndex = 0;
-            this.tabPage8.Text = "tabPage8";
-            // 
-            // uiButton5
-            // 
-            this.uiButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton5.Location = new System.Drawing.Point(265, 50);
-            this.uiButton5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton5.Name = "uiButton5";
-            this.uiButton5.Size = new System.Drawing.Size(106, 49);
-            this.uiButton5.TabIndex = 0;
-            this.uiButton5.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton5.Click += new System.EventHandler(this.uiButton5_Click);
-            // 
-            // uiButton6
-            // 
-            this.uiButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton6.Location = new System.Drawing.Point(82, 30);
-            this.uiButton6.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton6.Name = "uiButton6";
-            this.uiButton6.Size = new System.Drawing.Size(101, 68);
-            this.uiButton6.TabIndex = 1;
-            this.uiButton6.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            // 
             // uiImageButton15
             // 
             this.uiImageButton15.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -641,6 +582,18 @@
             this.uiImageButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.uiImageButton1.Click += new System.EventHandler(this.uiImageButton1_Click);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.tabPage1.Controls.Add(this.uiImageButton9);
+            this.tabPage1.Controls.Add(this.uiImageButton8);
+            this.tabPage1.Controls.Add(this.uiImageButton7);
+            this.tabPage1.Location = new System.Drawing.Point(201, 0);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1523, 926);
+            this.tabPage1.TabIndex = 1;
+            this.tabPage1.Text = "财务管理";
+            // 
             // uiImageButton9
             // 
             this.uiImageButton9.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -686,6 +639,18 @@
             this.uiImageButton7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.uiImageButton7.Click += new System.EventHandler(this.uiImageButton7_Click_1);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.tabPage2.Controls.Add(this.uiImageButton18);
+            this.tabPage2.Controls.Add(this.uiImageButton17);
+            this.tabPage2.Controls.Add(this.uiImageButton3);
+            this.tabPage2.Location = new System.Drawing.Point(201, 0);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1523, 926);
+            this.tabPage2.TabIndex = 2;
+            this.tabPage2.Text = "基础资料";
+            // 
             // uiImageButton3
             // 
             this.uiImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -700,6 +665,75 @@
             this.uiImageButton3.Text = "客户资料";
             this.uiImageButton3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.uiImageButton3.Click += new System.EventHandler(this.uiImageButton3_Click_1);
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.tabPage9.Location = new System.Drawing.Point(201, 0);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(1523, 690);
+            this.tabPage9.TabIndex = 1;
+            this.tabPage9.Text = "tabPage9";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.tabPage8.Location = new System.Drawing.Point(201, 0);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1523, 690);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "tabPage8";
+            // 
+            // uiButton5
+            // 
+            this.uiButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton5.Location = new System.Drawing.Point(265, 50);
+            this.uiButton5.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton5.Name = "uiButton5";
+            this.uiButton5.Size = new System.Drawing.Size(106, 49);
+            this.uiButton5.TabIndex = 0;
+            this.uiButton5.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton5.Click += new System.EventHandler(this.uiButton5_Click);
+            // 
+            // uiButton6
+            // 
+            this.uiButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton6.Location = new System.Drawing.Point(82, 30);
+            this.uiButton6.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton6.Name = "uiButton6";
+            this.uiButton6.Size = new System.Drawing.Size(101, 68);
+            this.uiButton6.TabIndex = 1;
+            this.uiButton6.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
+            // uiImageButton17
+            // 
+            this.uiImageButton17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton17.Image = global::WindowsFormsApp5.Properties.Resources.客户;
+            this.uiImageButton17.Location = new System.Drawing.Point(516, 180);
+            this.uiImageButton17.Name = "uiImageButton17";
+            this.uiImageButton17.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton17.TabIndex = 5;
+            this.uiImageButton17.TabStop = false;
+            this.uiImageButton17.Text = "收款方式资料";
+            this.uiImageButton17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // uiImageButton18
+            // 
+            this.uiImageButton18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton18.Image = global::WindowsFormsApp5.Properties.Resources.客户;
+            this.uiImageButton18.Location = new System.Drawing.Point(694, 180);
+            this.uiImageButton18.Name = "uiImageButton18";
+            this.uiImageButton18.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton18.TabIndex = 6;
+            this.uiImageButton18.TabStop = false;
+            this.uiImageButton18.Text = "付款方式资料";
+            this.uiImageButton18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // from_main
             // 
@@ -721,8 +755,6 @@
             this.tabPage_nav.ResumeLayout(false);
             this.uiTabControlMenu1.ResumeLayout(false);
             this.tabPage20.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton14)).EndInit();
@@ -735,10 +767,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton7)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton18)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -798,5 +834,7 @@
         private Sunny.UI.UIImageButton uiImageButton8;
         private Sunny.UI.UIImageButton uiImageButton7;
         private Sunny.UI.UIImageButton uiImageButton3;
+        private Sunny.UI.UIImageButton uiImageButton18;
+        private Sunny.UI.UIImageButton uiImageButton17;
     }
 }

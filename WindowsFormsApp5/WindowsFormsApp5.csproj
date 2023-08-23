@@ -205,11 +205,35 @@
     <Compile Include="Form_Paydoc.Designer.cs">
       <DependentUpon>Form_Paydoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_PayType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PayType.Designer.cs">
+      <DependentUpon>Form_PayType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PayType_Child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PayType_Child.Designer.cs">
+      <DependentUpon>Form_PayType_Child.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_product.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_product.Designer.cs">
       <DependentUpon>Form_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pro_Class_Max.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pro_Class_Max.Designer.cs">
+      <DependentUpon>Form_Pro_Class_Max.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pro_Class_Min.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pro_Class_Min.Designer.cs">
+      <DependentUpon>Form_Pro_Class_Min.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Ruku.cs">
       <SubType>Form</SubType>
@@ -295,8 +319,20 @@
     <EmbeddedResource Include="Form_Paydoc.resx">
       <DependentUpon>Form_Paydoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_PayType.resx">
+      <DependentUpon>Form_PayType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PayType_Child.resx">
+      <DependentUpon>Form_PayType_Child.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_product.resx">
       <DependentUpon>Form_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pro_Class_Max.resx">
+      <DependentUpon>Form_Pro_Class_Max.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pro_Class_Min.resx">
+      <DependentUpon>Form_Pro_Class_Min.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Ruku.resx">
       <DependentUpon>Form_Ruku.cs</DependentUpon>

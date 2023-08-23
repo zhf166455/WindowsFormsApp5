@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using FlexCell;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -165,6 +166,16 @@ namespace WindowsFormsApp5
                     break;
             }
             return rel;
+        }
+        public static string getNowDate()
+        {
+            DateTime now = DateTime.Now;
+            return (now.ToString("yyyy-MM-dd"));
+        }
+        public static string getNowTime()
+        {
+            DateTime now = DateTime.Now;
+            return (now.ToString("HH:mm"));
         }
     }
 }

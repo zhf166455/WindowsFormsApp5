@@ -23,16 +23,19 @@ namespace WindowsFormsApp5
             this.Height = Screen.PrimaryScreen.Bounds.Height;
 
             TabPage tabPage = uiTabControl1.TabPages[0];
-            Form_Business_Child from_cg = new Form_Business_Child();
+            Form_Business_Child from_cg = new Form_Business_Child(true);
             from_cg.Name = "form_business_child";
             from_cg.TopLevel= false;
             tabPage.Controls.Add(from_cg);
             from_cg.Show();
+
+            TabPage tabPage2 = uiTabControl1.TabPages[1];
+            Form_Business_Child from_xs = new Form_Business_Child(false);
+            from_xs.Name = "form_business_child2";
+            from_xs.TopLevel = false;
+            tabPage2.Controls.Add(from_xs);
+            from_xs.Show();
         }
 
-        private void init_grid()
-        {
-
-        }
     }
 }

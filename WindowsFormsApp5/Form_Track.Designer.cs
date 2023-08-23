@@ -73,7 +73,7 @@
             this.grid1.Location = new System.Drawing.Point(10, 53);
             this.grid1.Name = "grid1";
             this.grid1.Rows = 2;
-            this.grid1.Size = new System.Drawing.Size(1872, 822);
+            this.grid1.Size = new System.Drawing.Size(1888, 846);
             this.grid1.TabIndex = 2;
             // 
             // uiLabel2
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1894, 887);
+            this.ClientSize = new System.Drawing.Size(1910, 926);
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.grid1);
             this.Controls.Add(this.uiTextBox_kwd);

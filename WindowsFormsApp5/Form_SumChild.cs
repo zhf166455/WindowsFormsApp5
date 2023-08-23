@@ -21,6 +21,9 @@ namespace WindowsFormsApp5
 
         private void Form_SumChild_Load(object sender, EventArgs e)
         {
+            DateTime now = DateTime.Now;
+            uiDatePicker_s.Value = now;
+            uiDatePicker_e.Value = now;
             init_grid();
         }
         private void init_grid()

@@ -37,6 +37,10 @@
             treeNode2,
             treeNode3,
             treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("刷新");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("新建");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("删除");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("修改");
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
@@ -48,6 +52,7 @@
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiTreeView1 = new Sunny.UI.UITreeView();
             this.grid_pro = new FlexCell.Grid();
+            this.uiNavMenu1 = new Sunny.UI.UINavMenu();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,7 +79,6 @@
             // uiTextBox1
             // 
             this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.FillColor = System.Drawing.Color.Yellow;
             this.uiTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTextBox1.Location = new System.Drawing.Point(915, 31);
             this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -83,7 +87,6 @@
             this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
             this.uiTextBox1.ShowText = false;
             this.uiTextBox1.Size = new System.Drawing.Size(176, 23);
-            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBox1.TabIndex = 7;
             this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTextBox1.Watermark = "";
@@ -171,6 +174,7 @@
             this.uiButton1.TabIndex = 0;
             this.uiButton1.Text = "分类管理";
             this.uiButton1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
             // 
             // uiTreeView1
             // 
@@ -203,14 +207,56 @@
             // 
             // grid_pro
             // 
+            this.grid_pro.AllowUserSort = true;
+            this.grid_pro.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid_pro.BackColorBkg = System.Drawing.Color.White;
+            this.grid_pro.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid_pro.Cols = 9;
             this.grid_pro.DefaultFont = new System.Drawing.Font("宋体", 9F);
+            this.grid_pro.DisplayRowArrow = true;
+            this.grid_pro.EnterKeyMoveTo = FlexCell.MoveToEnum.NextRow;
             this.grid_pro.Location = new System.Drawing.Point(253, 88);
+            this.grid_pro.MultiSelect = false;
             this.grid_pro.Name = "grid_pro";
             this.grid_pro.Rows = 2;
+            this.grid_pro.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid_pro.Size = new System.Drawing.Size(1645, 831);
             this.grid_pro.TabIndex = 2;
+            // 
+            // uiNavMenu1
+            // 
+            this.uiNavMenu1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uiNavMenu1.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.uiNavMenu1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavMenu1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.uiNavMenu1.FullRowSelect = true;
+            this.uiNavMenu1.Indent = 19;
+            this.uiNavMenu1.ItemHeight = 50;
+            this.uiNavMenu1.Location = new System.Drawing.Point(140, 30);
+            this.uiNavMenu1.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
+            this.uiNavMenu1.Name = "uiNavMenu1";
+            treeNode6.Name = "节点0";
+            treeNode6.Text = "刷新";
+            treeNode7.Name = "节点1";
+            treeNode7.Text = "新建";
+            treeNode8.Name = "节点2";
+            treeNode8.Text = "删除";
+            treeNode9.Name = "节点3";
+            treeNode9.Text = "修改";
+            this.uiNavMenu1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9});
+            this.uiNavMenu1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.uiNavMenu1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.uiNavMenu1.ScrollBarPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.uiNavMenu1.ShowLines = false;
+            this.uiNavMenu1.Size = new System.Drawing.Size(100, 201);
+            this.uiNavMenu1.TabIndex = 5;
+            this.uiNavMenu1.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiNavMenu1.Visible = false;
+            this.uiNavMenu1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.uiNavMenu1_NodeMouseClick);
             // 
             // Form_product
             // 
@@ -218,6 +264,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1910, 926);
+            this.Controls.Add(this.uiNavMenu1);
             this.Controls.Add(this.grid_pro);
             this.Controls.Add(this.uiTreeView1);
             this.Controls.Add(this.uiPanel1);
@@ -243,5 +290,6 @@
         private Sunny.UI.UIButton uiButton4;
         private Sunny.UI.UIButton uiButton3;
         private Sunny.UI.UIButton uiButton2;
+        private Sunny.UI.UINavMenu uiNavMenu1;
     }
 }

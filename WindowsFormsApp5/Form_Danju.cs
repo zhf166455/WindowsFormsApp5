@@ -24,13 +24,14 @@ namespace WindowsFormsApp5
         {
             uiPanel_der.Text = Util.G_dname;
             uiLabel_bzdr.Text = Util.G_name;
-            uiLabel_bzdt.Text = "2023/08/14";
+            uiLabel_bzdt.Text = Util.getNowDate();
             init_grid();
             
         }
         private void init_grid()
         {
             grid_danju.AutoRedraw = false;
+            grid_danju.Locked = false;
             grid_danju.Rows = 3;
             grid_danju.Range(0, 1, 2, 12).ClearAll();
 
@@ -61,16 +62,16 @@ namespace WindowsFormsApp5
             grid_danju.Cell(0, 11).Text = "附加信息";
             grid_danju.Cell(0, 12).Text = "别名";
             
-
-            grid_danju.Column(1).CellType = FlexCell.CellTypeEnum.TextBox;
-            grid_danju.Column(2).CellType = FlexCell.CellTypeEnum.TextBox;
             grid_danju.Cell(2, 5).Text = "记录数:0";
             grid_danju.Column(9).Mask = FlexCell.MaskEnum.Numeric;
             grid_danju.Column(9).DecimalLength = 2;
+            grid_danju.Column(10).Mask = FlexCell.MaskEnum.Numeric;
+            grid_danju.Column(10).DecimalLength = 2;
 
             grid_danju.Cell(2, 8).Text = "0";
             grid_danju.Cell(2, 9).Text = "0";
             grid_danju.Cell(2, 10).Text = "0";
+            grid_danju.Locked = true;
             grid_danju.AutoRedraw = true;
             grid_danju.Refresh();
         }
@@ -83,6 +84,7 @@ namespace WindowsFormsApp5
         }
         public void add_grid_new(string pro_type,string pro_id,string name,string color,string code,string imei,int num,float price,float sum,string note,string cname,string oname)
         {
+            grid_danju.Locked = false;
             int n = grid_danju.Rows;
             string te = grid_danju.Cell(n - 2, 1).Text;
             if(te!="")
@@ -104,10 +106,11 @@ namespace WindowsFormsApp5
             grid_danju.Cell(n, 7).Text = imei;
             grid_danju.Cell(n, 8).Text = num.ToString();
             grid_danju.Cell(n, 9).Text = price.ToString();
-            grid_danju.Cell(n, 10).Text = sum.ToString();
+            grid_danju.Cell(n, 10).Text = (num * price).ToString();
             grid_danju.Cell(n, 11).Text = note;
             grid_danju.Cell(n, 12).Text = oname;
             CalculateSummary_grid();
+            grid_danju.Locked = true;
         }
         private void CalculateSummary_grid()
         {
@@ -122,17 +125,17 @@ namespace WindowsFormsApp5
             string tx = "";
             for (int i = 0; i < n; i++)
             {
-                tx = grid_danju.Cell(n , 2).Text;
+                tx = grid_danju.Cell(i+1 , 2).Text;
                 if (tx != "")
                 {
                     sum_n++;
-                    tx = grid_danju.Cell(n , 8).Text;
+                    tx = grid_danju.Cell(i + 1, 8).Text;
                     ls_zs = Convert.ToInt32(tx);
                     sum_num += ls_zs;
-                    tx = grid_danju.Cell(n , 9).Text;
+                    tx = grid_danju.Cell(i + 1, 9).Text;
                     ls_xs = Convert.ToSingle(tx);
                     sum_price += ls_xs;
-                    tx = grid_danju.Cell(n , 10).Text;
+                    tx = grid_danju.Cell(i + 1, 10).Text;
                     ls_xs = Convert.ToSingle(tx);
                     sum_sum += ls_xs;
                 }
@@ -142,7 +145,7 @@ namespace WindowsFormsApp5
             n = grid_danju.Rows - 1;
             grid_danju.Cell(n, 5).Text ="记录数:"+ sum_n.ToString();
             grid_danju.Cell(n, 8).Text = sum_num.ToString();
-            grid_danju.Cell(n, 9).Text = sum_price + sum_n.ToString();
+            grid_danju.Cell(n, 9).Text = sum_price.ToString();
             grid_danju.Cell(n, 10).Text = sum_sum.ToString();
         }
         private void Form_Danju_Shown(object sender, EventArgs e)

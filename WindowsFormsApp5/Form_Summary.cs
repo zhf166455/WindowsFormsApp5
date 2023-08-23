@@ -25,6 +25,13 @@ namespace WindowsFormsApp5
             from_cg.TopLevel = false;
             tabPage.Controls.Add(from_cg);
             from_cg.Show();
+
+            TabPage tabPage1 = uiTabControl1.TabPages[1];
+            Form_SumChild from_xs = new Form_SumChild();
+            from_xs.Name = "from_sumchild1";
+            from_xs.TopLevel = false;
+            tabPage1.Controls.Add(from_xs);
+            from_xs.Show();
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
