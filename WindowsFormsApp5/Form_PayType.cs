@@ -16,5 +16,17 @@ namespace WindowsFormsApp5
         {
             InitializeComponent();
         }
+
+        private void Form_PayType_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            Form_PayType_Child mainfrom =new Form_PayType_Child();
+            mainfrom.Text = "收款方式--新建";
+            mainfrom.ShowDialog();
+        }
     }
 }

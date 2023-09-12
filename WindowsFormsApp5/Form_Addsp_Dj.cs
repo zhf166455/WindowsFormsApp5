@@ -71,6 +71,7 @@ namespace WindowsFormsApp5
             if (e.KeyChar == '\r')
             {
                 pfrom.add_grid_new("串码", uiTextBox_cid.Text, uiTextBox_name.Text, uiTextBox_color.Text,uiTextBox_code.Text,uiTextBox_imei.Text,1,1,1,uiTextBox_onote.Text,uiTextBox_class.Text,"");
+                this.Close();
             }
         }
         private void Form_Addsp_Dj_Load(object sender, EventArgs e)
@@ -78,7 +79,13 @@ namespace WindowsFormsApp5
 
         }
 
-        
+        private void uiTextBox_cid_ButtonClick(object sender, EventArgs e)
+        {
+            Form_Chose_Pro_Dj mainfrom = new Form_Chose_Pro_Dj(this);
+            mainfrom.from_type = "串码";
+            mainfrom.Text = "选择普通商品";
+            mainfrom.ShowDialog();
+        }
     }
 
      

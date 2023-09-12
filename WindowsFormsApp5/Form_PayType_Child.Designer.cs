@@ -169,7 +169,9 @@
             this.Controls.Add(this.uiTextBox1);
             this.Controls.Add(this.uiLabel1);
             this.Name = "Form_PayType_Child";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_PayType_Child";
+            this.Load += new System.EventHandler(this.Form_PayType_Child_Load);
             this.ResumeLayout(false);
 
         }

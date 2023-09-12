@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(from_main));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel_ad = new System.Windows.Forms.ToolStripStatusLabel();
@@ -60,56 +61,58 @@
             this.tabPage_nav = new System.Windows.Forms.TabPage();
             this.uiTabControlMenu1 = new Sunny.UI.UITabControlMenu();
             this.tabPage20 = new System.Windows.Forms.TabPage();
-            this.uiImageButton15 = new Sunny.UI.UIImageButton();
-            this.uiImageButton16 = new Sunny.UI.UIImageButton();
-            this.uiImageButton14 = new Sunny.UI.UIImageButton();
-            this.uiImageButton13 = new Sunny.UI.UIImageButton();
-            this.uiImageButton12 = new Sunny.UI.UIImageButton();
-            this.uiImageButton11 = new Sunny.UI.UIImageButton();
-            this.uiImageButton10 = new Sunny.UI.UIImageButton();
-            this.uiImageButton6 = new Sunny.UI.UIImageButton();
-            this.uiImageButton5 = new Sunny.UI.UIImageButton();
-            this.uiImageButton4 = new Sunny.UI.UIImageButton();
-            this.uiImageButton2 = new Sunny.UI.UIImageButton();
+            this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiImageButton1 = new Sunny.UI.UIImageButton();
+            this.uiImageButton11 = new Sunny.UI.UIImageButton();
+            this.uiImageButton15 = new Sunny.UI.UIImageButton();
+            this.uiImageButton2 = new Sunny.UI.UIImageButton();
+            this.uiImageButton6 = new Sunny.UI.UIImageButton();
+            this.uiImageButton10 = new Sunny.UI.UIImageButton();
+            this.uiImageButton12 = new Sunny.UI.UIImageButton();
+            this.uiImageButton16 = new Sunny.UI.UIImageButton();
+            this.uiImageButton4 = new Sunny.UI.UIImageButton();
+            this.uiImageButton5 = new Sunny.UI.UIImageButton();
+            this.uiImageButton13 = new Sunny.UI.UIImageButton();
+            this.uiImageButton14 = new Sunny.UI.UIImageButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.uiImageButton9 = new Sunny.UI.UIImageButton();
             this.uiImageButton8 = new Sunny.UI.UIImageButton();
             this.uiImageButton7 = new Sunny.UI.UIImageButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.uiImageButton18 = new Sunny.UI.UIImageButton();
+            this.uiImageButton17 = new Sunny.UI.UIImageButton();
             this.uiImageButton3 = new Sunny.UI.UIImageButton();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.uiButton5 = new Sunny.UI.UIButton();
             this.uiButton6 = new Sunny.UI.UIButton();
-            this.uiImageButton17 = new Sunny.UI.UIImageButton();
-            this.uiImageButton18 = new Sunny.UI.UIImageButton();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.uiTabControl1.SuspendLayout();
             this.tabPage_nav.SuspendLayout();
             this.uiTabControlMenu1.SuspendLayout();
             this.tabPage20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).BeginInit();
+            this.uiPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton14)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton7)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton3)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -250,7 +253,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.进销存ToolStripMenuItem,
             this.财务管理ToolStripMenuItem,
@@ -328,8 +331,9 @@
             // 
             this.uiTabControl1.Controls.Add(this.tabPage_nav);
             this.uiTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.uiTabControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.uiTabControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.uiTabControl1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiTabControl1.HotTrack = true;
             this.uiTabControl1.ItemSize = new System.Drawing.Size(150, 40);
             this.uiTabControl1.Location = new System.Drawing.Point(5, 28);
             this.uiTabControl1.MainPage = "导航";
@@ -338,17 +342,16 @@
             this.uiTabControl1.ShowCloseButton = true;
             this.uiTabControl1.Size = new System.Drawing.Size(1910, 950);
             this.uiTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.uiTabControl1.Style = Sunny.UI.UIStyle.LayuiGreen;
+            this.uiTabControl1.Style = Sunny.UI.UIStyle.Colorful;
             this.uiTabControl1.TabIndex = 3;
-            this.uiTabControl1.TabSelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.uiTabControl1.TabSelectedHighColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.uiTabControl1.TabSelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
+            this.uiTabControl1.TabSelectedHighColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.uiTabControl1.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTabControl1.BeforeRemoveTabPage += new Sunny.UI.UITabControl.OnBeforeRemoveTabPage(this.uiTabControl1_BeforeRemoveTabPage);
-            this.uiTabControl1.SelectedIndexChanged += new System.EventHandler(this.uiTabControl1_SelectedIndexChanged);
             // 
             // tabPage_nav
             // 
-            this.tabPage_nav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.tabPage_nav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
             this.tabPage_nav.Controls.Add(this.uiTabControlMenu1);
             this.tabPage_nav.Location = new System.Drawing.Point(0, 40);
             this.tabPage_nav.Name = "tabPage_nav";
@@ -370,7 +373,7 @@
             this.uiTabControlMenu1.Multiline = true;
             this.uiTabControlMenu1.Name = "uiTabControlMenu1";
             this.uiTabControlMenu1.SelectedIndex = 0;
-            this.uiTabControlMenu1.Size = new System.Drawing.Size(1724, 926);
+            this.uiTabControlMenu1.Size = new System.Drawing.Size(1908, 926);
             this.uiTabControlMenu1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControlMenu1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTabControlMenu1.TabBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -382,215 +385,245 @@
             // 
             // tabPage20
             // 
-            this.tabPage20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.tabPage20.Controls.Add(this.uiImageButton15);
-            this.tabPage20.Controls.Add(this.uiImageButton16);
-            this.tabPage20.Controls.Add(this.uiImageButton14);
-            this.tabPage20.Controls.Add(this.uiImageButton13);
-            this.tabPage20.Controls.Add(this.uiImageButton12);
-            this.tabPage20.Controls.Add(this.uiImageButton11);
-            this.tabPage20.Controls.Add(this.uiImageButton10);
-            this.tabPage20.Controls.Add(this.uiImageButton6);
-            this.tabPage20.Controls.Add(this.uiImageButton5);
-            this.tabPage20.Controls.Add(this.uiImageButton4);
-            this.tabPage20.Controls.Add(this.uiImageButton2);
-            this.tabPage20.Controls.Add(this.uiImageButton1);
+            this.tabPage20.BackColor = System.Drawing.Color.White;
+            this.tabPage20.Controls.Add(this.uiPanel1);
             this.tabPage20.Location = new System.Drawing.Point(201, 0);
             this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Size = new System.Drawing.Size(1523, 926);
+            this.tabPage20.Size = new System.Drawing.Size(1707, 926);
             this.tabPage20.TabIndex = 0;
             this.tabPage20.Text = "进销存";
             // 
-            // uiImageButton15
+            // uiPanel1
             // 
-            this.uiImageButton15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton15.Image = global::WindowsFormsApp5.Properties.Resources.采购入库;
-            this.uiImageButton15.Location = new System.Drawing.Point(459, 308);
-            this.uiImageButton15.Name = "uiImageButton15";
-            this.uiImageButton15.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton15.TabIndex = 16;
-            this.uiImageButton15.TabStop = false;
-            this.uiImageButton15.Text = "内部退销单";
-            this.uiImageButton15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton15.Click += new System.EventHandler(this.uiImageButton15_Click);
-            // 
-            // uiImageButton16
-            // 
-            this.uiImageButton16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton16.Image = global::WindowsFormsApp5.Properties.Resources.分销系统;
-            this.uiImageButton16.Location = new System.Drawing.Point(264, 308);
-            this.uiImageButton16.Name = "uiImageButton16";
-            this.uiImageButton16.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton16.TabIndex = 15;
-            this.uiImageButton16.TabStop = false;
-            this.uiImageButton16.Text = "内部分销单";
-            this.uiImageButton16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton16.Click += new System.EventHandler(this.uiImageButton16_Click);
-            // 
-            // uiImageButton14
-            // 
-            this.uiImageButton14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton14.Image = global::WindowsFormsApp5.Properties.Resources.采购入库;
-            this.uiImageButton14.Location = new System.Drawing.Point(774, 180);
-            this.uiImageButton14.Name = "uiImageButton14";
-            this.uiImageButton14.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton14.TabIndex = 14;
-            this.uiImageButton14.TabStop = false;
-            this.uiImageButton14.Text = "零售退库单";
-            this.uiImageButton14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton14.Click += new System.EventHandler(this.uiImageButton14_Click);
-            // 
-            // uiImageButton13
-            // 
-            this.uiImageButton13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton13.Image = global::WindowsFormsApp5.Properties.Resources.零售业;
-            this.uiImageButton13.Location = new System.Drawing.Point(616, 180);
-            this.uiImageButton13.Name = "uiImageButton13";
-            this.uiImageButton13.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton13.TabIndex = 13;
-            this.uiImageButton13.TabStop = false;
-            this.uiImageButton13.Text = "零售出库单";
-            this.uiImageButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton13.Click += new System.EventHandler(this.uiImageButton13_Click);
-            // 
-            // uiImageButton12
-            // 
-            this.uiImageButton12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton12.Image = global::WindowsFormsApp5.Properties.Resources.采购入库;
-            this.uiImageButton12.Location = new System.Drawing.Point(459, 180);
-            this.uiImageButton12.Name = "uiImageButton12";
-            this.uiImageButton12.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton12.TabIndex = 12;
-            this.uiImageButton12.TabStop = false;
-            this.uiImageButton12.Text = "采购退库单";
-            this.uiImageButton12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton12.Click += new System.EventHandler(this.uiImageButton12_Click);
-            // 
-            // uiImageButton11
-            // 
-            this.uiImageButton11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton11.Image = global::WindowsFormsApp5.Properties.Resources.备件管理;
-            this.uiImageButton11.Location = new System.Drawing.Point(459, 539);
-            this.uiImageButton11.Name = "uiImageButton11";
-            this.uiImageButton11.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton11.TabIndex = 11;
-            this.uiImageButton11.TabStop = false;
-            this.uiImageButton11.Text = "普通商品管理";
-            this.uiImageButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton11.Click += new System.EventHandler(this.uiImageButton11_Click);
-            // 
-            // uiImageButton10
-            // 
-            this.uiImageButton10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton10.Image = global::WindowsFormsApp5.Properties.Resources.公司管理;
-            this.uiImageButton10.Location = new System.Drawing.Point(616, 420);
-            this.uiImageButton10.Name = "uiImageButton10";
-            this.uiImageButton10.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton10.TabIndex = 10;
-            this.uiImageButton10.TabStop = false;
-            this.uiImageButton10.Text = "成员管理";
-            this.uiImageButton10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton10.Click += new System.EventHandler(this.uiImageButton10_Click);
-            // 
-            // uiImageButton6
-            // 
-            this.uiImageButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton6.Image = global::WindowsFormsApp5.Properties.Resources.统计分析;
-            this.uiImageButton6.Location = new System.Drawing.Point(774, 420);
-            this.uiImageButton6.Name = "uiImageButton6";
-            this.uiImageButton6.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton6.TabIndex = 6;
-            this.uiImageButton6.TabStop = false;
-            this.uiImageButton6.Text = "业务汇总";
-            this.uiImageButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton6.Click += new System.EventHandler(this.uiImageButton6_Click);
-            // 
-            // uiImageButton5
-            // 
-            this.uiImageButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton5.Image = global::WindowsFormsApp5.Properties.Resources.仓库管理1;
-            this.uiImageButton5.Location = new System.Drawing.Point(264, 420);
-            this.uiImageButton5.Name = "uiImageButton5";
-            this.uiImageButton5.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton5.TabIndex = 5;
-            this.uiImageButton5.TabStop = false;
-            this.uiImageButton5.Text = "库存管理";
-            this.uiImageButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton5.Click += new System.EventHandler(this.uiImageButton5_Click);
-            // 
-            // uiImageButton4
-            // 
-            this.uiImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton4.Image = global::WindowsFormsApp5.Properties.Resources.地图监控;
-            this.uiImageButton4.Location = new System.Drawing.Point(459, 420);
-            this.uiImageButton4.Name = "uiImageButton4";
-            this.uiImageButton4.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton4.TabIndex = 4;
-            this.uiImageButton4.TabStop = false;
-            this.uiImageButton4.Text = "串码追踪";
-            this.uiImageButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton4.Click += new System.EventHandler(this.uiImageButton4_Click);
-            // 
-            // uiImageButton2
-            // 
-            this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton2.Image = global::WindowsFormsApp5.Properties.Resources.集中监控;
-            this.uiImageButton2.Location = new System.Drawing.Point(264, 539);
-            this.uiImageButton2.Name = "uiImageButton2";
-            this.uiImageButton2.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton2.TabIndex = 2;
-            this.uiImageButton2.TabStop = false;
-            this.uiImageButton2.Text = "串码商品管理";
-            this.uiImageButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.uiImageButton2.Click += new System.EventHandler(this.uiImageButton2_Click);
+            this.uiPanel1.BackColor = System.Drawing.Color.White;
+            this.uiPanel1.Controls.Add(this.uiImageButton1);
+            this.uiPanel1.Controls.Add(this.uiImageButton11);
+            this.uiPanel1.Controls.Add(this.uiImageButton15);
+            this.uiPanel1.Controls.Add(this.uiImageButton2);
+            this.uiPanel1.Controls.Add(this.uiImageButton6);
+            this.uiPanel1.Controls.Add(this.uiImageButton10);
+            this.uiPanel1.Controls.Add(this.uiImageButton12);
+            this.uiPanel1.Controls.Add(this.uiImageButton16);
+            this.uiPanel1.Controls.Add(this.uiImageButton4);
+            this.uiPanel1.Controls.Add(this.uiImageButton5);
+            this.uiPanel1.Controls.Add(this.uiImageButton13);
+            this.uiPanel1.Controls.Add(this.uiImageButton14);
+            this.uiPanel1.FillColor = System.Drawing.Color.White;
+            this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiPanel1.Location = new System.Drawing.Point(218, 171);
+            this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel1.Name = "uiPanel1";
+            this.uiPanel1.RectColor = System.Drawing.Color.White;
+            this.uiPanel1.Size = new System.Drawing.Size(654, 512);
+            this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel1.TabIndex = 17;
+            this.uiPanel1.Text = null;
+            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // uiImageButton1
             // 
             this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton1.Image = global::WindowsFormsApp5.Properties.Resources.采购入库;
+            this.uiImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton1.Image")));
             this.uiImageButton1.ImageOffset = new System.Drawing.Point(0, -30);
-            this.uiImageButton1.Location = new System.Drawing.Point(264, 180);
+            this.uiImageButton1.Location = new System.Drawing.Point(3, 3);
             this.uiImageButton1.Name = "uiImageButton1";
             this.uiImageButton1.Size = new System.Drawing.Size(100, 97);
             this.uiImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton1.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton1.TabIndex = 1;
             this.uiImageButton1.TabStop = false;
             this.uiImageButton1.Text = "采购入库单";
             this.uiImageButton1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.uiImageButton1.Click += new System.EventHandler(this.uiImageButton1_Click);
             // 
+            // uiImageButton11
+            // 
+            this.uiImageButton11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton11.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_25;
+            this.uiImageButton11.Location = new System.Drawing.Point(180, 404);
+            this.uiImageButton11.Name = "uiImageButton11";
+            this.uiImageButton11.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.uiImageButton11.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton11.TabIndex = 11;
+            this.uiImageButton11.TabStop = false;
+            this.uiImageButton11.Text = "普通商品管理";
+            this.uiImageButton11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton11.Click += new System.EventHandler(this.uiImageButton11_Click);
+            // 
+            // uiImageButton15
+            // 
+            this.uiImageButton15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton15.Image = global::WindowsFormsApp5.Properties.Resources.icon_25;
+            this.uiImageButton15.Location = new System.Drawing.Point(180, 137);
+            this.uiImageButton15.Name = "uiImageButton15";
+            this.uiImageButton15.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton15.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton15.TabIndex = 16;
+            this.uiImageButton15.TabStop = false;
+            this.uiImageButton15.Text = "内部退销单";
+            this.uiImageButton15.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton15.Click += new System.EventHandler(this.uiImageButton15_Click);
+            // 
+            // uiImageButton2
+            // 
+            this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton2.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_23;
+            this.uiImageButton2.ImageOffset = new System.Drawing.Point(0, 10);
+            this.uiImageButton2.Location = new System.Drawing.Point(3, 404);
+            this.uiImageButton2.Name = "uiImageButton2";
+            this.uiImageButton2.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.uiImageButton2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton2.TabIndex = 2;
+            this.uiImageButton2.TabStop = false;
+            this.uiImageButton2.Text = "串码商品管理";
+            this.uiImageButton2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton2.Click += new System.EventHandler(this.uiImageButton2_Click);
+            // 
+            // uiImageButton6
+            // 
+            this.uiImageButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton6.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164908_05;
+            this.uiImageButton6.Location = new System.Drawing.Point(544, 269);
+            this.uiImageButton6.Name = "uiImageButton6";
+            this.uiImageButton6.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton6.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton6.TabIndex = 6;
+            this.uiImageButton6.TabStop = false;
+            this.uiImageButton6.Text = "业务汇总";
+            this.uiImageButton6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton6.Click += new System.EventHandler(this.uiImageButton6_Click);
+            // 
+            // uiImageButton10
+            // 
+            this.uiImageButton10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton10.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_11;
+            this.uiImageButton10.Location = new System.Drawing.Point(362, 269);
+            this.uiImageButton10.Name = "uiImageButton10";
+            this.uiImageButton10.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton10.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton10.TabIndex = 10;
+            this.uiImageButton10.TabStop = false;
+            this.uiImageButton10.Text = "成员管理";
+            this.uiImageButton10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton10.Click += new System.EventHandler(this.uiImageButton10_Click);
+            // 
+            // uiImageButton12
+            // 
+            this.uiImageButton12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton12.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton12.Image")));
+            this.uiImageButton12.Location = new System.Drawing.Point(180, 3);
+            this.uiImageButton12.Name = "uiImageButton12";
+            this.uiImageButton12.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton12.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton12.TabIndex = 12;
+            this.uiImageButton12.TabStop = false;
+            this.uiImageButton12.Text = "采购退库单";
+            this.uiImageButton12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton12.Click += new System.EventHandler(this.uiImageButton12_Click);
+            // 
+            // uiImageButton16
+            // 
+            this.uiImageButton16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton16.Image = global::WindowsFormsApp5.Properties.Resources.icon_17;
+            this.uiImageButton16.Location = new System.Drawing.Point(3, 137);
+            this.uiImageButton16.Name = "uiImageButton16";
+            this.uiImageButton16.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton16.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton16.TabIndex = 15;
+            this.uiImageButton16.TabStop = false;
+            this.uiImageButton16.Text = "内部分销单";
+            this.uiImageButton16.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton16.Click += new System.EventHandler(this.uiImageButton16_Click);
+            // 
+            // uiImageButton4
+            // 
+            this.uiImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton4.Image = global::WindowsFormsApp5.Properties.Resources.icon_32;
+            this.uiImageButton4.Location = new System.Drawing.Point(180, 269);
+            this.uiImageButton4.Name = "uiImageButton4";
+            this.uiImageButton4.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton4.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton4.TabIndex = 4;
+            this.uiImageButton4.TabStop = false;
+            this.uiImageButton4.Text = "串码追踪";
+            this.uiImageButton4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton4.Click += new System.EventHandler(this.uiImageButton4_Click);
+            // 
+            // uiImageButton5
+            // 
+            this.uiImageButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton5.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164901_25;
+            this.uiImageButton5.Location = new System.Drawing.Point(3, 269);
+            this.uiImageButton5.Name = "uiImageButton5";
+            this.uiImageButton5.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton5.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton5.TabIndex = 5;
+            this.uiImageButton5.TabStop = false;
+            this.uiImageButton5.Text = "库存管理";
+            this.uiImageButton5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton5.Click += new System.EventHandler(this.uiImageButton5_Click);
+            // 
+            // uiImageButton13
+            // 
+            this.uiImageButton13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton13.Image = global::WindowsFormsApp5.Properties.Resources.icon_15;
+            this.uiImageButton13.Location = new System.Drawing.Point(362, 3);
+            this.uiImageButton13.Name = "uiImageButton13";
+            this.uiImageButton13.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton13.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton13.TabIndex = 13;
+            this.uiImageButton13.TabStop = false;
+            this.uiImageButton13.Text = "零售出库单";
+            this.uiImageButton13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton13.Click += new System.EventHandler(this.uiImageButton13_Click);
+            // 
+            // uiImageButton14
+            // 
+            this.uiImageButton14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton14.Image = global::WindowsFormsApp5.Properties.Resources.icon_23;
+            this.uiImageButton14.Location = new System.Drawing.Point(544, 3);
+            this.uiImageButton14.Name = "uiImageButton14";
+            this.uiImageButton14.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton14.Style = Sunny.UI.UIStyle.Custom;
+            this.uiImageButton14.TabIndex = 14;
+            this.uiImageButton14.TabStop = false;
+            this.uiImageButton14.Text = "零售退库单";
+            this.uiImageButton14.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton14.Click += new System.EventHandler(this.uiImageButton14_Click);
+            // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Controls.Add(this.uiImageButton9);
             this.tabPage1.Controls.Add(this.uiImageButton8);
             this.tabPage1.Controls.Add(this.uiImageButton7);
             this.tabPage1.Location = new System.Drawing.Point(201, 0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1523, 926);
+            this.tabPage1.Size = new System.Drawing.Size(1707, 926);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "财务管理";
             // 
@@ -598,8 +631,8 @@
             // 
             this.uiImageButton9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton9.Image = global::WindowsFormsApp5.Properties.Resources.付款;
-            this.uiImageButton9.Location = new System.Drawing.Point(642, 203);
+            this.uiImageButton9.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164838_15;
+            this.uiImageButton9.Location = new System.Drawing.Point(865, 203);
             this.uiImageButton9.Name = "uiImageButton9";
             this.uiImageButton9.Size = new System.Drawing.Size(100, 97);
             this.uiImageButton9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -613,8 +646,8 @@
             // 
             this.uiImageButton8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton8.Image = global::WindowsFormsApp5.Properties.Resources.收款;
-            this.uiImageButton8.Location = new System.Drawing.Point(484, 203);
+            this.uiImageButton8.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164838_13;
+            this.uiImageButton8.Location = new System.Drawing.Point(707, 203);
             this.uiImageButton8.Name = "uiImageButton8";
             this.uiImageButton8.Size = new System.Drawing.Size(100, 97);
             this.uiImageButton8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -628,8 +661,8 @@
             // 
             this.uiImageButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton7.Image = global::WindowsFormsApp5.Properties.Resources.往来明细账;
-            this.uiImageButton7.Location = new System.Drawing.Point(315, 203);
+            this.uiImageButton7.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164838_11;
+            this.uiImageButton7.Location = new System.Drawing.Point(538, 203);
             this.uiImageButton7.Name = "uiImageButton7";
             this.uiImageButton7.Size = new System.Drawing.Size(100, 97);
             this.uiImageButton7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -641,22 +674,52 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.uiImageButton18);
             this.tabPage2.Controls.Add(this.uiImageButton17);
             this.tabPage2.Controls.Add(this.uiImageButton3);
             this.tabPage2.Location = new System.Drawing.Point(201, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1523, 926);
+            this.tabPage2.Size = new System.Drawing.Size(1707, 926);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "基础资料";
+            // 
+            // uiImageButton18
+            // 
+            this.uiImageButton18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton18.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_41;
+            this.uiImageButton18.Location = new System.Drawing.Point(891, 200);
+            this.uiImageButton18.Name = "uiImageButton18";
+            this.uiImageButton18.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton18.TabIndex = 6;
+            this.uiImageButton18.TabStop = false;
+            this.uiImageButton18.Text = "付款方式资料";
+            this.uiImageButton18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton18.Click += new System.EventHandler(this.uiImageButton18_Click);
+            // 
+            // uiImageButton17
+            // 
+            this.uiImageButton17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiImageButton17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiImageButton17.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_39;
+            this.uiImageButton17.Location = new System.Drawing.Point(713, 200);
+            this.uiImageButton17.Name = "uiImageButton17";
+            this.uiImageButton17.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.uiImageButton17.TabIndex = 5;
+            this.uiImageButton17.TabStop = false;
+            this.uiImageButton17.Text = "收款方式资料";
+            this.uiImageButton17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.uiImageButton17.Click += new System.EventHandler(this.uiImageButton17_Click);
             // 
             // uiImageButton3
             // 
             this.uiImageButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton3.Image = global::WindowsFormsApp5.Properties.Resources.客户;
-            this.uiImageButton3.Location = new System.Drawing.Point(340, 180);
+            this.uiImageButton3.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_13;
+            this.uiImageButton3.Location = new System.Drawing.Point(537, 200);
             this.uiImageButton3.Name = "uiImageButton3";
             this.uiImageButton3.Size = new System.Drawing.Size(100, 97);
             this.uiImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -707,34 +770,6 @@
             this.uiButton6.TabIndex = 1;
             this.uiButton6.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             // 
-            // uiImageButton17
-            // 
-            this.uiImageButton17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton17.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton17.Image = global::WindowsFormsApp5.Properties.Resources.客户;
-            this.uiImageButton17.Location = new System.Drawing.Point(516, 180);
-            this.uiImageButton17.Name = "uiImageButton17";
-            this.uiImageButton17.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton17.TabIndex = 5;
-            this.uiImageButton17.TabStop = false;
-            this.uiImageButton17.Text = "收款方式资料";
-            this.uiImageButton17.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // uiImageButton18
-            // 
-            this.uiImageButton18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton18.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiImageButton18.Image = global::WindowsFormsApp5.Properties.Resources.客户;
-            this.uiImageButton18.Location = new System.Drawing.Point(694, 180);
-            this.uiImageButton18.Name = "uiImageButton18";
-            this.uiImageButton18.Size = new System.Drawing.Size(100, 97);
-            this.uiImageButton18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton18.TabIndex = 6;
-            this.uiImageButton18.TabStop = false;
-            this.uiImageButton18.Text = "付款方式资料";
-            this.uiImageButton18.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
             // from_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -747,6 +782,7 @@
             this.Text = "经营管理系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.from_main_Load);
+            this.Resize += new System.EventHandler(this.from_main_Resize);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -755,26 +791,27 @@
             this.tabPage_nav.ResumeLayout(false);
             this.uiTabControlMenu1.ResumeLayout(false);
             this.tabPage20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).EndInit();
+            this.uiPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton14)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton7)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -836,5 +873,6 @@
         private Sunny.UI.UIImageButton uiImageButton3;
         private Sunny.UI.UIImageButton uiImageButton18;
         private Sunny.UI.UIImageButton uiImageButton17;
+        private Sunny.UI.UIPanel uiPanel1;
     }
 }

@@ -25,6 +25,7 @@ namespace WindowsFormsApp5
             init_grid();
             TreeNode root = uiTreeView1.Nodes[0];
             root.ExpandAll();
+            getallclient();
         }
         private void init_grid()
         {
@@ -68,7 +69,7 @@ namespace WindowsFormsApp5
             grid_client.Refresh();
         }
 
-        private void uiButton2_Click(object sender, EventArgs e)
+        private void getallclient()
         {
             string rel = Util.httpget("/client/getAll", Util.G_token);
             JObject job = (JObject)JsonConvert.DeserializeObject(rel);
@@ -108,7 +109,7 @@ namespace WindowsFormsApp5
                         grid_client.Cell(i + 2, 2).Text = classname;
                         grid_client.Cell(i + 2, 3).Text = customid;
                         grid_client.Cell(i + 2, 4).Text = name;
-                        grid_client.Cell(i + 2, 5).Text = addr1+ addr2+ addr3+ addr4;
+                        grid_client.Cell(i + 2, 5).Text = addr1 + addr2 + addr3 + addr4;
                         grid_client.Cell(i + 2, 6).Text = oname;
                         grid_client.Cell(i + 2, 7).Text = ophone;
                         grid_client.Cell(i + 2, 8).Text = onote;
@@ -125,6 +126,10 @@ namespace WindowsFormsApp5
                 }
 
             }
+        }
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            getallclient();
         }
 
         private void uiButton_add_Click(object sender, EventArgs e)

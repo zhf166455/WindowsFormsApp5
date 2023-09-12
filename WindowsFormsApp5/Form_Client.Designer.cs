@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("(000)本公司");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("(001)供应商");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("(998)内部分销");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("(999)零售对应客户");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("全部客户", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("(000)本公司");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("(001)供应商");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("(998)内部分销");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("(999)零售对应客户");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("全部客户", new System.Windows.Forms.TreeNode[] {
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9});
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiButton_update = new Sunny.UI.UIButton();
             this.uiButton_del = new Sunny.UI.UIButton();
@@ -60,7 +60,7 @@
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(1894, 77);
+            this.uiPanel1.Size = new System.Drawing.Size(1903, 77);
             this.uiPanel1.TabIndex = 0;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,21 +136,21 @@
             this.uiTreeView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTreeView1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTreeView1.Name = "uiTreeView1";
-            treeNode1.Name = "节点1";
-            treeNode1.Text = "(000)本公司";
-            treeNode2.Name = "节点2";
-            treeNode2.Text = "(001)供应商";
-            treeNode3.Name = "节点3";
-            treeNode3.Text = "(998)内部分销";
-            treeNode4.Name = "节点4";
-            treeNode4.Text = "(999)零售对应客户";
-            treeNode5.Name = "节点0";
-            treeNode5.Text = "全部客户";
+            treeNode6.Name = "节点1";
+            treeNode6.Text = "(000)本公司";
+            treeNode7.Name = "节点2";
+            treeNode7.Text = "(001)供应商";
+            treeNode8.Name = "节点3";
+            treeNode8.Text = "(998)内部分销";
+            treeNode9.Name = "节点4";
+            treeNode9.Text = "(999)零售对应客户";
+            treeNode10.Name = "节点0";
+            treeNode10.Text = "全部客户";
             this.uiTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            treeNode10});
             this.uiTreeView1.ShowLines = true;
             this.uiTreeView1.ShowText = false;
-            this.uiTreeView1.Size = new System.Drawing.Size(283, 821);
+            this.uiTreeView1.Size = new System.Drawing.Size(283, 818);
             this.uiTreeView1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTreeView1.TabIndex = 1;
             this.uiTreeView1.Text = "uiTreeView1";
@@ -160,8 +160,9 @@
             // grid_client
             // 
             this.grid_client.AllowUserSort = true;
-            this.grid_client.BackColorActiveCellSel = System.Drawing.SystemColors.Highlight;
+            this.grid_client.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid_client.BackColorBkg = System.Drawing.Color.White;
+            this.grid_client.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid_client.Cols = 10;
             this.grid_client.DefaultFont = new System.Drawing.Font("宋体", 9F);
             this.grid_client.DisplayRowArrow = true;
@@ -169,8 +170,9 @@
             this.grid_client.Location = new System.Drawing.Point(297, 91);
             this.grid_client.Name = "grid_client";
             this.grid_client.Rows = 3;
+            this.grid_client.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_client.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
-            this.grid_client.Size = new System.Drawing.Size(1601, 823);
+            this.grid_client.Size = new System.Drawing.Size(1609, 821);
             this.grid_client.TabIndex = 2;
             this.grid_client.TopRow = 2;
             this.grid_client.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid_client_MouseDoubleClick);

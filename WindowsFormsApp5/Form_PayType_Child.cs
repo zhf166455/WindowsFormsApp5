@@ -16,5 +16,10 @@ namespace WindowsFormsApp5
         {
             InitializeComponent();
         }
+
+        private void Form_PayType_Child_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

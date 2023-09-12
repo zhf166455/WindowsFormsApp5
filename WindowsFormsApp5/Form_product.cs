@@ -30,13 +30,13 @@ namespace WindowsFormsApp5
         {
             init_grid();
             init_tree();
+            getprobycla();
         }
         public void init_grid()
         {
             grid_pro.AutoRedraw = false;
             grid_pro.Rows = 2;
-            grid_pro.Range(0, 1, 1, 8).Locked = false;
-            grid_pro.Range(0, 1, 1, 8).ClearAll();
+            grid_pro.Locked = false;
 
             grid_pro.Column(0).Width = 10;
             grid_pro.Column(1).Width = 120;
@@ -57,14 +57,14 @@ namespace WindowsFormsApp5
             grid_pro.Cell(0, 7).Text = "可选颜色";
             grid_pro.Cell(0, 8).Text = "串码位数";
 
-            grid_pro.Range(0, 1, 1, 8).Locked = true;
+            grid_pro.Locked = true;
             grid_pro.AutoRedraw = true;
             grid_pro.Refresh();
         }
         private void init_tree() 
         {
             string rel;
-            if (Util.G_page == "串码商品管理")
+            if (from_type == "串码")
             {
                  rel= Util.httpget("/sepcial/getAllClass", Util.G_token);
             }
@@ -84,6 +84,14 @@ namespace WindowsFormsApp5
             else
             {
                 TreeNode root = uiTreeView1.Nodes[0];
+                if(from_type=="串码")
+                {
+                    root.Text = "全部串码商品";
+                }
+                else
+                {
+                    root.Text = "全部普通商品";
+                }
                 root.Tag = 0;
                 root.Nodes.Clear();
                 int n=job["items"].Count();
@@ -133,16 +141,42 @@ namespace WindowsFormsApp5
             
         }
 
-        private void uiTreeView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void getprobycla()
         {
             TreeNode node = uiTreeView1.SelectedNode;
-            string tx = node.Text;
-            tx = Util.midstr(ref tx, "(", ")");
-            string max = Util.leftstr(ref tx, 1);
-            string min = Util.rightstr(ref tx, 3);
-            string pram = "?max=" + max + "&min=" + min;
+            string pram = "";
+            if (node == null)
+            {
+                pram = "?max=all&min=all";
+            }
+            else
+            {
+                int ntag = (int)node.Tag;
+                if (ntag == 0)
+                {
+                    pram = "?max=all&min=all";
+                }
+                else
+                {
+                    if (ntag == 1)
+                    {
+                        string tx = node.Text;
+                        tx = Util.midstr(ref tx, "(", ")");
+                        pram = "?max=" + tx + "&min=all";
+                    }
+                    else
+                    {
+                        string tx = node.Text;
+                        tx = Util.midstr(ref tx, "(", ")");
+                        string max = Util.leftstr(ref tx, 1);
+                        string min = Util.rightstr(ref tx, 3);
+                        pram = "?max=" + max + "&min=" + min;
+                    }
+                }
+                
+            }
             string rel;
-            if (Util.G_page== "串码商品管理")
+            if (from_type == "串码")
             {
                 rel = Util.httpget("/special/getByClass" + pram, Util.G_token);
             }
@@ -150,7 +184,7 @@ namespace WindowsFormsApp5
             {
                 rel = Util.httpget("/normal/getByClass" + pram, Util.G_token);
             }
-             
+
             JObject job = (JObject)JsonConvert.DeserializeObject(rel);
 
             // 访问解析后的JSON数据
@@ -165,6 +199,7 @@ namespace WindowsFormsApp5
                 int n = job["items"].Count();
                 if (n > 0)
                 {
+                    grid_pro.Locked = false;
                     grid_pro.AutoRedraw = false;
                     grid_pro.Rows = n + 1;
 
@@ -191,18 +226,24 @@ namespace WindowsFormsApp5
                         grid_pro.Cell(i + 1, 6).Text = keyword;
                         grid_pro.Cell(i + 1, 7).Text = color;
                         grid_pro.Cell(i + 1, 8).Text = bit.ToString();
-                        
+
                     }
+                    grid_pro.Locked = true;
                     grid_pro.AutoRedraw = true;
                     grid_pro.Refresh();
-                    
+
                 }
                 else
                 {
                     init_grid();
                 }
             }
-         }
+        }
+
+        private void uiTreeView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            getprobycla();
+        }
 
         private void uiButton1_Click(object sender, EventArgs e)
         {
@@ -256,6 +297,11 @@ namespace WindowsFormsApp5
                 //修改
             }
             
+        }
+
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+            getprobycla();
         }
     }
      

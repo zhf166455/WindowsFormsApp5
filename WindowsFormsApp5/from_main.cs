@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection;
@@ -134,7 +135,7 @@ namespace WindowsFormsApp5
                 TabPage tabPage = new TabPage();
                 tabPage.Text = "采购入库单";
                 tabPage.Name = "page_cg";
-                Form_Ruku from_cg = new Form_Ruku();
+                Form_Ruku from_cg = new Form_Ruku("采购入库单");
                 from_cg.Name = "from_cg";
                 from_cg.TopLevel = false;
                 tabPage.Controls.Add(from_cg);
@@ -155,7 +156,6 @@ namespace WindowsFormsApp5
             {
                 TabPage tabPage = new TabPage();
                 tabPage.Text = "串码商品管理";
-                Util.G_page = tabPage.Text;
                 tabPage.Name = "page_spro";
                 Form_product from_cg = new Form_product("串码");
                 from_cg.Name = "from_spro";
@@ -247,7 +247,7 @@ namespace WindowsFormsApp5
                 TabPage tabPage = new TabPage();
                 tabPage.Text = "采购退库单";
                 tabPage.Name = "page_ct";
-                Form_Ruku from_cg = new Form_Ruku();
+                Form_Ruku from_cg = new Form_Ruku("采购退库单");
                 from_cg.Name = "from_ct";
                 from_cg.TopLevel = false;
                 tabPage.Controls.Add(from_cg);
@@ -269,7 +269,7 @@ namespace WindowsFormsApp5
                 TabPage tabPage = new TabPage();
                 tabPage.Text = "零售出库单";
                 tabPage.Name = "page_ls";
-                Form_Ruku from_cg = new Form_Ruku();
+                Form_Ruku from_cg = new Form_Ruku("零售出库单");
                 from_cg.Name = "from_ls";
                 from_cg.TopLevel = false;
                 tabPage.Controls.Add(from_cg);
@@ -291,7 +291,7 @@ namespace WindowsFormsApp5
                 TabPage tabPage = new TabPage();
                 tabPage.Text = "零售退库单";
                 tabPage.Name = "page_lt";
-                Form_Ruku from_cg = new Form_Ruku();
+                Form_Ruku from_cg = new Form_Ruku("零售退库单");
                 from_cg.Name = "from_lt";
                 from_cg.TopLevel = false;
                 tabPage.Controls.Add(from_cg);
@@ -313,7 +313,7 @@ namespace WindowsFormsApp5
                 TabPage tabPage = new TabPage();
                 tabPage.Text = "内部分销单";
                 tabPage.Name = "page_fx";
-                Form_Ruku from_cg = new Form_Ruku();
+                Form_Ruku from_cg = new Form_Ruku("内部分销单");
                 from_cg.Name = "from_fx";
                 from_cg.TopLevel = false;
                 tabPage.Controls.Add(from_cg);
@@ -335,7 +335,7 @@ namespace WindowsFormsApp5
                 TabPage tabPage = new TabPage();
                 tabPage.Text = "内部退销单";
                 tabPage.Name = "page_tx";
-                Form_Ruku from_cg = new Form_Ruku();
+                Form_Ruku from_cg = new Form_Ruku("内部退销单");
                 from_cg.Name = "from_tx";
                 from_cg.TopLevel = false;
                 tabPage.Controls.Add(from_cg);
@@ -356,7 +356,6 @@ namespace WindowsFormsApp5
             {
                 TabPage tabPage = new TabPage();
                 tabPage.Text = "普通商品管理";
-                Util.G_page = tabPage.Text;
                 tabPage.Name = "page_npro";
                 Form_product from_cg = new Form_product("普通");
                 from_cg.Name = "from_npro";
@@ -394,11 +393,6 @@ namespace WindowsFormsApp5
             }
         }
 
-        private void uiTabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            TabPage tc = uiTabControl1.SelectedTab;
-            Util.G_page = tc.Text;
-        }
 
         private void uiImageButton7_Click_1(object sender, EventArgs e)
         {
@@ -487,5 +481,28 @@ namespace WindowsFormsApp5
                 uiTabControl1.SelectedIndex = idx;
             }
         }
+
+        private void uiImageButton17_Click(object sender, EventArgs e)
+        {
+            Form_PayType mainfrom= new Form_PayType();
+            mainfrom.Text = "收款方式资料";
+            mainfrom.ShowDialog();
+        }
+
+        private void uiImageButton18_Click(object sender, EventArgs e)
+        {
+            Form_PayType mainfrom = new Form_PayType();
+            mainfrom.Text = "付款方式资料";
+            mainfrom.ShowDialog();
+        }
+
+        private void from_main_Resize(object sender, EventArgs e)
+        {
+            
+            int aw= this.Width - 25;
+            uiTabControlMenu1.Width = aw;
+            uiPanel1.Left = (aw - 200)/2- uiPanel1.Width/2;
+        }
+
     }
 }

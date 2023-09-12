@@ -19,12 +19,17 @@ namespace WindowsFormsApp5
     {
         public string from_type;
         private Form_Addnr_Dj pfrom;
+        private Form_Addsp_Dj pfrom2;
         public Form_Chose_Pro_Dj(Form_Addnr_Dj pfrom)
         {
             InitializeComponent();
             this.pfrom = pfrom;
         }
-
+        public Form_Chose_Pro_Dj(Form_Addsp_Dj pfrom)
+        {
+            InitializeComponent();
+            this.pfrom2 = pfrom;
+        }
         private void Form_Chose_Pro_Dj_Load(object sender, EventArgs e)
         {
             init_grid();
@@ -120,7 +125,7 @@ namespace WindowsFormsApp5
             tx = Util.midstr(ref tx, "(", ")");
             string pram = "?class=" + tx ;
             string rel;
-            if (Util.G_page == "串码商品管理")
+            if (from_type == "串码")
             {
                 rel = Util.httpget("/special/getByClass/detail" + pram, Util.G_token);
             }
@@ -195,16 +200,32 @@ namespace WindowsFormsApp5
             int n = ac.Row;
             if (n > 1)
             {
-                string tx = grid1.Cell(n, 1).Text;
-                pfrom.uiTextBox_cid.Text= tx;
-                tx=grid1.Cell(n, 2).Text;
-                pfrom.uiTextBox_class.Text= tx;
-                tx = grid1.Cell(n, 3).Text;
-                pfrom.uiTextBox_name.Text = tx;
-                tx = grid1.Cell(n, 4).Text;
-                pfrom.uiTextBox_color.Text = tx;
-                tx = grid1.Cell(n, 5).Text;
-                pfrom.uiTextBox_oname.Text = tx;
+                if(from_type=="普通")
+                { 
+                    string tx = grid1.Cell(n, 1).Text;
+                    pfrom.uiTextBox_cid.Text= tx;
+                    tx=grid1.Cell(n, 2).Text;
+                    pfrom.uiTextBox_class.Text= tx;
+                    tx = grid1.Cell(n, 3).Text;
+                    pfrom.uiTextBox_name.Text = tx;
+                    tx = grid1.Cell(n, 4).Text;
+                    pfrom.uiTextBox_color.Text = tx;
+                    tx = grid1.Cell(n, 5).Text;
+                    pfrom.uiTextBox_oname.Text = tx;
+                }
+                else
+                {
+                    string tx = grid1.Cell(n, 1).Text;
+                    pfrom2.uiTextBox_cid.Text = tx;
+                    tx = grid1.Cell(n, 2).Text;
+                    pfrom2.uiTextBox_class.Text = tx;
+                    tx = grid1.Cell(n, 3).Text;
+                    pfrom2.uiTextBox_name.Text = tx;
+                    tx = grid1.Cell(n, 4).Text;
+                    pfrom2.uiTextBox_color.Text = tx;
+                    tx = grid1.Cell(n, 6).Text;
+                    pfrom2.uiTextBox_code.Text = tx;
+                }
             }
         }
     }

@@ -28,7 +28,7 @@ namespace WindowsFormsApp5
         public static string G_dname = "";
         public static string G_token = "";
         public static string G_ver = "v 1.0.0";
-        public static string G_page = "导航";
+        //public static string G_page = "导航";
         public static string G_opt = "新建";
 
         public static void SetRootUrl(string root)
@@ -139,12 +139,10 @@ namespace WindowsFormsApp5
 
             return str.Substring(str.Length - len, len);
         }
-        
-        public static string getshortcode()
+        public static string getTypeShot(string tt)
         {
-            string str = G_page;
             string rel = "";
-            switch (str)
+            switch (tt)
             {
                 case "采购入库单":
                     rel = "CG";
@@ -158,7 +156,7 @@ namespace WindowsFormsApp5
                 case "零售退库单":
                     rel = "LT";
                     break;
-                case "内部分销但":
+                case "内部分销单":
                     rel = "FX";
                     break;
                 case "内部退销单":
@@ -167,14 +165,48 @@ namespace WindowsFormsApp5
             }
             return rel;
         }
-        public static string getNowDate()
+        public static string getTypeTitle(string tt)
         {
-            DateTime now = DateTime.Now;
+            string rel = "";
+            switch (tt)
+            {
+                case "采购入库单":
+                    rel = "采 购 入 库 单";
+                    break;
+                case "采购退库单":
+                    rel = "采 购 退 库 单";
+                    break;
+                case "零售出库单":
+                    rel = "零 售 出 库 单";
+                    break;
+                case "零售退库单":
+                    rel = "零 售 退 库 单";
+                    break;
+                case "内部分销单":
+                    rel = "内 部 分 销 单";
+                    break;
+                case "内部退销单":
+                    rel = "内 部 退 销 单";
+                    break;
+            }
+            return rel;
+        }
+        public static string getNowDate(string ti="")
+        {
+            DateTime now= DateTime.Now;
+            if (ti!="")
+            {
+                now = DateTime.Parse(ti);
+            }
             return (now.ToString("yyyy-MM-dd"));
         }
-        public static string getNowTime()
+        public static string getNowTime(string ti="")
         {
             DateTime now = DateTime.Now;
+            if (ti != "")
+            {
+                now = DateTime.Parse(ti);
+            }
             return (now.ToString("HH:mm"));
         }
     }

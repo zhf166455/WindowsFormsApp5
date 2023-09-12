@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using FlexCell;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RestSharp.Serializers.Json;
 using System;
@@ -15,21 +16,31 @@ namespace WindowsFormsApp5
 {
     public partial class Form_Ruku : Form
     {
-        public Form_Ruku()
+        public string from_type;
+        public string from_type_long;
+        public string from_type_shot;
+        private bool is_re_done;
+        public Form_Ruku(string from_type)
         {
             InitializeComponent();
+            this.from_type = from_type;
+            from_type_long=Util.getTypeTitle(from_type);
+            from_type_shot = Util.getTypeShot(from_type);
         }
 
         private void Form_Ruku_Load(object sender, EventArgs e)
         {
-            uiComboBox1.SelectedIndex=0;
             init_gridruku();
+            is_re_done = false;
+            uiComboBox2.SelectedIndex = 0;
+            uiComboBox1.SelectedIndex=0;
+            is_re_done = true;
         }
         private void init_gridruku()
         {
             grid_ruku.AutoRedraw = false;
             grid_ruku.Rows = 4;
-            grid_ruku.Range(0, 1, 3, 14).Locked = false;
+            grid_ruku.Locked = false;
             grid_ruku.Range(0,1,3,14).ClearAll();
 
             grid_ruku.Column(0).Width = 10;
@@ -88,30 +99,74 @@ namespace WindowsFormsApp5
             grid_ruku.Cell(3, 7).Text = "0";
             grid_ruku.Cell(3, 8).Text = "0";
             grid_ruku.Cell(3, 9).Text = "0";
-            grid_ruku.Range(3, 1, 3, 14).Locked = true;
+            grid_ruku.Locked = true;
             grid_ruku.AutoRedraw = true;
             grid_ruku.Refresh();
+        }
+        private void CalculateSummary_grid()
+        {
+            int n = grid_ruku.Rows - 2;
+            int sum_n = 0;
+            int sum_num = 0;
+            float sum_price = 0;
+            float sum_sum = 0;
+
+            int ls_zs = 0;
+            float ls_xs = 0;
+            string tx = "";
+            for (int i = 0; i < n; i++)
+            {
+                tx = grid_ruku.Cell(i + 1, 3).Text;
+                if (tx != "")
+                {
+                    sum_n++;
+                    tx = grid_ruku.Cell(i + 1, 7).Text;
+                    ls_zs = Convert.ToInt32(tx);
+                    sum_num += ls_zs;
+                    tx = grid_ruku.Cell(i + 1, 8).Text;
+                    ls_xs = Convert.ToSingle(tx);
+                    sum_price += ls_xs;
+                    tx = grid_ruku.Cell(i + 1, 9).Text;
+                    ls_xs = Convert.ToSingle(tx);
+                    sum_sum += ls_xs;
+                }
+
+            }
+
+            n = grid_ruku.Rows - 1;
+            grid_ruku.Cell(n, 5).Text = "记录数:" + sum_n.ToString();
+            grid_ruku.Cell(n, 7).Text = sum_num.ToString();
+            grid_ruku.Cell(n, 8).Text = sum_price.ToString();
+            grid_ruku.Cell(n, 9).Text = sum_sum.ToString();
         }
 
         private void uiButton_update_Click(object sender, EventArgs e)
         {
-            string rel=Util.httpget("/stock/v2/get?type=CG", Util.G_token);
+            string otp = getcombox_otp();
+            refesh_grid(otp);
+        }
+        private void refesh_grid(string otp)
+        {
+            string pram = "?type=" + from_type_shot+otp;
+            string rel = Util.httpget("/stock/v2/get" + pram, Util.G_token);
             JObject job = (JObject)JsonConvert.DeserializeObject(rel);
 
             // 访问解析后的JSON数据
             int code = ((int)job["code"]);
             string msg = ((string)job["msg"]);
-            if(code == -1)
+            if (code == -1)
             {
                 MessageBox.Show(msg);
             }
             else
             {
                 int n = job["items"].Count();
-                if (n>0)
+                init_gridruku();
+                if (n > 0)
                 {
+                    grid_ruku.Locked = false;
                     grid_ruku.AutoRedraw = false;
-                    grid_ruku.Rows = n + 3;
+                    grid_ruku.InsertRow(2, n - 1);
                     grid_ruku.Column(1).CellType = FlexCell.CellTypeEnum.CheckBox;
                     grid_ruku.Column(2).CellType = FlexCell.CellTypeEnum.CheckBox;
                     for (int i = 0; i < n; i++)
@@ -130,8 +185,8 @@ namespace WindowsFormsApp5
                         string note = (string)(job["items"][i]["note"]);
                         string order_id = (string)(job["items"][i]["order_id"]);
 
-                        grid_ruku.Cell(i + 2, 1).Text = po ? "1" : "0";
-                        grid_ruku.Cell(i + 2, 2).Text = vo ? "1" : "0";
+                        grid_ruku.Cell(i + 2, 1).Text = po ? "true" : "false";
+                        grid_ruku.Cell(i + 2, 2).Text = vo ? "true" : "false";
                         grid_ruku.Cell(i + 2, 3).Text = Util.G_dname;
                         grid_ruku.Cell(i + 2, 4).Text = doc_day;
                         grid_ruku.Cell(i + 2, 5).Text = custom_id;
@@ -145,60 +200,109 @@ namespace WindowsFormsApp5
                         grid_ruku.Cell(i + 2, 13).Text = note;
                         grid_ruku.Cell(i + 2, 14).Text = order_id;
                     }
-                    grid_ruku.Cell(n+2,1).CellType = FlexCell.CellTypeEnum.TextBox;
-                    grid_ruku.Cell(n+2,2).CellType = FlexCell.CellTypeEnum.TextBox;
-                    grid_ruku.Cell(n + 2, 5).Text = "记录数:0";
-                    grid_ruku.Cell(n + 2, 7).Text = "0";
-                    grid_ruku.Cell(n + 2, 8).Text = "0";
-                    grid_ruku.Cell(n + 2, 9).Text = "0";
+                    grid_ruku.Cell(n + 2, 1).CellType = FlexCell.CellTypeEnum.TextBox;
+                    grid_ruku.Cell(n + 2, 2).CellType = FlexCell.CellTypeEnum.TextBox;
+                    CalculateSummary_grid();
 
                     grid_ruku.AutoRedraw = true;
+                    grid_ruku.Locked = true;
                     grid_ruku.Refresh();
 
                 }
-                else
-                {
-                    init_gridruku();
-                }
-                
+
             }
-            
+
         }
 
         private void uiButton3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Util.G_page);
+            MessageBox.Show(from_type);
         }
 
         private void uiButton2_Click(object sender, EventArgs e)
         {
-            string tit="";
-            switch(Util.G_page)
-            {
-                case "采购入库单":
-                    tit = "采 购 入 库 单";
-                    break;
-                case "采购退库单":
-                    tit = "采 购 退 库 单";
-                    break;
-                case "零售出库单":
-                    tit = "零 售 出 库 单";
-                    break;
-                case "零售退库单":
-                    tit = "零 售 退 库 单";
-                    break;
-                case "内部分销单":
-                    tit = "内 部 分 销 单";
-                    break;
-                case "内部退销单":
-                    tit = "内 部 退 销 单";
-                    break;
-            }
-            Form_Danju mainForm = new Form_Danju();
-            mainForm.Text=Util.G_page;
-            mainForm.uiLabel_djtype.Text= tit;
+            ordnewfrom();
+        }
+        public void ordnewfrom()
+        {
+            Form_Danju mainForm = new Form_Danju(this, from_type, "");
             mainForm.ShowDialog();
         }
-       
+        private void uiButton4_Click(object sender, EventArgs e)
+        {
+            update_danju();
+        }
+        private void update_danju()
+        {
+            Cell ac = grid_ruku.ActiveCell;
+            int n = ac.Row;
+            string tx = grid_ruku.Cell(n, 5).Text;
+            if(tx!="")
+            {
+                Form_Danju form_Danju = new Form_Danju(this, from_type, tx);
+                form_Danju.ShowDialog();
+            }
+        }
+
+        private void grid_ruku_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            update_danju();
+        }
+
+        private void uiComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string otp = getcombox_otp();
+            refesh_grid(otp);
+        }
+        private void uiComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(is_re_done)
+            {
+                string otp = getcombox_otp();
+                refesh_grid(otp);
+            }
+        }
+        private string getcombox_otp()
+        {
+            string pram = "";
+            string pram2 = "";
+            int idx = uiComboBox1.SelectedIndex;
+            int idx2 = uiComboBox2.SelectedIndex;
+            switch (idx)
+            {
+                case 0:
+                    pram = "&otime=today";
+                    break;
+                case 1:
+                    pram = "&otime=last7";
+                    break;
+                case 2:
+                    pram = "&otime=last30";
+                    break;
+                case 3:
+                    pram = "&otime=last90";
+                    break;
+            }
+            switch (idx2)
+            {
+                case 0:
+                    pram2 = "&otype=all";
+                    break;
+                case 1:
+                    pram2 = "&otype=wgz";
+                    break;
+                case 2:
+                    pram2 = "&otype=ygz";
+                    break;
+                case 3:
+                    pram2 = "&otype=whx";
+                    break;
+                case 4:
+                    pram2 = "&otype=yhx";
+                    break;
+            }
+            return pram+pram2;
+        }
+
     }
 }

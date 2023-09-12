@@ -36,21 +36,21 @@
             this.uiButton_update = new Sunny.UI.UIButton();
             this.uiComboBox1 = new Sunny.UI.UIComboBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
+            this.uiComboBox2 = new Sunny.UI.UIComboBox();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grid_ruku
             // 
             this.grid_ruku.AllowUserSort = true;
-            this.grid_ruku.BackColorActiveCellSel = System.Drawing.SystemColors.Desktop;
-            this.grid_ruku.BackColorBkg = System.Drawing.Color.Transparent;
-            this.grid_ruku.BackColorScrollBar = System.Drawing.SystemColors.Desktop;
-            this.grid_ruku.BackColorSel = System.Drawing.SystemColors.Desktop;
-            this.grid_ruku.BorderColor = System.Drawing.SystemColors.AppWorkspace;
+            this.grid_ruku.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid_ruku.BackColorBkg = System.Drawing.Color.White;
+            this.grid_ruku.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid_ruku.BorderColor = System.Drawing.Color.Empty;
+            this.grid_ruku.CellBorderColor = System.Drawing.Color.Empty;
             this.grid_ruku.ClearBlankArea = true;
             this.grid_ruku.Cols = 15;
             this.grid_ruku.DefaultFont = new System.Drawing.Font("宋体", 9F);
-            this.grid_ruku.DisplayClientBorder = false;
             this.grid_ruku.DisplayFocusRect = false;
             this.grid_ruku.DisplayRowArrow = true;
             this.grid_ruku.EnterKeyMoveTo = FlexCell.MoveToEnum.NextRow;
@@ -60,14 +60,17 @@
             this.grid_ruku.MultiSelect = false;
             this.grid_ruku.Name = "grid_ruku";
             this.grid_ruku.Rows = 4;
+            this.grid_ruku.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_ruku.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid_ruku.Size = new System.Drawing.Size(1900, 858);
             this.grid_ruku.SortIndicatorColor = System.Drawing.Color.Green;
             this.grid_ruku.TabIndex = 3;
             this.grid_ruku.TopRow = 2;
+            this.grid_ruku.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid_ruku_MouseDoubleClick);
             // 
             // uiPanel1
             // 
+            this.uiPanel1.Controls.Add(this.uiComboBox2);
             this.uiPanel1.Controls.Add(this.uiButton4);
             this.uiPanel1.Controls.Add(this.uiButton3);
             this.uiPanel1.Controls.Add(this.uiButton2);
@@ -88,19 +91,20 @@
             // 
             this.uiButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton4.Location = new System.Drawing.Point(519, 15);
+            this.uiButton4.Location = new System.Drawing.Point(553, 15);
             this.uiButton4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton4.Name = "uiButton4";
             this.uiButton4.Size = new System.Drawing.Size(61, 19);
             this.uiButton4.TabIndex = 14;
             this.uiButton4.Text = "修改";
             this.uiButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton4.Click += new System.EventHandler(this.uiButton4_Click);
             // 
             // uiButton3
             // 
             this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.Location = new System.Drawing.Point(434, 15);
+            this.uiButton3.Location = new System.Drawing.Point(468, 15);
             this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton3.Name = "uiButton3";
             this.uiButton3.Size = new System.Drawing.Size(61, 19);
@@ -113,7 +117,7 @@
             // 
             this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton2.Location = new System.Drawing.Point(350, 15);
+            this.uiButton2.Location = new System.Drawing.Point(384, 15);
             this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton2.Name = "uiButton2";
             this.uiButton2.Size = new System.Drawing.Size(61, 19);
@@ -126,7 +130,7 @@
             // 
             this.uiButton_update.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_update.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton_update.Location = new System.Drawing.Point(265, 14);
+            this.uiButton_update.Location = new System.Drawing.Point(299, 14);
             this.uiButton_update.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_update.Name = "uiButton_update";
             this.uiButton_update.Size = new System.Drawing.Size(61, 19);
@@ -141,23 +145,20 @@
             this.uiComboBox1.FillColor = System.Drawing.Color.White;
             this.uiComboBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiComboBox1.Items.AddRange(new object[] {
-            "今日单据",
-            "未过账",
-            "已过帐",
-            "未核销",
-            "已核销",
+            "今日",
             "近7日",
             "近30日",
-            "全部"});
+            "近90日"});
             this.uiComboBox1.Location = new System.Drawing.Point(94, 11);
             this.uiComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboBox1.Name = "uiComboBox1";
             this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(136, 22);
+            this.uiComboBox1.Size = new System.Drawing.Size(83, 22);
             this.uiComboBox1.TabIndex = 10;
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboBox1.Watermark = "";
+            this.uiComboBox1.SelectedIndexChanged += new System.EventHandler(this.uiComboBox1_SelectedIndexChanged);
             // 
             // uiLabel1
             // 
@@ -169,6 +170,28 @@
             this.uiLabel1.TabIndex = 9;
             this.uiLabel1.Text = "显示选项";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiComboBox2
+            // 
+            this.uiComboBox2.DataSource = null;
+            this.uiComboBox2.FillColor = System.Drawing.Color.White;
+            this.uiComboBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiComboBox2.Items.AddRange(new object[] {
+            "全部",
+            "未过账",
+            "已过帐",
+            "未核销",
+            "已核销"});
+            this.uiComboBox2.Location = new System.Drawing.Point(194, 11);
+            this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboBox2.Name = "uiComboBox2";
+            this.uiComboBox2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiComboBox2.Size = new System.Drawing.Size(83, 22);
+            this.uiComboBox2.TabIndex = 15;
+            this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox2.Watermark = "";
+            this.uiComboBox2.SelectedIndexChanged += new System.EventHandler(this.uiComboBox2_SelectedIndexChanged);
             // 
             // Form_Ruku
             // 
@@ -189,13 +212,14 @@
         }
 
         #endregion
-        private FlexCell.Grid grid_ruku;
-        private Sunny.UI.UIPanel uiPanel1;
-        private Sunny.UI.UIButton uiButton4;
-        private Sunny.UI.UIButton uiButton3;
-        private Sunny.UI.UIButton uiButton2;
-        private Sunny.UI.UIButton uiButton_update;
-        private Sunny.UI.UIComboBox uiComboBox1;
-        private Sunny.UI.UILabel uiLabel1;
+        public FlexCell.Grid grid_ruku;
+        public Sunny.UI.UIPanel uiPanel1;
+        public Sunny.UI.UIButton uiButton4;
+        public Sunny.UI.UIButton uiButton3;
+        public Sunny.UI.UIButton uiButton2;
+        public Sunny.UI.UIButton uiButton_update;
+        public Sunny.UI.UIComboBox uiComboBox1;
+        public Sunny.UI.UILabel uiLabel1;
+        public Sunny.UI.UIComboBox uiComboBox2;
     }
 }

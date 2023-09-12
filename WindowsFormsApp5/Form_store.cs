@@ -27,13 +27,15 @@ namespace WindowsFormsApp5
             uiDatePicker_s.Value = now;
             uiDatePicker_e.Value = now;
             init_grid();
+            getstorecla();
+
         }
         private void init_grid()
         {
             grid_store.AutoRedraw = false;
             grid_store.Rows = 3;
-            grid_store.Range(0, 1, 2, 8).Locked = false;
-            grid_store.Range(0, 1, 2, 8).ClearAll();
+            grid_store.Locked = false;
+            grid_store.Range(2, 0, 2, 8).ClearAll();
 
             grid_store.Column(0).Width = 10;
             grid_store.Column(1).Width = 220;
@@ -54,15 +56,14 @@ namespace WindowsFormsApp5
             grid_store.Cell(0, 7).Text = "库存";
             grid_store.Cell(0, 8).Text = "销量";
 
-            grid_store.Range(0, 1, 2, 8).Locked = true;
+            grid_store.Locked = true;
             grid_store.AutoRedraw = true;
             grid_store.Refresh();
         }
-
-        private void uiButton1_Click(object sender, EventArgs e)
+        private void getstorecla()
         {
             string rel;
-            if(uiRadioButton_spc.Checked)
+            if (uiRadioButton_spc.Checked)
             {
                 rel = Util.httpget("/special/num", Util.G_token);
             }
@@ -89,17 +90,16 @@ namespace WindowsFormsApp5
                     grid_store.AutoRedraw = false;
 
                     grid_store.InsertRow(1, n - 1);
-                    grid_store.AutoRedraw = false;
-                    for (int i = 0;i<n;i++)
+                    for (int i = 0; i < n; i++)
                     {
                         string cid = job["items"][i]["custom_id"].ToString();
                         string cla = job["items"][i]["class"].ToString();
                         string color = job["items"][i]["color"].ToString();
                         string pro_code = job["items"][i]["pro_code"].ToString();
                         int snum = (int)job["items"][i]["num"];
+                        int num = (int)job["items"][i]["sell"];
                         string pro_name = job["items"][i]["pro_name"].ToString();
                         string pro_oname = (string)job["items"][i]["pro_oname"];
-                        int num = 999;
 
                         grid_store.Cell(i + 1, 1).Text = cid;
                         grid_store.Cell(i + 1, 2).Text = cla;
@@ -114,9 +114,13 @@ namespace WindowsFormsApp5
 
                     grid_store.Locked = true;
                     grid_store.AutoRedraw = true;
-                    grid_store.Refresh ();
+                    grid_store.Refresh();
                 }
             }
+        }
+        private void uiButton1_Click(object sender, EventArgs e)
+        {
+            getstorecla();
         }
     }
 }

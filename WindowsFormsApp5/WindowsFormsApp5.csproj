@@ -13,7 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>D:\hf\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -23,9 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -49,6 +50,18 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Alrong.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>46F3C5DCD03DDF11F326BCBAB8DA439F7E141F78</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WindowsFormsApp5_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FlexCell, Version=4.5.6.0, Culture=neutral, PublicKeyToken=6f86587eb70ee309, processorArchitecture=MSIL">
@@ -187,6 +200,12 @@
     <Compile Include="Form_Danju.Designer.cs">
       <DependentUpon>Form_Danju.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Inputprice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Inputprice.Designer.cs">
+      <DependentUpon>Form_Inputprice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +329,9 @@
     <EmbeddedResource Include="Form_Danju.resx">
       <DependentUpon>Form_Danju.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Inputprice.resx">
+      <DependentUpon>Form_Inputprice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_login.resx">
       <DependentUpon>Form_login.cs</DependentUpon>
     </EmbeddedResource>
@@ -372,6 +394,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="WindowsFormsApp5_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -438,6 +461,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Alrong.ico" />
+    <None Include="Resources\QQ图片20230908164912_41.jpg" />
+    <None Include="Resources\QQ图片20230908164912_39.jpg" />
+    <None Include="Resources\QQ图片20230908164912_13.jpg" />
+    <None Include="Resources\QQ图片20230908164901_25.jpg" />
+    <None Include="Resources\QQ图片20230908164912_11.jpg" />
+    <None Include="Resources\QQ图片20230908164838_15.jpg" />
+    <None Include="Resources\QQ图片20230908164838_13.jpg" />
+    <None Include="Resources\QQ图片20230908164838_11.jpg" />
+    <None Include="Resources\QQ图片20230908164912_25.jpg" />
+    <None Include="Resources\QQ图片20230908164912_23.jpg" />
+    <None Include="Resources\QQ图片20230908164908_05.jpg" />
+    <None Include="Resources\icon_071.jpg" />
+    <None Include="Resources\icon_091.jpg" />
+    <None Include="Resources\icon_321.jpg" />
+    <None Include="Resources\icon_251.jpg" />
+    <None Include="Resources\icon_171.jpg" />
+    <None Include="Resources\icon_231.jpg" />
+    <None Include="Resources\icon_151.jpg" />
     <None Include="Resources\零售业.png" />
     <None Include="Resources\分销系统.png" />
     <None Include="Resources\仓库管理1.png" />

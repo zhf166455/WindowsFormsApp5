@@ -203,6 +203,7 @@
             this.grid_store.MultiSelect = false;
             this.grid_store.Name = "grid_store";
             this.grid_store.Rows = 3;
+            this.grid_store.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_store.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid_store.Size = new System.Drawing.Size(1888, 831);
             this.grid_store.TabIndex = 1;

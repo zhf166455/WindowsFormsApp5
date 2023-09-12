@@ -69,6 +69,7 @@
             this.uiButton2.TabIndex = 2;
             this.uiButton2.Text = "新建";
             this.uiButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
             // 
             // uiButton3
             // 
@@ -105,7 +106,9 @@
             this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.grid1);
             this.Name = "Form_PayType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_PayType";
+            this.Load += new System.EventHandler(this.Form_PayType_Load);
             this.ResumeLayout(false);
 
         }

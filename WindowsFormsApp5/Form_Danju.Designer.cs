@@ -164,6 +164,7 @@
             this.uiButton_xd.TabIndex = 3;
             this.uiButton_xd.Text = "新单";
             this.uiButton_xd.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton_xd.Click += new System.EventHandler(this.uiButton_xd_Click);
             // 
             // uiButton_gz
             // 
@@ -187,6 +188,7 @@
             this.uiButton_gz.TabIndex = 4;
             this.uiButton_gz.Text = "过账";
             this.uiButton_gz.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton_gz.Click += new System.EventHandler(this.uiButton_gz_Click);
             // 
             // uiButton_otp
             // 
@@ -512,6 +514,7 @@
             this.uiTextBox_note.TabIndex = 2;
             this.uiTextBox_note.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTextBox_note.Watermark = "";
+            this.uiTextBox_note.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uiTextBox_note_KeyPress);
             // 
             // uiLabel2
             // 
@@ -529,6 +532,7 @@
             // 
             this.uiLabel_djtype.BackColor = System.Drawing.Color.Transparent;
             this.uiLabel_djtype.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiLabel_djtype.ForeColor = System.Drawing.Color.Blue;
             this.uiLabel_djtype.Location = new System.Drawing.Point(6, -9);
             this.uiLabel_djtype.Name = "uiLabel_djtype";
             this.uiLabel_djtype.Size = new System.Drawing.Size(221, 71);
@@ -682,8 +686,9 @@
             // 
             // grid_danju
             // 
-            this.grid_danju.BackColorActiveCellSel = System.Drawing.SystemColors.Highlight;
+            this.grid_danju.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid_danju.BackColorBkg = System.Drawing.Color.White;
+            this.grid_danju.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid_danju.BorderColor = System.Drawing.Color.Silver;
             this.grid_danju.CellBorderColorFixed = System.Drawing.SystemColors.ActiveBorder;
             this.grid_danju.ClearBlankArea = true;
@@ -696,6 +701,7 @@
             this.grid_danju.MultiSelect = false;
             this.grid_danju.Name = "grid_danju";
             this.grid_danju.Rows = 3;
+            this.grid_danju.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_danju.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid_danju.Size = new System.Drawing.Size(1242, 436);
             this.grid_danju.TabIndex = 10;

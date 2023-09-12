@@ -90,6 +90,7 @@
             this.grid1.MultiSelect = false;
             this.grid1.Name = "grid1";
             this.grid1.Rows = 2;
+            this.grid1.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid1.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid1.Size = new System.Drawing.Size(1011, 524);
             this.grid1.TabIndex = 3;

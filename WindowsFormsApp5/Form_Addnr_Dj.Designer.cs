@@ -91,6 +91,7 @@
             this.uiTextBox_cid.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTextBox_cid.Watermark = "";
             this.uiTextBox_cid.ButtonClick += new System.EventHandler(this.uiTextBox_cid_ButtonClick);
+            this.uiTextBox_cid.TextChanged += new System.EventHandler(this.uiTextBox_cid_TextChanged);
             // 
             // uiTextBox_class
             // 

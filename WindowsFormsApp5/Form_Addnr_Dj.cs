@@ -41,6 +41,12 @@ namespace WindowsFormsApp5
         private void uiSymbolButton_ok_Click(object sender, EventArgs e)
         {
             pfrom.add_grid_new("普通", uiTextBox_cid.Text, uiTextBox_name.Text, uiTextBox_color.Text, "", "",uiTextBox_num.Text.ToInt(), uiTextBox_price.Text.ToFloat(), uiTextBox_price.Text.ToFloat(), "", uiTextBox_class.Text, "");
+            this.Close();
+        }
+
+        private void uiTextBox_cid_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

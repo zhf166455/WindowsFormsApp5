@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("手机");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("笔记本");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("电视");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("空调");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("全部串码商品", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("刷新");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("新建");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("删除");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("修改");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("手机");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("笔记本");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("电视");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("空调");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("全部串码商品", new System.Windows.Forms.TreeNode[] {
+            treeNode19,
+            treeNode20,
+            treeNode21,
+            treeNode22});
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("刷新");
+            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("新建");
+            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("删除");
+            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("修改");
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
@@ -162,6 +162,7 @@
             this.uiButton2.TabIndex = 1;
             this.uiButton2.Text = "刷新";
             this.uiButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
             // 
             // uiButton1
             // 
@@ -184,21 +185,21 @@
             this.uiTreeView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTreeView1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTreeView1.Name = "uiTreeView1";
-            treeNode1.Name = "节点1";
-            treeNode1.Text = "手机";
-            treeNode2.Name = "节点3";
-            treeNode2.Text = "笔记本";
-            treeNode3.Name = "节点4";
-            treeNode3.Text = "电视";
-            treeNode4.Name = "节点5";
-            treeNode4.Text = "空调";
-            treeNode5.Name = "节点0";
-            treeNode5.Text = "全部串码商品";
+            treeNode19.Name = "节点1";
+            treeNode19.Text = "手机";
+            treeNode20.Name = "节点3";
+            treeNode20.Text = "笔记本";
+            treeNode21.Name = "节点4";
+            treeNode21.Text = "电视";
+            treeNode22.Name = "节点5";
+            treeNode22.Text = "空调";
+            treeNode23.Name = "节点0";
+            treeNode23.Text = "全部串码商品";
             this.uiTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            treeNode23});
             this.uiTreeView1.ShowLines = true;
             this.uiTreeView1.ShowText = false;
-            this.uiTreeView1.Size = new System.Drawing.Size(236, 830);
+            this.uiTreeView1.Size = new System.Drawing.Size(236, 809);
             this.uiTreeView1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTreeView1.TabIndex = 1;
             this.uiTreeView1.Text = "uiTreeView1";
@@ -219,8 +220,9 @@
             this.grid_pro.MultiSelect = false;
             this.grid_pro.Name = "grid_pro";
             this.grid_pro.Rows = 2;
+            this.grid_pro.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_pro.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
-            this.grid_pro.Size = new System.Drawing.Size(1645, 831);
+            this.grid_pro.Size = new System.Drawing.Size(1645, 810);
             this.grid_pro.TabIndex = 2;
             // 
             // uiNavMenu1
@@ -235,19 +237,19 @@
             this.uiNavMenu1.Location = new System.Drawing.Point(140, 30);
             this.uiNavMenu1.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             this.uiNavMenu1.Name = "uiNavMenu1";
-            treeNode6.Name = "节点0";
-            treeNode6.Text = "刷新";
-            treeNode7.Name = "节点1";
-            treeNode7.Text = "新建";
-            treeNode8.Name = "节点2";
-            treeNode8.Text = "删除";
-            treeNode9.Name = "节点3";
-            treeNode9.Text = "修改";
+            treeNode24.Name = "节点0";
+            treeNode24.Text = "刷新";
+            treeNode25.Name = "节点1";
+            treeNode25.Text = "新建";
+            treeNode26.Name = "节点2";
+            treeNode26.Text = "删除";
+            treeNode27.Name = "节点3";
+            treeNode27.Text = "修改";
             this.uiNavMenu1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9});
+            treeNode24,
+            treeNode25,
+            treeNode26,
+            treeNode27});
             this.uiNavMenu1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiNavMenu1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiNavMenu1.ScrollBarPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));

@@ -87,11 +87,13 @@
             this.uiTextBox_cid.Name = "uiTextBox_cid";
             this.uiTextBox_cid.Padding = new System.Windows.Forms.Padding(5);
             this.uiTextBox_cid.Radius = 0;
+            this.uiTextBox_cid.ShowButton = true;
             this.uiTextBox_cid.ShowText = false;
             this.uiTextBox_cid.Size = new System.Drawing.Size(220, 27);
             this.uiTextBox_cid.TabIndex = 3;
             this.uiTextBox_cid.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTextBox_cid.Watermark = "";
+            this.uiTextBox_cid.ButtonClick += new System.EventHandler(this.uiTextBox_cid_ButtonClick);
             // 
             // uiLabel8
             // 
