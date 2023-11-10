@@ -1,10 +1,13 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,14 +16,96 @@ namespace WindowsFormsApp5
 {
     public partial class Form_Addsp : Form
     {
-        public Form_Addsp()
+        private string pro_code;
+        private string from_type;
+        public Form_Addsp(string from_type, string pro_code)
         {
             InitializeComponent();
+            this.pro_code = pro_code;
+            this.from_type = from_type;
         }
 
         private void Form_Addsp_Load(object sender, EventArgs e)
         {
             init_grid();
+            if (pro_code !="")
+            {
+                string rel = "";
+                string pram = "";
+                if (from_type=="串码")
+                {
+                    this.Text = "串码商品详细--修改";
+                    pram = "?id=" + pro_code;
+                    rel = Util.httpget("/special/get" + pram, Util.G_token);
+                }
+                else
+                {
+                    this.Text = "普通商品详细--修改";
+                    pram = "?id=" + pro_code;
+                    rel = Util.httpget("/normal/get" + pram, Util.G_token);
+                }
+                
+
+                JObject job = (JObject)JsonConvert.DeserializeObject(rel);
+
+                int code = ((int)job["code"]);
+                string msg = ((string)job["msg"]);
+
+                if (code == -1)
+                {
+                    MessageBox.Show(msg);
+                }
+                else
+                {
+                    string classname = (string)job["classname"];
+                    string class_id = (string)job["class_id"];
+                    string custom_id = (string)job["custom_id"];
+                    string name = (string)job["name"];
+                    string oname = (string)job["oname"];
+                    int bit = (int)job["bit"];
+                    int mbit = (int)job["mbit"];
+                    string org = (string)job["org"];
+                    string keyword = (string)job["keyword"];
+                    bool check = (bool)job["check"];
+
+                    uiTextBox_bit.Text=bit.ToString();
+                    uiTextBox_cid.Text = custom_id;
+                    uiTextBox_class.Text = classname;
+                    uiTextBox_name.Text = name;
+                    uiTextBox_keyword.Text = keyword;
+                    uiTextBox_mbit.Text = mbit.ToString();
+                    uiTextBox_org.Text = org;
+                    uiCheckBox_check.Checked = check;
+                    uiTextBox_oname.Text = oname;
+                    uiLabel_cid.Text = class_id;
+
+                    int n = job["items"].Count();
+                    grid1.Locked = false;
+                    grid1.AutoRedraw = false;
+                    grid1.InsertRow(1, n - 1);
+
+                    for(int i = 0; i < n; i++)
+                    {
+                        string itnid= (string)job["items"][i]["nid"];
+                        string itname = (string)job["items"][i]["name"];
+                        string itcode = (string)job["items"][i]["code"];
+                        bool itstate = (bool)job["items"][i]["state"];
+                        string itimg = (string)job["items"][i]["img"];
+
+                        grid1.Cell(i + 1, 1).Text = itnid;
+                        grid1.Cell(i + 1, 2).Text = itname;
+                        grid1.Cell(i + 1, 3).Text = itcode;
+                        grid1.Cell(i + 1, 4).Text = itstate?"真":"假";
+                        grid1.Cell(i + 1, 5).Text = itimg;
+                    }
+
+                    grid1.Locked = true;
+                    grid1.AutoRedraw = true;
+                    grid1.Refresh();
+                }
+
+
+            }
         }
         private void init_grid()
         {
@@ -78,8 +163,32 @@ namespace WindowsFormsApp5
             job["colors"] = jArray;
 
             string body = job.ToString();
-            string rel = Util.httppost("/special/add", ref body, Util.G_token);
-            MessageBox.Show(rel);
+            string rel = "";
+            if (from_type == "串码")
+            {
+                rel=Util.httppost("/special/add", ref body, Util.G_token);
+            }
+            else
+            {
+                rel = Util.httppost("/normal/add", ref body, Util.G_token);
+            }
+
+            JObject rjob = (JObject)JsonConvert.DeserializeObject(rel);
+
+            int code = ((int)rjob["code"]);
+            string msg = ((string)rjob["msg"]);
+
+            if (code == -1)
+            {
+                MessageBox.Show(msg);
+            }
+            else
+            {
+                string cid = ((string)rjob["custom_id"]);
+                uiTextBox_cid.Text= cid;
+                uiButton_save.Enabled = false;
+                MessageBox.Show("新建成功");
+            }
         }
 
         private void uiButton3_Click(object sender, EventArgs e)

@@ -168,6 +168,7 @@
             // 
             // uiButton_gz
             // 
+            this.uiButton_gz.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_gz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_gz.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.uiButton_gz.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -176,7 +177,7 @@
             this.uiButton_gz.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.uiButton_gz.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_gz.LightStyle = true;
-            this.uiButton_gz.Location = new System.Drawing.Point(862, 12);
+            this.uiButton_gz.Location = new System.Drawing.Point(840, 8);
             this.uiButton_gz.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_gz.Name = "uiButton_gz";
             this.uiButton_gz.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -192,6 +193,7 @@
             // 
             // uiButton_otp
             // 
+            this.uiButton_otp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_otp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_otp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.uiButton_otp.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -200,7 +202,7 @@
             this.uiButton_otp.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.uiButton_otp.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_otp.LightStyle = true;
-            this.uiButton_otp.Location = new System.Drawing.Point(933, 12);
+            this.uiButton_otp.Location = new System.Drawing.Point(912, 9);
             this.uiButton_otp.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_otp.Name = "uiButton_otp";
             this.uiButton_otp.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -215,6 +217,7 @@
             // 
             // uiButton_dy
             // 
+            this.uiButton_dy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_dy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_dy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.uiButton_dy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -223,7 +226,7 @@
             this.uiButton_dy.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.uiButton_dy.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_dy.LightStyle = true;
-            this.uiButton_dy.Location = new System.Drawing.Point(1023, 12);
+            this.uiButton_dy.Location = new System.Drawing.Point(1006, 9);
             this.uiButton_dy.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_dy.Name = "uiButton_dy";
             this.uiButton_dy.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -238,6 +241,7 @@
             // 
             // uiButton_ndy
             // 
+            this.uiButton_ndy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_ndy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_ndy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.uiButton_ndy.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -246,7 +250,7 @@
             this.uiButton_ndy.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.uiButton_ndy.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_ndy.LightStyle = true;
-            this.uiButton_ndy.Location = new System.Drawing.Point(1092, 12);
+            this.uiButton_ndy.Location = new System.Drawing.Point(1078, 9);
             this.uiButton_ndy.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_ndy.Name = "uiButton_ndy";
             this.uiButton_ndy.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -261,6 +265,7 @@
             // 
             // uiButton_exit
             // 
+            this.uiButton_exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_exit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.uiButton_exit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -269,7 +274,7 @@
             this.uiButton_exit.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(152)))), ((int)(((byte)(138)))));
             this.uiButton_exit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_exit.LightStyle = true;
-            this.uiButton_exit.Location = new System.Drawing.Point(1183, 12);
+            this.uiButton_exit.Location = new System.Drawing.Point(1173, 9);
             this.uiButton_exit.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_exit.Name = "uiButton_exit";
             this.uiButton_exit.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
@@ -285,6 +290,8 @@
             // 
             // uiPanel1
             // 
+            this.uiPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel1.Controls.Add(this.uiPanel_trans);
             this.uiPanel1.Controls.Add(this.uiPanel_client);
             this.uiPanel1.Controls.Add(this.uiPanel_order);
@@ -309,7 +316,7 @@
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.RectColor = System.Drawing.Color.White;
-            this.uiPanel1.Size = new System.Drawing.Size(1242, 148);
+            this.uiPanel1.Size = new System.Drawing.Size(1240, 152);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel1.TabIndex = 9;
             this.uiPanel1.Text = null;
@@ -318,8 +325,9 @@
             // 
             // uiPanel_trans
             // 
+            this.uiPanel_trans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel_trans.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel_trans.Location = new System.Drawing.Point(1111, 87);
+            this.uiPanel_trans.Location = new System.Drawing.Point(1109, 87);
             this.uiPanel_trans.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel_trans.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel_trans.Name = "uiPanel_trans";
@@ -332,9 +340,10 @@
             // 
             // uiPanel_client
             // 
+            this.uiPanel_client.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel_client.Controls.Add(this.uiLabel7);
             this.uiPanel_client.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel_client.Location = new System.Drawing.Point(853, 87);
+            this.uiPanel_client.Location = new System.Drawing.Point(851, 87);
             this.uiPanel_client.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel_client.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel_client.Name = "uiPanel_client";
@@ -360,8 +369,9 @@
             // 
             // uiPanel_order
             // 
+            this.uiPanel_order.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel_order.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel_order.Location = new System.Drawing.Point(684, 87);
+            this.uiPanel_order.Location = new System.Drawing.Point(682, 87);
             this.uiPanel_order.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel_order.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel_order.Name = "uiPanel_order";
@@ -374,8 +384,9 @@
             // 
             // uiPanel13
             // 
+            this.uiPanel13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel13.Location = new System.Drawing.Point(1111, 63);
+            this.uiPanel13.Location = new System.Drawing.Point(1109, 63);
             this.uiPanel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel13.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel13.Name = "uiPanel13";
@@ -388,8 +399,9 @@
             // 
             // uiPanel14
             // 
+            this.uiPanel14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel14.Location = new System.Drawing.Point(853, 63);
+            this.uiPanel14.Location = new System.Drawing.Point(851, 63);
             this.uiPanel14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel14.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel14.Name = "uiPanel14";
@@ -402,8 +414,9 @@
             // 
             // uiPanel15
             // 
+            this.uiPanel15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel15.Location = new System.Drawing.Point(684, 63);
+            this.uiPanel15.Location = new System.Drawing.Point(682, 63);
             this.uiPanel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel15.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel15.Name = "uiPanel15";
@@ -416,8 +429,9 @@
             // 
             // uiPanel_djday
             // 
+            this.uiPanel_djday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel_djday.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel_djday.Location = new System.Drawing.Point(1111, 33);
+            this.uiPanel_djday.Location = new System.Drawing.Point(1109, 33);
             this.uiPanel_djday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel_djday.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel_djday.Name = "uiPanel_djday";
@@ -430,8 +444,9 @@
             // 
             // uiPanel_djid
             // 
+            this.uiPanel_djid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel_djid.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel_djid.Location = new System.Drawing.Point(939, 33);
+            this.uiPanel_djid.Location = new System.Drawing.Point(937, 33);
             this.uiPanel_djid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel_djid.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel_djid.Name = "uiPanel_djid";
@@ -444,8 +459,9 @@
             // 
             // uiPanel_der
             // 
+            this.uiPanel_der.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel_der.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel_der.Location = new System.Drawing.Point(837, 33);
+            this.uiPanel_der.Location = new System.Drawing.Point(835, 33);
             this.uiPanel_der.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel_der.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel_der.Name = "uiPanel_der";
@@ -458,8 +474,9 @@
             // 
             // uiPanel4
             // 
+            this.uiPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel4.Location = new System.Drawing.Point(1111, 9);
+            this.uiPanel4.Location = new System.Drawing.Point(1109, 9);
             this.uiPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel4.Name = "uiPanel4";
@@ -472,8 +489,9 @@
             // 
             // uiPanel3
             // 
+            this.uiPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel3.Location = new System.Drawing.Point(939, 9);
+            this.uiPanel3.Location = new System.Drawing.Point(937, 9);
             this.uiPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
@@ -486,8 +504,9 @@
             // 
             // uiPanel2
             // 
+            this.uiPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uiPanel2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel2.Location = new System.Drawing.Point(837, 9);
+            this.uiPanel2.Location = new System.Drawing.Point(835, 9);
             this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel2.Name = "uiPanel2";
@@ -500,6 +519,8 @@
             // 
             // uiTextBox_note
             // 
+            this.uiTextBox_note.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiTextBox_note.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox_note.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTextBox_note.Location = new System.Drawing.Point(53, 119);
@@ -509,7 +530,7 @@
             this.uiTextBox_note.Padding = new System.Windows.Forms.Padding(5);
             this.uiTextBox_note.Radius = 0;
             this.uiTextBox_note.ShowText = false;
-            this.uiTextBox_note.Size = new System.Drawing.Size(1180, 24);
+            this.uiTextBox_note.Size = new System.Drawing.Size(1178, 24);
             this.uiTextBox_note.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBox_note.TabIndex = 2;
             this.uiTextBox_note.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -543,8 +564,9 @@
             // 
             // uiLabel3
             // 
+            this.uiLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel3.Location = new System.Drawing.Point(9, 643);
+            this.uiLabel3.Location = new System.Drawing.Point(6, 664);
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(80, 28);
             this.uiLabel3.TabIndex = 11;
@@ -553,8 +575,9 @@
             // 
             // uiLabel4
             // 
+            this.uiLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel4.Location = new System.Drawing.Point(8, 684);
+            this.uiLabel4.Location = new System.Drawing.Point(5, 697);
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(94, 28);
             this.uiLabel4.TabIndex = 12;
@@ -563,8 +586,9 @@
             // 
             // uiLabel5
             // 
+            this.uiLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(248, 684);
+            this.uiLabel5.Location = new System.Drawing.Point(264, 697);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(94, 28);
             this.uiLabel5.TabIndex = 14;
@@ -573,8 +597,9 @@
             // 
             // uiLabel6
             // 
+            this.uiLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel6.Location = new System.Drawing.Point(249, 643);
+            this.uiLabel6.Location = new System.Drawing.Point(265, 664);
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(80, 28);
             this.uiLabel6.TabIndex = 13;
@@ -583,10 +608,11 @@
             // 
             // uiButton_bxm_add
             // 
+            this.uiButton_bxm_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_bxm_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_bxm_add.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_bxm_add.LightStyle = true;
-            this.uiButton_bxm_add.Location = new System.Drawing.Point(602, 659);
+            this.uiButton_bxm_add.Location = new System.Drawing.Point(632, 675);
             this.uiButton_bxm_add.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_bxm_add.Name = "uiButton_bxm_add";
             this.uiButton_bxm_add.Size = new System.Drawing.Size(111, 41);
@@ -596,10 +622,11 @@
             // 
             // uiButton_bsp_add
             // 
+            this.uiButton_bsp_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_bsp_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_bsp_add.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_bsp_add.LightStyle = true;
-            this.uiButton_bsp_add.Location = new System.Drawing.Point(732, 659);
+            this.uiButton_bsp_add.Location = new System.Drawing.Point(757, 675);
             this.uiButton_bsp_add.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_bsp_add.Name = "uiButton_bsp_add";
             this.uiButton_bsp_add.Size = new System.Drawing.Size(111, 41);
@@ -610,10 +637,11 @@
             // 
             // uiButton_bnr_add
             // 
+            this.uiButton_bnr_add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_bnr_add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_bnr_add.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_bnr_add.LightStyle = true;
-            this.uiButton_bnr_add.Location = new System.Drawing.Point(862, 659);
+            this.uiButton_bnr_add.Location = new System.Drawing.Point(881, 675);
             this.uiButton_bnr_add.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_bnr_add.Name = "uiButton_bnr_add";
             this.uiButton_bnr_add.Size = new System.Drawing.Size(111, 41);
@@ -624,10 +652,11 @@
             // 
             // uiButton_bmod
             // 
+            this.uiButton_bmod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_bmod.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_bmod.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_bmod.LightStyle = true;
-            this.uiButton_bmod.Location = new System.Drawing.Point(1123, 659);
+            this.uiButton_bmod.Location = new System.Drawing.Point(1126, 675);
             this.uiButton_bmod.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_bmod.Name = "uiButton_bmod";
             this.uiButton_bmod.Size = new System.Drawing.Size(111, 41);
@@ -637,10 +666,11 @@
             // 
             // uiButton_bdel
             // 
+            this.uiButton_bdel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.uiButton_bdel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton_bdel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiButton_bdel.LightStyle = true;
-            this.uiButton_bdel.Location = new System.Drawing.Point(993, 659);
+            this.uiButton_bdel.Location = new System.Drawing.Point(1002, 675);
             this.uiButton_bdel.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton_bdel.Name = "uiButton_bdel";
             this.uiButton_bdel.Size = new System.Drawing.Size(111, 41);
@@ -650,8 +680,9 @@
             // 
             // uiLabel_bzdr
             // 
+            this.uiLabel_bzdr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLabel_bzdr.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel_bzdr.Location = new System.Drawing.Point(80, 646);
+            this.uiLabel_bzdr.Location = new System.Drawing.Point(87, 667);
             this.uiLabel_bzdr.Name = "uiLabel_bzdr";
             this.uiLabel_bzdr.Size = new System.Drawing.Size(162, 24);
             this.uiLabel_bzdr.TabIndex = 20;
@@ -659,8 +690,9 @@
             // 
             // uiLabel_bgzr
             // 
+            this.uiLabel_bgzr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLabel_bgzr.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel_bgzr.Location = new System.Drawing.Point(335, 646);
+            this.uiLabel_bgzr.Location = new System.Drawing.Point(334, 667);
             this.uiLabel_bgzr.Name = "uiLabel_bgzr";
             this.uiLabel_bgzr.Size = new System.Drawing.Size(162, 24);
             this.uiLabel_bgzr.TabIndex = 21;
@@ -668,8 +700,9 @@
             // 
             // uiLabel_bzdt
             // 
+            this.uiLabel_bzdt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLabel_bzdt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel_bzdt.Location = new System.Drawing.Point(87, 688);
+            this.uiLabel_bzdt.Location = new System.Drawing.Point(93, 700);
             this.uiLabel_bzdt.Name = "uiLabel_bzdt";
             this.uiLabel_bzdt.Size = new System.Drawing.Size(162, 24);
             this.uiLabel_bzdt.TabIndex = 22;
@@ -677,8 +710,9 @@
             // 
             // uiLabel_gzt
             // 
+            this.uiLabel_gzt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLabel_gzt.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel_gzt.Location = new System.Drawing.Point(335, 688);
+            this.uiLabel_gzt.Location = new System.Drawing.Point(334, 700);
             this.uiLabel_gzt.Name = "uiLabel_gzt";
             this.uiLabel_gzt.Size = new System.Drawing.Size(162, 24);
             this.uiLabel_gzt.TabIndex = 23;
@@ -686,9 +720,13 @@
             // 
             // grid_danju
             // 
-            this.grid_danju.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid_danju.AllowUserResizing = FlexCell.ResizeEnum.Columns;
+            this.grid_danju.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid_danju.BackColorActiveCellSel = System.Drawing.Color.Blue;
             this.grid_danju.BackColorBkg = System.Drawing.Color.White;
-            this.grid_danju.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid_danju.BackColorSel = System.Drawing.Color.Blue;
             this.grid_danju.BorderColor = System.Drawing.Color.Silver;
             this.grid_danju.CellBorderColorFixed = System.Drawing.SystemColors.ActiveBorder;
             this.grid_danju.ClearBlankArea = true;
@@ -697,13 +735,14 @@
             this.grid_danju.DisplayFocusRect = false;
             this.grid_danju.DisplayRowArrow = true;
             this.grid_danju.FrozenBottomRows = 1;
-            this.grid_danju.Location = new System.Drawing.Point(6, 200);
+            this.grid_danju.Location = new System.Drawing.Point(6, 195);
             this.grid_danju.MultiSelect = false;
             this.grid_danju.Name = "grid_danju";
+            this.grid_danju.Padding = new System.Windows.Forms.Padding(3);
             this.grid_danju.Rows = 3;
             this.grid_danju.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_danju.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
-            this.grid_danju.Size = new System.Drawing.Size(1242, 436);
+            this.grid_danju.Size = new System.Drawing.Size(1240, 466);
             this.grid_danju.TabIndex = 10;
             this.grid_danju.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid_danju_MouseDoubleClick);
             // 
@@ -712,7 +751,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1252, 721);
+            this.ClientSize = new System.Drawing.Size(1248, 731);
             this.Controls.Add(this.uiLabel_gzt);
             this.Controls.Add(this.uiLabel_bzdt);
             this.Controls.Add(this.uiLabel_bgzr);

@@ -37,7 +37,7 @@
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel1.Location = new System.Drawing.Point(10, 7);
+            this.uiLabel1.Location = new System.Drawing.Point(-1, 7);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(51, 36);
             this.uiLabel1.TabIndex = 0;
@@ -67,13 +67,24 @@
             // 
             // grid1
             // 
+            this.grid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid1.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid1.BackColorBkg = System.Drawing.Color.White;
+            this.grid1.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid1.Cols = 10;
             this.grid1.DefaultFont = new System.Drawing.Font("宋体", 9F);
-            this.grid1.Location = new System.Drawing.Point(10, 53);
+            this.grid1.DisplayFocusRect = false;
+            this.grid1.DisplayRowArrow = true;
+            this.grid1.EnterKeyMoveTo = FlexCell.MoveToEnum.NextRow;
+            this.grid1.Location = new System.Drawing.Point(3, 53);
+            this.grid1.MultiSelect = false;
             this.grid1.Name = "grid1";
             this.grid1.Rows = 2;
-            this.grid1.Size = new System.Drawing.Size(1888, 846);
+            this.grid1.SelectionBorderColor = System.Drawing.Color.Transparent;
+            this.grid1.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
+            this.grid1.Size = new System.Drawing.Size(1901, 867);
             this.grid1.TabIndex = 2;
             // 
             // uiLabel2
@@ -98,6 +109,7 @@
             this.Controls.Add(this.uiLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Track";
+            this.Padding = new System.Windows.Forms.Padding(3);
             this.Text = "Form_Track";
             this.Load += new System.EventHandler(this.Form_Track_Load);
             this.ResumeLayout(false);

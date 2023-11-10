@@ -70,6 +70,7 @@
             this.uiTextBox_class.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_class.Name = "uiTextBox_class";
             this.uiTextBox_class.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_class.Radius = 0;
             this.uiTextBox_class.ShowText = false;
             this.uiTextBox_class.Size = new System.Drawing.Size(166, 26);
             this.uiTextBox_class.TabIndex = 0;
@@ -105,6 +106,7 @@
             this.uiTextBox_cid.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_cid.Name = "uiTextBox_cid";
             this.uiTextBox_cid.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_cid.Radius = 0;
             this.uiTextBox_cid.ShowText = false;
             this.uiTextBox_cid.Size = new System.Drawing.Size(166, 26);
             this.uiTextBox_cid.TabIndex = 2;
@@ -130,6 +132,7 @@
             this.uiTextBox_name.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_name.Name = "uiTextBox_name";
             this.uiTextBox_name.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_name.Radius = 0;
             this.uiTextBox_name.ShowText = false;
             this.uiTextBox_name.Size = new System.Drawing.Size(382, 26);
             this.uiTextBox_name.TabIndex = 4;
@@ -155,6 +158,7 @@
             this.uiTextBox_oname.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_oname.Name = "uiTextBox_oname";
             this.uiTextBox_oname.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_oname.Radius = 0;
             this.uiTextBox_oname.ShowText = false;
             this.uiTextBox_oname.Size = new System.Drawing.Size(166, 26);
             this.uiTextBox_oname.TabIndex = 6;
@@ -180,6 +184,7 @@
             this.uiTextBox_bit.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_bit.Name = "uiTextBox_bit";
             this.uiTextBox_bit.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_bit.Radius = 0;
             this.uiTextBox_bit.ShowText = false;
             this.uiTextBox_bit.Size = new System.Drawing.Size(59, 26);
             this.uiTextBox_bit.TabIndex = 8;
@@ -205,6 +210,7 @@
             this.uiTextBox_mbit.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_mbit.Name = "uiTextBox_mbit";
             this.uiTextBox_mbit.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_mbit.Radius = 0;
             this.uiTextBox_mbit.ShowText = false;
             this.uiTextBox_mbit.Size = new System.Drawing.Size(96, 26);
             this.uiTextBox_mbit.TabIndex = 10;
@@ -230,6 +236,7 @@
             this.uiTextBox_org.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_org.Name = "uiTextBox_org";
             this.uiTextBox_org.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_org.Radius = 0;
             this.uiTextBox_org.ShowText = false;
             this.uiTextBox_org.Size = new System.Drawing.Size(188, 26);
             this.uiTextBox_org.TabIndex = 12;
@@ -255,6 +262,7 @@
             this.uiTextBox_keyword.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_keyword.Name = "uiTextBox_keyword";
             this.uiTextBox_keyword.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_keyword.Radius = 0;
             this.uiTextBox_keyword.ShowText = false;
             this.uiTextBox_keyword.Size = new System.Drawing.Size(242, 26);
             this.uiTextBox_keyword.TabIndex = 14;
@@ -263,12 +271,20 @@
             // 
             // grid1
             // 
+            this.grid1.AllowUserResizing = FlexCell.ResizeEnum.Columns;
+            this.grid1.BackColorActiveCellSel = System.Drawing.Color.Blue;
             this.grid1.BackColorBkg = System.Drawing.Color.White;
+            this.grid1.BackColorSel = System.Drawing.Color.Blue;
             this.grid1.DefaultFont = new System.Drawing.Font("宋体", 9F);
+            this.grid1.DisplayFocusRect = false;
             this.grid1.DisplayRowArrow = true;
+            this.grid1.EnterKeyMoveTo = FlexCell.MoveToEnum.NextRow;
             this.grid1.Location = new System.Drawing.Point(613, 50);
+            this.grid1.MultiSelect = false;
             this.grid1.Name = "grid1";
             this.grid1.Rows = 2;
+            this.grid1.SelectionBorderColor = System.Drawing.Color.Transparent;
+            this.grid1.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid1.Size = new System.Drawing.Size(603, 311);
             this.grid1.TabIndex = 16;
             // 
@@ -471,6 +487,7 @@
             this.Controls.Add(this.uiTextBox_cid);
             this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.uiTextBox_class);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form_Addsp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Addsp";

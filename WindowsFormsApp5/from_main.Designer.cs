@@ -54,9 +54,23 @@
             this.普通商品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.客户资料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.串码追踪ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.内部退销单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.库存管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.串码追踪ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.成员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.业务汇总ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.串码商品管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.普通商品管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.财务管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.客户往来财务ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.客户收款单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.客户付款单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.基础资料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.客户资料ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.收款方式资料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.付款方式资料ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于我们ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uiTabControl1 = new Sunny.UI.UITabControl();
             this.tabPage_nav = new System.Windows.Forms.TabPage();
             this.uiTabControlMenu1 = new Sunny.UI.UITabControlMenu();
@@ -117,6 +131,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel_ad,
@@ -133,9 +148,9 @@
             this.toolStripStatusLabel_time2,
             this.toolStripStatusLabel14,
             this.toolStripStatusLabel_ver});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1015);
+            this.statusStrip1.Location = new System.Drawing.Point(3, 1027);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1924, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1918, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -243,7 +258,7 @@
             this.toolStripStatusLabel_ver.AutoSize = false;
             this.toolStripStatusLabel_ver.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_ver.Name = "toolStripStatusLabel_ver";
-            this.toolStripStatusLabel_ver.Size = new System.Drawing.Size(153, 21);
+            this.toolStripStatusLabel_ver.Size = new System.Drawing.Size(147, 21);
             this.toolStripStatusLabel_ver.Spring = true;
             // 
             // timer1
@@ -254,14 +269,15 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.进销存ToolStripMenuItem,
             this.财务管理ToolStripMenuItem,
             this.基础资料ToolStripMenuItem,
             this.系统维护ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1924, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1918, 25);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
@@ -274,7 +290,14 @@
             this.串码商品ToolStripMenuItem,
             this.普通商品ToolStripMenuItem,
             this.客户资料ToolStripMenuItem,
-            this.串码追踪ToolStripMenuItem});
+            this.串码追踪ToolStripMenuItem,
+            this.内部退销单ToolStripMenuItem,
+            this.库存管理ToolStripMenuItem,
+            this.串码追踪ToolStripMenuItem1,
+            this.成员管理ToolStripMenuItem,
+            this.业务汇总ToolStripMenuItem,
+            this.串码商品管理ToolStripMenuItem,
+            this.普通商品管理ToolStripMenuItem});
             this.进销存ToolStripMenuItem.Name = "进销存ToolStripMenuItem";
             this.进销存ToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
             this.进销存ToolStripMenuItem.Text = "进销存";
@@ -282,80 +305,176 @@
             // 出入库ToolStripMenuItem
             // 
             this.出入库ToolStripMenuItem.Name = "出入库ToolStripMenuItem";
-            this.出入库ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.出入库ToolStripMenuItem.Text = "出入库";
+            this.出入库ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.出入库ToolStripMenuItem.Text = "采购入库单";
             // 
             // 串码商品ToolStripMenuItem
             // 
             this.串码商品ToolStripMenuItem.Name = "串码商品ToolStripMenuItem";
-            this.串码商品ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.串码商品ToolStripMenuItem.Text = "串码商品";
+            this.串码商品ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.串码商品ToolStripMenuItem.Text = "采购退库单";
+            this.串码商品ToolStripMenuItem.Click += new System.EventHandler(this.串码商品ToolStripMenuItem_Click);
             // 
             // 普通商品ToolStripMenuItem
             // 
             this.普通商品ToolStripMenuItem.Name = "普通商品ToolStripMenuItem";
-            this.普通商品ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.普通商品ToolStripMenuItem.Text = "普通商品";
+            this.普通商品ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.普通商品ToolStripMenuItem.Text = "零售出库单";
             // 
             // 客户资料ToolStripMenuItem
             // 
             this.客户资料ToolStripMenuItem.Name = "客户资料ToolStripMenuItem";
-            this.客户资料ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.客户资料ToolStripMenuItem.Text = "客户资料";
+            this.客户资料ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.客户资料ToolStripMenuItem.Text = "零售退库单";
             // 
             // 串码追踪ToolStripMenuItem
             // 
             this.串码追踪ToolStripMenuItem.Name = "串码追踪ToolStripMenuItem";
-            this.串码追踪ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.串码追踪ToolStripMenuItem.Text = "串码追踪";
+            this.串码追踪ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.串码追踪ToolStripMenuItem.Text = "内部分销单";
+            // 
+            // 内部退销单ToolStripMenuItem
+            // 
+            this.内部退销单ToolStripMenuItem.Name = "内部退销单ToolStripMenuItem";
+            this.内部退销单ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.内部退销单ToolStripMenuItem.Text = "内部退销单";
+            // 
+            // 库存管理ToolStripMenuItem
+            // 
+            this.库存管理ToolStripMenuItem.Name = "库存管理ToolStripMenuItem";
+            this.库存管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.库存管理ToolStripMenuItem.Text = "库存管理";
+            // 
+            // 串码追踪ToolStripMenuItem1
+            // 
+            this.串码追踪ToolStripMenuItem1.Name = "串码追踪ToolStripMenuItem1";
+            this.串码追踪ToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.串码追踪ToolStripMenuItem1.Text = "串码追踪";
+            // 
+            // 成员管理ToolStripMenuItem
+            // 
+            this.成员管理ToolStripMenuItem.Name = "成员管理ToolStripMenuItem";
+            this.成员管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.成员管理ToolStripMenuItem.Text = "成员管理";
+            // 
+            // 业务汇总ToolStripMenuItem
+            // 
+            this.业务汇总ToolStripMenuItem.Name = "业务汇总ToolStripMenuItem";
+            this.业务汇总ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.业务汇总ToolStripMenuItem.Text = "业务汇总";
+            // 
+            // 串码商品管理ToolStripMenuItem
+            // 
+            this.串码商品管理ToolStripMenuItem.Name = "串码商品管理ToolStripMenuItem";
+            this.串码商品管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.串码商品管理ToolStripMenuItem.Text = "串码商品管理";
+            // 
+            // 普通商品管理ToolStripMenuItem
+            // 
+            this.普通商品管理ToolStripMenuItem.Name = "普通商品管理ToolStripMenuItem";
+            this.普通商品管理ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.普通商品管理ToolStripMenuItem.Text = "普通商品管理";
             // 
             // 财务管理ToolStripMenuItem
             // 
+            this.财务管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.客户往来财务ToolStripMenuItem,
+            this.客户收款单ToolStripMenuItem,
+            this.客户付款单ToolStripMenuItem});
             this.财务管理ToolStripMenuItem.Name = "财务管理ToolStripMenuItem";
             this.财务管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.财务管理ToolStripMenuItem.Text = "财务管理";
             // 
+            // 客户往来财务ToolStripMenuItem
+            // 
+            this.客户往来财务ToolStripMenuItem.Name = "客户往来财务ToolStripMenuItem";
+            this.客户往来财务ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.客户往来财务ToolStripMenuItem.Text = "客户往来财务";
+            // 
+            // 客户收款单ToolStripMenuItem
+            // 
+            this.客户收款单ToolStripMenuItem.Name = "客户收款单ToolStripMenuItem";
+            this.客户收款单ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.客户收款单ToolStripMenuItem.Text = "客户收款单";
+            // 
+            // 客户付款单ToolStripMenuItem
+            // 
+            this.客户付款单ToolStripMenuItem.Name = "客户付款单ToolStripMenuItem";
+            this.客户付款单ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.客户付款单ToolStripMenuItem.Text = "客户付款单";
+            // 
             // 基础资料ToolStripMenuItem
             // 
+            this.基础资料ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.客户资料ToolStripMenuItem1,
+            this.收款方式资料ToolStripMenuItem,
+            this.付款方式资料ToolStripMenuItem});
             this.基础资料ToolStripMenuItem.Name = "基础资料ToolStripMenuItem";
             this.基础资料ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.基础资料ToolStripMenuItem.Text = "基础资料";
             // 
+            // 客户资料ToolStripMenuItem1
+            // 
+            this.客户资料ToolStripMenuItem1.Name = "客户资料ToolStripMenuItem1";
+            this.客户资料ToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.客户资料ToolStripMenuItem1.Text = "客户资料";
+            // 
+            // 收款方式资料ToolStripMenuItem
+            // 
+            this.收款方式资料ToolStripMenuItem.Name = "收款方式资料ToolStripMenuItem";
+            this.收款方式资料ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.收款方式资料ToolStripMenuItem.Text = "收款方式资料";
+            // 
+            // 付款方式资料ToolStripMenuItem
+            // 
+            this.付款方式资料ToolStripMenuItem.Name = "付款方式资料ToolStripMenuItem";
+            this.付款方式资料ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.付款方式资料ToolStripMenuItem.Text = "付款方式资料";
+            // 
             // 系统维护ToolStripMenuItem
             // 
+            this.系统维护ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.关于我们ToolStripMenuItem});
             this.系统维护ToolStripMenuItem.Name = "系统维护ToolStripMenuItem";
             this.系统维护ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.系统维护ToolStripMenuItem.Text = "系统维护";
             // 
+            // 关于我们ToolStripMenuItem
+            // 
+            this.关于我们ToolStripMenuItem.Name = "关于我们ToolStripMenuItem";
+            this.关于我们ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.关于我们ToolStripMenuItem.Text = "关于我们";
+            // 
             // uiTabControl1
             // 
             this.uiTabControl1.Controls.Add(this.tabPage_nav);
+            this.uiTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.uiTabControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
+            this.uiTabControl1.FillColor = System.Drawing.Color.White;
             this.uiTabControl1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTabControl1.HotTrack = true;
-            this.uiTabControl1.ItemSize = new System.Drawing.Size(150, 40);
-            this.uiTabControl1.Location = new System.Drawing.Point(5, 28);
+            this.uiTabControl1.ItemSize = new System.Drawing.Size(150, 38);
+            this.uiTabControl1.Location = new System.Drawing.Point(3, 28);
             this.uiTabControl1.MainPage = "导航";
             this.uiTabControl1.Name = "uiTabControl1";
+            this.uiTabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.uiTabControl1.SelectedIndex = 0;
             this.uiTabControl1.ShowCloseButton = true;
-            this.uiTabControl1.Size = new System.Drawing.Size(1910, 950);
+            this.uiTabControl1.Size = new System.Drawing.Size(1918, 999);
             this.uiTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.uiTabControl1.Style = Sunny.UI.UIStyle.Colorful;
+            this.uiTabControl1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTabControl1.TabIndex = 3;
-            this.uiTabControl1.TabSelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
-            this.uiTabControl1.TabSelectedHighColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(172)))));
             this.uiTabControl1.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTabControl1.BeforeRemoveTabPage += new Sunny.UI.UITabControl.OnBeforeRemoveTabPage(this.uiTabControl1_BeforeRemoveTabPage);
+            this.uiTabControl1.Resize += new System.EventHandler(this.uiTabControl1_Resize);
             // 
             // tabPage_nav
             // 
-            this.tabPage_nav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(251)))), ((int)(((byte)(250)))));
+            this.tabPage_nav.BackColor = System.Drawing.Color.White;
             this.tabPage_nav.Controls.Add(this.uiTabControlMenu1);
-            this.tabPage_nav.Location = new System.Drawing.Point(0, 40);
+            this.tabPage_nav.Location = new System.Drawing.Point(0, 38);
             this.tabPage_nav.Name = "tabPage_nav";
-            this.tabPage_nav.Size = new System.Drawing.Size(1910, 910);
+            this.tabPage_nav.Size = new System.Drawing.Size(1918, 961);
             this.tabPage_nav.TabIndex = 0;
             this.tabPage_nav.Text = "导航";
             // 
@@ -365,15 +484,16 @@
             this.uiTabControlMenu1.Controls.Add(this.tabPage20);
             this.uiTabControlMenu1.Controls.Add(this.tabPage1);
             this.uiTabControlMenu1.Controls.Add(this.tabPage2);
+            this.uiTabControlMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiTabControlMenu1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.uiTabControlMenu1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.uiTabControlMenu1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTabControlMenu1.Location = new System.Drawing.Point(-1, 0);
+            this.uiTabControlMenu1.Location = new System.Drawing.Point(0, 0);
             this.uiTabControlMenu1.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             this.uiTabControlMenu1.Multiline = true;
             this.uiTabControlMenu1.Name = "uiTabControlMenu1";
             this.uiTabControlMenu1.SelectedIndex = 0;
-            this.uiTabControlMenu1.Size = new System.Drawing.Size(1908, 926);
+            this.uiTabControlMenu1.Size = new System.Drawing.Size(1918, 961);
             this.uiTabControlMenu1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControlMenu1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTabControlMenu1.TabBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -387,14 +507,17 @@
             // 
             this.tabPage20.BackColor = System.Drawing.Color.White;
             this.tabPage20.Controls.Add(this.uiPanel1);
+            this.tabPage20.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPage20.Location = new System.Drawing.Point(201, 0);
             this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Size = new System.Drawing.Size(1707, 926);
+            this.tabPage20.Size = new System.Drawing.Size(1717, 961);
             this.tabPage20.TabIndex = 0;
             this.tabPage20.Text = "进销存";
             // 
             // uiPanel1
             // 
+            this.uiPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.uiPanel1.AutoSize = true;
             this.uiPanel1.BackColor = System.Drawing.Color.White;
             this.uiPanel1.Controls.Add(this.uiImageButton1);
             this.uiPanel1.Controls.Add(this.uiImageButton11);
@@ -410,12 +533,12 @@
             this.uiPanel1.Controls.Add(this.uiImageButton14);
             this.uiPanel1.FillColor = System.Drawing.Color.White;
             this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel1.Location = new System.Drawing.Point(218, 171);
+            this.uiPanel1.Location = new System.Drawing.Point(488, 219);
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.RectColor = System.Drawing.Color.White;
-            this.uiPanel1.Size = new System.Drawing.Size(654, 512);
+            this.uiPanel1.Size = new System.Drawing.Size(663, 529);
             this.uiPanel1.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel1.TabIndex = 17;
             this.uiPanel1.Text = null;
@@ -423,13 +546,14 @@
             // 
             // uiImageButton1
             // 
+            this.uiImageButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton1.Image")));
             this.uiImageButton1.ImageOffset = new System.Drawing.Point(0, -30);
-            this.uiImageButton1.Location = new System.Drawing.Point(3, 3);
+            this.uiImageButton1.Location = new System.Drawing.Point(5, 24);
             this.uiImageButton1.Name = "uiImageButton1";
-            this.uiImageButton1.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton1.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton1.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton1.TabIndex = 1;
@@ -440,12 +564,13 @@
             // 
             // uiImageButton11
             // 
+            this.uiImageButton11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton11.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_25;
-            this.uiImageButton11.Location = new System.Drawing.Point(180, 404);
+            this.uiImageButton11.Location = new System.Drawing.Point(182, 424);
             this.uiImageButton11.Name = "uiImageButton11";
-            this.uiImageButton11.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton11.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.uiImageButton11.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton11.TabIndex = 11;
@@ -456,12 +581,13 @@
             // 
             // uiImageButton15
             // 
+            this.uiImageButton15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton15.Image = global::WindowsFormsApp5.Properties.Resources.icon_25;
-            this.uiImageButton15.Location = new System.Drawing.Point(180, 137);
+            this.uiImageButton15.Location = new System.Drawing.Point(182, 157);
             this.uiImageButton15.Name = "uiImageButton15";
-            this.uiImageButton15.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton15.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton15.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton15.TabIndex = 16;
@@ -472,13 +598,14 @@
             // 
             // uiImageButton2
             // 
+            this.uiImageButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton2.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_23;
             this.uiImageButton2.ImageOffset = new System.Drawing.Point(0, 10);
-            this.uiImageButton2.Location = new System.Drawing.Point(3, 404);
+            this.uiImageButton2.Location = new System.Drawing.Point(5, 424);
             this.uiImageButton2.Name = "uiImageButton2";
-            this.uiImageButton2.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton2.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.uiImageButton2.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton2.TabIndex = 2;
@@ -489,12 +616,13 @@
             // 
             // uiImageButton6
             // 
+            this.uiImageButton6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton6.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164908_05;
-            this.uiImageButton6.Location = new System.Drawing.Point(544, 269);
+            this.uiImageButton6.Location = new System.Drawing.Point(546, 289);
             this.uiImageButton6.Name = "uiImageButton6";
-            this.uiImageButton6.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton6.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton6.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton6.TabIndex = 6;
@@ -505,12 +633,13 @@
             // 
             // uiImageButton10
             // 
+            this.uiImageButton10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton10.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164912_11;
-            this.uiImageButton10.Location = new System.Drawing.Point(362, 269);
+            this.uiImageButton10.Location = new System.Drawing.Point(364, 289);
             this.uiImageButton10.Name = "uiImageButton10";
-            this.uiImageButton10.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton10.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton10.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton10.TabIndex = 10;
@@ -521,12 +650,13 @@
             // 
             // uiImageButton12
             // 
+            this.uiImageButton12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton12.Image = ((System.Drawing.Image)(resources.GetObject("uiImageButton12.Image")));
-            this.uiImageButton12.Location = new System.Drawing.Point(180, 3);
+            this.uiImageButton12.Location = new System.Drawing.Point(182, 23);
             this.uiImageButton12.Name = "uiImageButton12";
-            this.uiImageButton12.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton12.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton12.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton12.TabIndex = 12;
@@ -537,12 +667,13 @@
             // 
             // uiImageButton16
             // 
+            this.uiImageButton16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton16.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton16.Image = global::WindowsFormsApp5.Properties.Resources.icon_17;
-            this.uiImageButton16.Location = new System.Drawing.Point(3, 137);
+            this.uiImageButton16.Location = new System.Drawing.Point(5, 157);
             this.uiImageButton16.Name = "uiImageButton16";
-            this.uiImageButton16.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton16.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton16.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton16.TabIndex = 15;
@@ -553,12 +684,13 @@
             // 
             // uiImageButton4
             // 
+            this.uiImageButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton4.Image = global::WindowsFormsApp5.Properties.Resources.icon_32;
-            this.uiImageButton4.Location = new System.Drawing.Point(180, 269);
+            this.uiImageButton4.Location = new System.Drawing.Point(182, 289);
             this.uiImageButton4.Name = "uiImageButton4";
-            this.uiImageButton4.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton4.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton4.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton4.TabIndex = 4;
@@ -569,12 +701,13 @@
             // 
             // uiImageButton5
             // 
+            this.uiImageButton5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton5.Image = global::WindowsFormsApp5.Properties.Resources.QQ图片20230908164901_25;
-            this.uiImageButton5.Location = new System.Drawing.Point(3, 269);
+            this.uiImageButton5.Location = new System.Drawing.Point(5, 289);
             this.uiImageButton5.Name = "uiImageButton5";
-            this.uiImageButton5.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton5.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton5.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton5.TabIndex = 5;
@@ -585,12 +718,13 @@
             // 
             // uiImageButton13
             // 
+            this.uiImageButton13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton13.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton13.Image = global::WindowsFormsApp5.Properties.Resources.icon_15;
-            this.uiImageButton13.Location = new System.Drawing.Point(362, 3);
+            this.uiImageButton13.Location = new System.Drawing.Point(364, 23);
             this.uiImageButton13.Name = "uiImageButton13";
-            this.uiImageButton13.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton13.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton13.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton13.TabIndex = 13;
@@ -601,12 +735,13 @@
             // 
             // uiImageButton14
             // 
+            this.uiImageButton14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.uiImageButton14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiImageButton14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiImageButton14.Image = global::WindowsFormsApp5.Properties.Resources.icon_23;
-            this.uiImageButton14.Location = new System.Drawing.Point(544, 3);
+            this.uiImageButton14.Location = new System.Drawing.Point(546, 23);
             this.uiImageButton14.Name = "uiImageButton14";
-            this.uiImageButton14.Size = new System.Drawing.Size(100, 97);
+            this.uiImageButton14.Size = new System.Drawing.Size(100, 102);
             this.uiImageButton14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.uiImageButton14.Style = Sunny.UI.UIStyle.Custom;
             this.uiImageButton14.TabIndex = 14;
@@ -623,7 +758,7 @@
             this.tabPage1.Controls.Add(this.uiImageButton7);
             this.tabPage1.Location = new System.Drawing.Point(201, 0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1707, 926);
+            this.tabPage1.Size = new System.Drawing.Size(1717, 961);
             this.tabPage1.TabIndex = 1;
             this.tabPage1.Text = "财务管理";
             // 
@@ -680,7 +815,7 @@
             this.tabPage2.Controls.Add(this.uiImageButton3);
             this.tabPage2.Location = new System.Drawing.Point(201, 0);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1707, 926);
+            this.tabPage2.Size = new System.Drawing.Size(1717, 961);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "基础资料";
             // 
@@ -774,11 +909,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1041);
+            this.ClientSize = new System.Drawing.Size(1924, 1056);
             this.Controls.Add(this.uiTabControl1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "from_main";
+            this.Padding = new System.Windows.Forms.Padding(3);
             this.Text = "经营管理系统";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.from_main_Load);
@@ -791,6 +927,7 @@
             this.tabPage_nav.ResumeLayout(false);
             this.uiTabControlMenu1.ResumeLayout(false);
             this.tabPage20.ResumeLayout(false);
+            this.tabPage20.PerformLayout();
             this.uiPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton11)).EndInit();
@@ -847,32 +984,46 @@
         private System.Windows.Forms.ToolStripMenuItem 系统维护ToolStripMenuItem;
         private Sunny.UI.UITabControl uiTabControl1;
         private System.Windows.Forms.TabPage tabPage_nav;
-        private Sunny.UI.UITabControlMenu uiTabControlMenu1;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.TabPage tabPage8;
         private Sunny.UI.UIButton uiButton5;
         private Sunny.UI.UIButton uiButton6;
+        private Sunny.UI.UITabControlMenu uiTabControlMenu1;
         private System.Windows.Forms.TabPage tabPage20;
+        private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UIImageButton uiImageButton1;
+        private Sunny.UI.UIImageButton uiImageButton11;
+        private Sunny.UI.UIImageButton uiImageButton15;
         private Sunny.UI.UIImageButton uiImageButton2;
-        private Sunny.UI.UIImageButton uiImageButton4;
-        private Sunny.UI.UIImageButton uiImageButton5;
         private Sunny.UI.UIImageButton uiImageButton6;
         private Sunny.UI.UIImageButton uiImageButton10;
-        private Sunny.UI.UIImageButton uiImageButton15;
-        private Sunny.UI.UIImageButton uiImageButton16;
-        private Sunny.UI.UIImageButton uiImageButton14;
-        private Sunny.UI.UIImageButton uiImageButton13;
         private Sunny.UI.UIImageButton uiImageButton12;
-        private Sunny.UI.UIImageButton uiImageButton11;
+        private Sunny.UI.UIImageButton uiImageButton16;
+        private Sunny.UI.UIImageButton uiImageButton4;
+        private Sunny.UI.UIImageButton uiImageButton5;
+        private Sunny.UI.UIImageButton uiImageButton13;
+        private Sunny.UI.UIImageButton uiImageButton14;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private Sunny.UI.UIImageButton uiImageButton9;
         private Sunny.UI.UIImageButton uiImageButton8;
         private Sunny.UI.UIImageButton uiImageButton7;
-        private Sunny.UI.UIImageButton uiImageButton3;
+        private System.Windows.Forms.TabPage tabPage2;
         private Sunny.UI.UIImageButton uiImageButton18;
         private Sunny.UI.UIImageButton uiImageButton17;
-        private Sunny.UI.UIPanel uiPanel1;
+        private Sunny.UI.UIImageButton uiImageButton3;
+        private System.Windows.Forms.ToolStripMenuItem 客户往来财务ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 客户收款单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 客户付款单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 客户资料ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 收款方式资料ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 付款方式资料ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于我们ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 内部退销单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 库存管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 串码追踪ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 成员管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 业务汇总ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 串码商品管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 普通商品管理ToolStripMenuItem;
     }
 }

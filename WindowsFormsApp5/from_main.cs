@@ -138,6 +138,7 @@ namespace WindowsFormsApp5
                 Form_Ruku from_cg = new Form_Ruku("采购入库单");
                 from_cg.Name = "from_cg";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -160,6 +161,7 @@ namespace WindowsFormsApp5
                 Form_product from_cg = new Form_product("串码");
                 from_cg.Name = "from_spro";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -183,6 +185,7 @@ namespace WindowsFormsApp5
                 Form_Track from_cg = new Form_Track();
                 from_cg.Name = "from_track";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -205,6 +208,7 @@ namespace WindowsFormsApp5
                 Form_store from_cg = new Form_store();
                 from_cg.Name = "from_stock";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -227,6 +231,7 @@ namespace WindowsFormsApp5
                 Form_Summary from_cg = new Form_Summary();
                 from_cg.Name = "from_summary";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -250,6 +255,7 @@ namespace WindowsFormsApp5
                 Form_Ruku from_cg = new Form_Ruku("采购退库单");
                 from_cg.Name = "from_ct";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -272,6 +278,7 @@ namespace WindowsFormsApp5
                 Form_Ruku from_cg = new Form_Ruku("零售出库单");
                 from_cg.Name = "from_ls";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -294,6 +301,7 @@ namespace WindowsFormsApp5
                 Form_Ruku from_cg = new Form_Ruku("零售退库单");
                 from_cg.Name = "from_lt";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -316,6 +324,7 @@ namespace WindowsFormsApp5
                 Form_Ruku from_cg = new Form_Ruku("内部分销单");
                 from_cg.Name = "from_fx";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -338,6 +347,7 @@ namespace WindowsFormsApp5
                 Form_Ruku from_cg = new Form_Ruku("内部退销单");
                 from_cg.Name = "from_tx";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -360,6 +370,7 @@ namespace WindowsFormsApp5
                 Form_product from_cg = new Form_product("普通");
                 from_cg.Name = "from_npro";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -382,6 +393,7 @@ namespace WindowsFormsApp5
                 Form_Member from_cg = new Form_Member();
                 from_cg.Name = "from_member";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -471,6 +483,7 @@ namespace WindowsFormsApp5
                 Form_Client from_cg = new Form_Client();
                 from_cg.Name = "from_client";
                 from_cg.TopLevel = false;
+                from_cg.Dock = DockStyle.Fill;
                 tabPage.Controls.Add(from_cg);
                 from_cg.Show();
                 uiTabControl1.TabPages.Add(tabPage);
@@ -499,10 +512,20 @@ namespace WindowsFormsApp5
         private void from_main_Resize(object sender, EventArgs e)
         {
             
-            int aw= this.Width - 25;
-            uiTabControlMenu1.Width = aw;
-            uiPanel1.Left = (aw - 200)/2- uiPanel1.Width/2;
+            //int aw= this.Width - 25;
+            ////uiTabControl1.Height=(int)(this.Height*0.8);
+            //uiTabControlMenu1.Width = aw;
+            //uiPanel1.Left = (aw - 200)/2- uiPanel1.Width/2;
         }
 
+        private void uiTabControl1_Resize(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void 串码商品ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

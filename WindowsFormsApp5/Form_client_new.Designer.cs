@@ -486,6 +486,7 @@
             this.Controls.Add(this.uiLine2);
             this.Controls.Add(this.uiLine1);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form_client_new";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_client_new";

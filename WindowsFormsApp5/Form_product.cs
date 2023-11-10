@@ -14,6 +14,7 @@ using System.Diagnostics.Eventing.Reader;
 using static System.Windows.Forms.AxHost;
 using System.Reflection.Emit;
 using System.Xml.Linq;
+using FlexCell;
 
 namespace WindowsFormsApp5
 {
@@ -37,6 +38,7 @@ namespace WindowsFormsApp5
             grid_pro.AutoRedraw = false;
             grid_pro.Rows = 2;
             grid_pro.Locked = false;
+            grid_pro.Range(0,0,1,8).ClearAll();
 
             grid_pro.Column(0).Width = 10;
             grid_pro.Column(1).Width = 120;
@@ -56,6 +58,8 @@ namespace WindowsFormsApp5
             grid_pro.Cell(0, 6).Text = "查询关键字";
             grid_pro.Cell(0, 7).Text = "可选颜色";
             grid_pro.Cell(0, 8).Text = "串码位数";
+
+
 
             grid_pro.Locked = true;
             grid_pro.AutoRedraw = true;
@@ -129,13 +133,20 @@ namespace WindowsFormsApp5
                 pt = Util.midstr(ref pt, ")", "#");
                 string ct = tn.Text + "#";
                 ct = Util.midstr(ref ct, ")", "#");
-                Form_Addsp mainForm = new Form_Addsp();
+                Form_Addsp mainForm = new Form_Addsp(from_type,"");
                 mainForm.uiTextBox_cid.Text = "<系统生成>";
                 mainForm.uiTextBox_class.Text = pt + "/" + ct;
                 ct= tn.Text;
                 ct = Util.midstr(ref ct, "(", ")");
                 mainForm.uiLabel_cid.Text = ct;
-                mainForm.Text = "串码商品详细--新建";
+                if (from_type == "串码")
+                {
+                    mainForm.Text = "串码商品详细--新建";
+                }
+                else
+                {
+                    mainForm.Text = "普通商品详细--新建";
+                }
                 mainForm.ShowDialog();
             }
             
@@ -277,13 +288,19 @@ namespace WindowsFormsApp5
                 if (tn == null) return;
                 if ((int)tn.Tag == 1)
                 {
-                    Form_Pro_Class_Min mainfrom = new Form_Pro_Class_Min();
+                    Form_Pro_Class_Min mainfrom = new Form_Pro_Class_Min(from_type);
+                    string maxtx = tn.Text+"#!#";
+                    string ltx = Util.midstr(ref maxtx, "(", ")");
+                    string rtx = Util.midstr(ref maxtx, ")", "#!#");
+                    mainfrom.uiTextBox_classname.Text = rtx;
+                    mainfrom.uiTextBox_cidmin.Text = "<系统生成>";
+                    mainfrom.uiLabel_cidmax.Text = ltx;
+                    mainfrom.uiTextBox_name.Focus();
                     mainfrom.ShowDialog();
                 }
                 if ((int)tn.Tag == 0)
                 {
-                    Form_Pro_Class_Max mainfrom = new Form_Pro_Class_Max("串码");
-                    mainfrom.Text = "串码大类--新建";
+                    Form_Pro_Class_Max mainfrom = new Form_Pro_Class_Max(from_type);
                     mainfrom.ShowDialog();
                 }
             }
@@ -302,6 +319,65 @@ namespace WindowsFormsApp5
         private void uiButton2_Click(object sender, EventArgs e)
         {
             getprobycla();
+        }
+        private void getprodeial()
+        {
+            Cell ac = grid_pro.ActiveCell;
+            int an = ac.Row;
+            string tx = grid_pro.Cell(an, 1).Text;
+            if(tx!="")
+            {
+                Form_Addsp form_Addsp = new Form_Addsp(from_type,tx);
+                form_Addsp.ShowDialog();
+            }
+
+        }
+
+        private void uiButton5_Click(object sender, EventArgs e)
+        {
+            getprodeial();
+        }
+
+        private void grid_pro_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            getprodeial();
+        }
+
+        private void uiButton4_Click(object sender, EventArgs e)
+        {
+            Cell ac = grid_pro.ActiveCell;
+            int n= ac.Row;
+            string tx= grid_pro.Cell(n, 1).Text;
+            if (tx!="")
+            {
+                DialogResult aws = MessageBox.Show("确定要删除商品" + tx + "吗", "确认操作", MessageBoxButtons.OKCancel);
+                if (aws == DialogResult.OK)
+                {
+                    string rel = "";
+                    if (from_type == "串码")
+                    {
+                        rel = Util.httpget("/special/del?id=" + tx, Util.G_token);
+                    }
+                    else
+                    {
+                        rel = Util.httpget("/normal/del?id=" + tx, Util.G_token);
+                    }
+                    
+                    JObject job = (JObject)JsonConvert.DeserializeObject(rel);
+
+                    // 访问解析后的JSON数据
+                    int code = ((int)job["code"]);
+                    string msg = ((string)job["msg"]);
+                    if (code == -1)
+                    {
+                        MessageBox.Show(msg);
+                    }
+                    else
+                    {
+                        MessageBox.Show("删除成功");
+                    }
+                }
+            }
         }
     }
      

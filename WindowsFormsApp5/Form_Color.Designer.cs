@@ -62,6 +62,7 @@
             this.uiTextBox_color.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_color.Name = "uiTextBox_color";
             this.uiTextBox_color.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_color.Radius = 0;
             this.uiTextBox_color.ShowText = false;
             this.uiTextBox_color.Size = new System.Drawing.Size(233, 28);
             this.uiTextBox_color.TabIndex = 1;
@@ -87,6 +88,7 @@
             this.uiTextBox_code.MinimumSize = new System.Drawing.Size(1, 16);
             this.uiTextBox_code.Name = "uiTextBox_code";
             this.uiTextBox_code.Padding = new System.Windows.Forms.Padding(5);
+            this.uiTextBox_code.Radius = 0;
             this.uiTextBox_code.ShowText = false;
             this.uiTextBox_code.Size = new System.Drawing.Size(233, 28);
             this.uiTextBox_code.TabIndex = 3;
@@ -205,6 +207,7 @@
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.uiTextBox_color);
             this.Controls.Add(this.uiLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form_Color";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Color";

@@ -38,8 +38,10 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
+            this.uiPanel2 = new Sunny.UI.UIPanel();
             this.grid_store = new FlexCell.Grid();
             this.uiPanel1.SuspendLayout();
+            this.uiPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiPanel1
@@ -53,12 +55,13 @@
             this.uiPanel1.Controls.Add(this.uiLabel3);
             this.uiPanel1.Controls.Add(this.uiLabel2);
             this.uiPanel1.Controls.Add(this.uiLabel1);
+            this.uiPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.uiPanel1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiPanel1.Location = new System.Drawing.Point(8, 9);
+            this.uiPanel1.Location = new System.Drawing.Point(3, 3);
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Size = new System.Drawing.Size(1890, 66);
+            this.uiPanel1.Size = new System.Drawing.Size(1550, 53);
             this.uiPanel1.TabIndex = 0;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,6 +191,23 @@
             this.uiLabel1.Text = "分区";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // uiPanel2
+            // 
+            this.uiPanel2.Controls.Add(this.grid_store);
+            this.uiPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiPanel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiPanel2.Location = new System.Drawing.Point(3, 56);
+            this.uiPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPanel2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPanel2.Name = "uiPanel2";
+            this.uiPanel2.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.uiPanel2.RectColor = System.Drawing.Color.White;
+            this.uiPanel2.Size = new System.Drawing.Size(1550, 825);
+            this.uiPanel2.Style = Sunny.UI.UIStyle.Custom;
+            this.uiPanel2.TabIndex = 2;
+            this.uiPanel2.Text = null;
+            this.uiPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // grid_store
             // 
             this.grid_store.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
@@ -198,29 +218,33 @@
             this.grid_store.DefaultFont = new System.Drawing.Font("宋体", 9F);
             this.grid_store.DisplayFocusRect = false;
             this.grid_store.DisplayRowArrow = true;
+            this.grid_store.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid_store.FrozenBottomRows = 1;
-            this.grid_store.Location = new System.Drawing.Point(10, 83);
+            this.grid_store.Location = new System.Drawing.Point(0, 3);
+            this.grid_store.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.grid_store.MultiSelect = false;
             this.grid_store.Name = "grid_store";
             this.grid_store.Rows = 3;
             this.grid_store.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_store.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
-            this.grid_store.Size = new System.Drawing.Size(1888, 831);
-            this.grid_store.TabIndex = 1;
+            this.grid_store.Size = new System.Drawing.Size(1550, 822);
+            this.grid_store.TabIndex = 2;
             // 
             // Form_store
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1910, 926);
-            this.Controls.Add(this.grid_store);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_store";
+            this.Padding = new System.Windows.Forms.Padding(3);
             this.Text = "Form_store";
             this.Load += new System.EventHandler(this.Form_store_Load);
             this.uiPanel1.ResumeLayout(false);
+            this.uiPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -228,7 +252,6 @@
         #endregion
 
         private Sunny.UI.UIPanel uiPanel1;
-        private FlexCell.Grid grid_store;
         private Sunny.UI.UIDatePicker uiDatePicker_e;
         private Sunny.UI.UIDatePicker uiDatePicker_s;
         private Sunny.UI.UIComboBox uiComboBox1;
@@ -238,5 +261,7 @@
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel1;
+        private Sunny.UI.UIPanel uiPanel2;
+        private FlexCell.Grid grid_store;
     }
 }

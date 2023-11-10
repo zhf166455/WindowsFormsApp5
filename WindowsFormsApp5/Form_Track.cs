@@ -28,6 +28,7 @@ namespace WindowsFormsApp5
         }
         private void init_grid()
         {
+            grid1.Locked = false;
             grid1.AutoRedraw = false;
             grid1.Rows = 2;
 
@@ -52,6 +53,7 @@ namespace WindowsFormsApp5
             grid1.Cell(0, 8).Text = "附加信息";
             grid1.Cell(0, 9).Text = "录入时间";
 
+            grid1.Locked = true;
             grid1.AutoRedraw = true;
             grid1.Refresh();
         }
@@ -81,6 +83,7 @@ namespace WindowsFormsApp5
                         init_grid();
                         if (n > 0)
                         {
+                            grid1.Locked = false;
                             grid1.Rows = n + 1;
                             grid1.AutoRedraw = false;
                             for(int i = 0; i < n; i++)
@@ -103,6 +106,7 @@ namespace WindowsFormsApp5
                                 grid1.Cell(i + 1, 8).Text = note;
                                 grid1.Cell(i + 1, 9).Text = "13:54";
                             }
+                            grid1.Locked = true;
                             grid1.AutoRedraw = true;
                             grid1.Refresh();
                         }

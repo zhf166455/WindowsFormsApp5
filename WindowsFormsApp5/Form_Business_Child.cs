@@ -12,20 +12,36 @@ namespace WindowsFormsApp5
 {
     public partial class Form_Business_Child : Form
     {
-        private bool _iscg;
-        public Form_Business_Child(bool iscg)
+        private string from_type;
+        private string pfrom_type;
+        private string st;
+        private string et;
+        public Form_Business_Child(string from_type, string pfrom_type, string st, string et)
         {
             InitializeComponent();
-            _iscg = iscg;
+            this.from_type = from_type;
+            this.pfrom_type = pfrom_type;
+            this.st = st;
+            this.et = et;
         }
 
         private void Form_Business_Child_Load(object sender, EventArgs e)
         {
             init_grid();
-        }
+            if (from_type == "供应商")
+            {
+                string pram = "?day_start=" + st + "&day_end=" + et + "&type=CG";
+                string rel = Util.httpget("/summary/v2/get_client" + pram, Util.G_token);
+                MessageBox.Show(rel);
+            }
+            else
+            {
+
+            }
+         }
         private void init_grid()
         {
-            if (_iscg)
+            if (from_type== "供应商")
             {
                 grid1.Locked = false;
                 grid1.AutoRedraw = false;
@@ -38,7 +54,7 @@ namespace WindowsFormsApp5
                 grid1.Column(3).Width = 100;
                 grid1.Column(4).Width = 100;
                 grid1.Column(5).Width = 100;
-                grid1.Column(6).Width = 100;
+                grid1.Column(6).Width = 120;
 
                 grid1.Cell(0, 1).Text = "编号";
                 grid1.Cell(0, 2).Text = "供应商";
@@ -122,5 +138,16 @@ namespace WindowsFormsApp5
             grid2.Refresh();
         }
 
+        private void grid1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(from_type=="供应商")
+            {
+                uiLabel2.Text = uiLabel2.Text + "日期：2023-05-03 供应商：李黄英+1877";
+            }
+            else
+            {
+                uiLabel2.Text = uiLabel2.Text + "商品：苹果14 128G 颜色：黑色";
+            }
+        }
     }
 }

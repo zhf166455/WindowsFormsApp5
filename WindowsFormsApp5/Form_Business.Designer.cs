@@ -37,6 +37,9 @@
             // 
             // uiTabControl1
             // 
+            this.uiTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.uiTabControl1.Controls.Add(this.tabPage1);
             this.uiTabControl1.Controls.Add(this.tabPage2);
             this.uiTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
@@ -46,7 +49,7 @@
             this.uiTabControl1.MainPage = "";
             this.uiTabControl1.Name = "uiTabControl1";
             this.uiTabControl1.SelectedIndex = 0;
-            this.uiTabControl1.Size = new System.Drawing.Size(1903, 942);
+            this.uiTabControl1.Size = new System.Drawing.Size(1903, 1002);
             this.uiTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl1.TabIndex = 0;
             this.uiTabControl1.TabSelectedHighColorSize = 0;
@@ -57,7 +60,7 @@
             this.tabPage1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage1.Location = new System.Drawing.Point(0, 20);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1903, 922);
+            this.tabPage1.Size = new System.Drawing.Size(1903, 982);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "按供应商汇总";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -79,7 +82,7 @@
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(411, 29);
             this.uiLabel1.TabIndex = 1;
-            this.uiLabel1.Text = "营业部：全公司 时间：2023-08-19~2023-08-19";
+            this.uiLabel1.Text = "营业部：全公司 时间：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form_Business

@@ -77,10 +77,11 @@
             // 
             // grid1
             // 
+            this.grid1.AllowUserResizing = FlexCell.ResizeEnum.Columns;
             this.grid1.AllowUserSort = true;
-            this.grid1.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid1.BackColorActiveCellSel = System.Drawing.Color.Blue;
             this.grid1.BackColorBkg = System.Drawing.Color.White;
-            this.grid1.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid1.BackColorSel = System.Drawing.Color.Blue;
             this.grid1.Cols = 7;
             this.grid1.DefaultFont = new System.Drawing.Font("宋体", 9F);
             this.grid1.DisplayFocusRect = false;
@@ -149,6 +150,7 @@
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.uiTextBox_keyword);
             this.Controls.Add(this.uiLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormChoseClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormChoseClient";

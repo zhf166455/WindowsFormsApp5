@@ -37,30 +37,49 @@
             // 
             // grid2
             // 
+            this.grid2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.grid2.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid2.BackColorBkg = System.Drawing.Color.White;
+            this.grid2.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid2.ClearBlankArea = true;
             this.grid2.Cols = 16;
             this.grid2.DefaultFont = new System.Drawing.Font("宋体", 9F);
+            this.grid2.DisplayFocusRect = false;
             this.grid2.DisplayRowArrow = true;
+            this.grid2.EnterKeyMoveTo = FlexCell.MoveToEnum.NextRow;
             this.grid2.FrozenBottomRows = 1;
             this.grid2.Location = new System.Drawing.Point(683, 50);
+            this.grid2.MultiSelect = false;
             this.grid2.Name = "grid2";
             this.grid2.Rows = 3;
-            this.grid2.Size = new System.Drawing.Size(1213, 856);
+            this.grid2.SelectionBorderColor = System.Drawing.Color.Transparent;
+            this.grid2.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
+            this.grid2.Size = new System.Drawing.Size(1213, 869);
             this.grid2.TabIndex = 7;
             // 
             // grid1
             // 
+            this.grid1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.grid1.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid1.BackColorBkg = System.Drawing.Color.White;
+            this.grid1.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid1.ClearBlankArea = true;
             this.grid1.DefaultFont = new System.Drawing.Font("宋体", 9F);
+            this.grid1.DisplayFocusRect = false;
             this.grid1.DisplayRowArrow = true;
+            this.grid1.EnterKeyMoveTo = FlexCell.MoveToEnum.NextRow;
             this.grid1.FrozenBottomRows = 1;
             this.grid1.Location = new System.Drawing.Point(6, 51);
+            this.grid1.MultiSelect = false;
             this.grid1.Name = "grid1";
             this.grid1.Rows = 3;
-            this.grid1.Size = new System.Drawing.Size(664, 856);
+            this.grid1.SelectionBorderColor = System.Drawing.Color.Transparent;
+            this.grid1.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
+            this.grid1.Size = new System.Drawing.Size(664, 868);
             this.grid1.TabIndex = 6;
+            this.grid1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.grid1_MouseClick);
             // 
             // uiTextBox1
             // 
@@ -99,7 +118,7 @@
             this.uiLabel2.Size = new System.Drawing.Size(392, 27);
             this.uiLabel2.Style = Sunny.UI.UIStyle.Custom;
             this.uiLabel2.TabIndex = 8;
-            this.uiLabel2.Text = "采购业务详细 日期：2023-05-03 供应商：李黄英+1877";
+            this.uiLabel2.Text = "业务详细 ";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form_Business_Child

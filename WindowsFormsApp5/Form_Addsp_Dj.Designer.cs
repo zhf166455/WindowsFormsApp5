@@ -315,6 +315,7 @@
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.uiTextBox_code);
             this.Controls.Add(this.uiLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form_Addsp_Dj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Addsp_Dj";

@@ -177,14 +177,14 @@
 
         #endregion
 
-        private Sunny.UI.UILine uiLine1;
-        private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UILabel uiLabel3;
-        private Sunny.UI.UITextBox uiTextBox_cid;
-        private Sunny.UI.UITextBox uiTextBox_name;
-        private Sunny.UI.UICheckBox uiCheckBox_check;
-        private Sunny.UI.UISymbolButton uiSymbolButton_ok;
-        private Sunny.UI.UISymbolButton uiSymbolButton_exit;
+        public Sunny.UI.UILine uiLine1;
+        public Sunny.UI.UILabel uiLabel1;
+        public Sunny.UI.UILabel uiLabel2;
+        public Sunny.UI.UILabel uiLabel3;
+        public Sunny.UI.UITextBox uiTextBox_cid;
+        public Sunny.UI.UITextBox uiTextBox_name;
+        public Sunny.UI.UICheckBox uiCheckBox_check;
+        public Sunny.UI.UISymbolButton uiSymbolButton_ok;
+        public Sunny.UI.UISymbolButton uiSymbolButton_exit;
     }
 }

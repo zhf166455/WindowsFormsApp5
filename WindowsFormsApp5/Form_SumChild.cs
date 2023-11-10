@@ -14,9 +14,11 @@ namespace WindowsFormsApp5
 {
     public partial class Form_SumChild : Form
     {
-        public Form_SumChild()
+        private string from_type;
+        public Form_SumChild(string from_type)
         {
             InitializeComponent();
+            this.from_type = from_type;
         }
 
         private void Form_SumChild_Load(object sender, EventArgs e)
@@ -34,22 +36,23 @@ namespace WindowsFormsApp5
             grid_sum.Range(0, 1, 2, 16).ClearAll();
 
             grid_sum.Column(0).Width = 10;
-            grid_sum.Column(1).Width = 80;
-            grid_sum.Column(2).Width = 80;
-            grid_sum.Column(3).Width = 120;
-            grid_sum.Column(4).Width = 120;
-            grid_sum.Column(5).Width = 120;
-            grid_sum.Column(6).Width = 120;
-            grid_sum.Column(7).Width = 120;
-            grid_sum.Column(8).Width = 220;
-            grid_sum.Column(9).Width = 120;
+            grid_sum.Column(1).Width = 30;
+            grid_sum.Column(2).Width = 30;
+            grid_sum.Column(3).Width = 100;
+            grid_sum.Column(4).Width = 100;
+            grid_sum.Column(5).Width = 140;
+            grid_sum.Column(6).Width = 100;
+            grid_sum.Column(7).Width = 80;
+            grid_sum.Column(8).Width = 140;
+            grid_sum.Column(9).Width = 140;
             grid_sum.Column(10).Width = 120;
             grid_sum.Column(11).Width = 220;
-            grid_sum.Column(12).Width = 120;
-            grid_sum.Column(13).Width = 100;
-            grid_sum.Column(14).Width = 100;
-            grid_sum.Column(15).Width = 100;
-            grid_sum.Column(16).Width = 100;
+            grid_sum.Column(12).Width = 100;
+            grid_sum.Column(13).Width = 80;
+            grid_sum.Column(14).Width = 80;
+            grid_sum.Column(15).Width = 80;
+            grid_sum.Column(16).Width = 80;
+            grid_sum.Column(17).Width = 80;
 
             grid_sum.Cell(0, 1).Text = "过账";
             grid_sum.Cell(0, 2).Text = "核销";
@@ -67,19 +70,65 @@ namespace WindowsFormsApp5
             grid_sum.Cell(0, 14).Text = "条码";
             grid_sum.Cell(0, 15).Text = "数量";
             grid_sum.Cell(0, 16).Text = "单价";
+            grid_sum.Cell(0, 17).Text = "金额";
+
+            grid_sum.Cell(2, 5).Text = "记录数:0";
+            grid_sum.Column(16).Mask = FlexCell.MaskEnum.Numeric;
+            grid_sum.Column(16).DecimalLength = 2;
+            grid_sum.Column(17).Mask = FlexCell.MaskEnum.Numeric;
+            grid_sum.Column(17).DecimalLength = 2;
+
+            grid_sum.Cell(2, 15).Text = "0";
+            grid_sum.Cell(2, 16).Text = "0";
+            grid_sum.Cell(2, 17).Text = "0";
 
             grid_sum.Locked = true;
             grid_sum.AutoRedraw = true;
             grid_sum.Refresh();
         }
+        private void CalculateSummary_grid()
+        {
+            int n = grid_sum.Rows - 2;
+            int sum_n = 0;
+            int sum_num = 0;
+            float sum_price = 0;
+            float sum_sum = 0;
 
+            int ls_zs = 0;
+            float ls_xs = 0;
+            string tx = "";
+            for (int i = 0; i < n; i++)
+            {
+                tx = grid_sum.Cell(i + 1, 5).Text;
+                if (tx != "")
+                {
+                    sum_n++;
+                    tx = grid_sum.Cell(i + 1, 15).Text;
+                    ls_zs = Convert.ToInt32(tx);
+                    sum_num += ls_zs;
+                    tx = grid_sum.Cell(i + 1, 16).Text;
+                    ls_xs = Convert.ToSingle(tx);
+                    sum_price += ls_xs;
+                    tx = grid_sum.Cell(i + 1, 17).Text;
+                    ls_xs = Convert.ToSingle(tx);
+                    sum_sum += ls_xs;
+                }
+
+            }
+
+            n = grid_sum.Rows - 1;
+            grid_sum.Cell(n, 5).Text = "记录数:" + sum_n.ToString();
+            grid_sum.Cell(n, 15).Text = sum_num.ToString();
+            grid_sum.Cell(n, 16).Text = sum_price.ToString();
+            grid_sum.Cell(n, 17).Text = sum_sum.ToString();
+        }
         private void uiButton1_Click(object sender, EventArgs e)
         {
             string st=uiDatePicker_s.Value.Date.ToString("yyyy-MM-dd");
             string et = uiDatePicker_e.Value.Date.ToString("yyyy-MM-dd");
-
+            string lstype = from_type == "采购" ? "CG" : "LS";
             //TODO
-            string pram = "?day_start=" + st + "&day_end=" + et + "&type=" + "CG";
+            string pram = "?day_start=" + st + "&day_end=" + et + "&type=" + lstype;
             string rel = Util.httpget("/summary/v2/get"+ pram, Util.G_token);
             JObject job = (JObject)JsonConvert.DeserializeObject(rel);
 
@@ -113,6 +162,10 @@ namespace WindowsFormsApp5
                 string po = "";
                 string vo = "";
                 string classname = "";
+                int lsnum = 0;
+                float lsprice = 0;
+                float lssum = 0;
+
                 DateTime ls_date;
 
                 init_grid();
@@ -123,8 +176,12 @@ namespace WindowsFormsApp5
                     grid_sum.AutoRedraw = false;
                     grid_sum.Locked= false;
                     grid_sum.InsertRow(1, n - 1);
+                    grid_sum.Column(1).CellType= FlexCell.CellTypeEnum.CheckBox;
+                    grid_sum.Column(2).CellType = FlexCell.CellTypeEnum.CheckBox;
+
                     for (int i = 0; i < n; i++)
                     {
+                        
                         cid= ((string)job["items"][i]["custom_id"]);
                         type= ((string)job["items"][i]["type"]);
                         doc_time = ((string)job["items"][i]["doc_time"]);
@@ -146,6 +203,9 @@ namespace WindowsFormsApp5
                         pc_code = ((string)job["items"][i]["pc_code"]);
                         po = ((string)job["items"][i]["po"]);
                         vo = ((string)job["items"][i]["vo"]);
+                        lsnum = (int)job["items"][i]["num"];
+                        lsprice = (float)job["items"][i]["price"];
+                        lssum = (float)job["items"][i]["sum"];
                         classname = ((string)job["items"][i]["classname"]);
 
                         grid_sum.Cell(i + 1, 1).Text = po;
@@ -155,18 +215,22 @@ namespace WindowsFormsApp5
                         grid_sum.Cell(i + 1, 5).Text = cid;
                         grid_sum.Cell(i + 1, 6).Text = ls_date.ToString("yyyy-MM-dd");
                         grid_sum.Cell(i + 1, 7).Text = ls_date.ToString("HH:mm");
-                        grid_sum.Cell(i + 1, 8).Text = "("+client_custom_id+")"+ client_name;
+                        grid_sum.Cell(i + 1, 8).Text = client_name;
                         grid_sum.Cell(i + 1, 9).Text = pc_custom_id;
                         grid_sum.Cell(i + 1, 10).Text = classname;
                         grid_sum.Cell(i + 1, 11).Text = pro_name;
                         grid_sum.Cell(i + 1, 12).Text = pro_oname;
                         grid_sum.Cell(i + 1, 13).Text = pc_color;
                         grid_sum.Cell(i + 1, 14).Text = pc_code;
-                        grid_sum.Cell(i + 1, 15).Text = "1";
-                        grid_sum.Cell(i + 1, 16).Text = "1";
+                        grid_sum.Cell(i + 1, 15).Text = lsnum.ToString();
+                        grid_sum.Cell(i + 1, 16).Text = lsprice.ToString();
+                        grid_sum.Cell(i + 1, 17).Text = lssum.ToString();
 
 
                     }
+                    grid_sum.Cell(n + 1, 1).CellType = FlexCell.CellTypeEnum.TextBox;
+                    grid_sum.Cell(n + 1, 2).CellType = FlexCell.CellTypeEnum.TextBox;
+                    CalculateSummary_grid();
                     grid_sum.AutoRedraw = true;
                     grid_sum.Locked=true;
                     grid_sum.Refresh();
@@ -176,9 +240,27 @@ namespace WindowsFormsApp5
 
         private void uiButton3_Click(object sender, EventArgs e)
         {
-            Form_Business mainfrom=new Form_Business();
-            mainfrom.Text = "采购业务汇总";
-            mainfrom.ShowDialog();
+            string dt = uiDatePicker_s.Value.ToString();
+            string st = Util.getNowDate(dt);
+            dt = uiDatePicker_e.Value.ToString();
+            string et = Util.getNowDate(dt);
+            if (from_type== "采购")
+            {
+                Form_Business mainfrom = new Form_Business("采购",st,et);
+                mainfrom.ShowDialog();
+            }
+            else
+            {
+                Form_Business mainfrom = new Form_Business("销售",st,et);
+                mainfrom.ShowDialog();
+            }
+        }
+
+
+        private void 导出到excelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grid_sum.ExportToExcel("C:\\Users\\Administrator\\Desktop\\导出.xls",true,false);
+            MessageBox.Show("导出成功");
         }
     }
 }

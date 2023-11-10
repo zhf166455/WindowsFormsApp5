@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FlexCell;
+using Sunny.UI.Win32;
 
 namespace WindowsFormsApp5
 {
@@ -129,7 +130,7 @@ namespace WindowsFormsApp5
         }
         private void uiButton2_Click(object sender, EventArgs e)
         {
-            getallclient();
+            getclientbyclass();
         }
 
         private void uiButton_add_Click(object sender, EventArgs e)
@@ -226,8 +227,13 @@ namespace WindowsFormsApp5
 
         private void uiTreeView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            getclientbyclass();
+        }
+
+        private void getclientbyclass()
+        {
             TreeNode sn = uiTreeView1.SelectedNode;
-            string cid="";
+            string cid = "";
             if (sn != null)
             {
                 int n = sn.Index;
@@ -245,6 +251,11 @@ namespace WindowsFormsApp5
                     case 3:
                         cid = "999";
                         break;
+                }
+                if (sn.Text == "全部客户")
+                {
+                    getallclient();
+                    return;
                 }
                 string pram = "?class=" + cid;
                 string rel = Util.httpget("/client/getByClass" + pram, Util.G_token);
@@ -267,7 +278,7 @@ namespace WindowsFormsApp5
                         {
                             string classname = (string)(job["items"][i]["classname"]);
                             bool state = (bool)(job["items"][i]["state"]);
-                            string customid = (string)(job["items"][i]["customid"]);
+                            string customid = (string)(job["items"][i]["custom_id"]);
                             string name = (string)(job["items"][i]["name"]);
                             string call = (string)(job["items"][i]["call"]);
                             string addr1 = (string)(job["items"][i]["addr1"]);
@@ -296,6 +307,39 @@ namespace WindowsFormsApp5
                     }
                 }
             }
+            else
+            {
+                getallclient();
+            }
+        }
+
+        private void uiButton_del_Click(object sender, EventArgs e)
+        {
+            Cell ac = grid_client.ActiveCell;
+            int n = ac.Row;
+            string tx = grid_client.Cell(n, 3).Text;
+            if(tx!="")
+            {
+                DialogResult aws=MessageBox.Show("确定要删除"+tx+"吗", "确认操作", MessageBoxButtons.YesNo);
+                if(aws==DialogResult.Yes)
+                {
+                    string rel = Util.httpget("/client/del?id=" + tx, Util.G_token);
+                    JObject job = (JObject)JsonConvert.DeserializeObject(rel);
+
+                    int code = ((int)job["code"]);
+                    string msg = ((string)job["msg"]);
+
+                    if (code == -1)
+                    {
+                        MessageBox.Show(msg);
+                    }
+                    else
+                    {
+                        MessageBox.Show("删除成功");
+                    }
+                }
+            }
+            
         }
     }
 }

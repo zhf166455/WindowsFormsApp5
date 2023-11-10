@@ -48,7 +48,23 @@ namespace WindowsFormsApp5
             job["note"] = uiTextBox_note.Text;
             string body=job.ToString();
             string rel=Util.httppost("/client/add",ref body, Util.G_token);
-            MessageBox.Show(rel);
+            JObject rjob = (JObject)JsonConvert.DeserializeObject(rel);
+
+            // 访问解析后的JSON数据
+            int code = ((int)rjob["code"]);
+            string msg = ((string)rjob["msg"]);
+            if (code == -1)
+            {
+                MessageBox.Show(msg);
+            }
+            else
+            {
+                string clientid = ((string)rjob["id"]);
+                uiTextBox_id.Text = clientid;
+                uiSymbolButton_save.Enabled = false;
+                MessageBox.Show("新增成功");
+            }
+                
 
         }
     }

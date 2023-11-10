@@ -190,7 +190,7 @@ namespace WindowsFormsApp5
                         grid_ruku.Cell(i + 2, 3).Text = Util.G_dname;
                         grid_ruku.Cell(i + 2, 4).Text = doc_day;
                         grid_ruku.Cell(i + 2, 5).Text = custom_id;
-                        grid_ruku.Cell(i + 2, 6).Text = client;
+                        grid_ruku.Cell(i + 2, 6).Text =  client;
                         grid_ruku.Cell(i + 2, 7).Text = s_num.ToString();
                         grid_ruku.Cell(i + 2, 8).Text = n_num.ToString();
                         grid_ruku.Cell(i + 2, 9).Text = sum.ToString();

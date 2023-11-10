@@ -110,7 +110,9 @@
             // 
             // grid1
             // 
+            this.grid1.BackColorActiveCellSel = System.Drawing.Color.Blue;
             this.grid1.BackColorBkg = System.Drawing.Color.White;
+            this.grid1.BackColorSel = System.Drawing.Color.Blue;
             this.grid1.Cols = 8;
             this.grid1.DefaultFont = new System.Drawing.Font("宋体", 9F);
             this.grid1.DisplayFocusRect = false;
@@ -119,6 +121,7 @@
             this.grid1.Location = new System.Drawing.Point(259, 60);
             this.grid1.Name = "grid1";
             this.grid1.Rows = 2;
+            this.grid1.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid1.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid1.Size = new System.Drawing.Size(866, 564);
             this.grid1.TabIndex = 5;

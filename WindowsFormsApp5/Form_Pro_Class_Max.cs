@@ -26,7 +26,14 @@ namespace WindowsFormsApp5
 
         private void Form_Pro_Class_Max_Load(object sender, EventArgs e)
         {
-
+            if(from_type=="串码")
+            {
+                this.Text = "串码商品大类--新增";
+            }
+            else
+            {
+                this.Text = "普通商品大类--新增";
+            }
         }
 
         private void uiSymbolButton_exit_Click(object sender, EventArgs e)

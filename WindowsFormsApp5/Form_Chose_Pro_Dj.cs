@@ -198,7 +198,7 @@ namespace WindowsFormsApp5
         {
             Cell ac = grid1.ActiveCell;
             int n = ac.Row;
-            if (n > 1)
+            if (n > 0)
             {
                 if(from_type=="普通")
                 { 

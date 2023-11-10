@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grid_sum = new FlexCell.Grid();
             this.uiDatePicker_s = new Sunny.UI.UIDatePicker();
             this.uiDatePicker_e = new Sunny.UI.UIDatePicker();
@@ -43,20 +44,34 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel5 = new Sunny.UI.UILabel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.导出到excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grid_sum
             // 
+            this.grid_sum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid_sum.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid_sum.BackColorBkg = System.Drawing.Color.White;
+            this.grid_sum.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
             this.grid_sum.ClearBlankArea = true;
-            this.grid_sum.Cols = 17;
+            this.grid_sum.Cols = 18;
+            this.grid_sum.ContextMenuStrip = this.contextMenuStrip1;
             this.grid_sum.DefaultFont = new System.Drawing.Font("宋体", 9F);
+            this.grid_sum.DisplayFocusRect = false;
             this.grid_sum.DisplayRowArrow = true;
+            this.grid_sum.EnterKeyMoveTo = FlexCell.MoveToEnum.NextRow;
             this.grid_sum.FrozenBottomRows = 1;
             this.grid_sum.Location = new System.Drawing.Point(7, 48);
+            this.grid_sum.MultiSelect = false;
             this.grid_sum.Name = "grid_sum";
             this.grid_sum.Rows = 3;
-            this.grid_sum.Size = new System.Drawing.Size(1880, 823);
+            this.grid_sum.SelectionBorderColor = System.Drawing.Color.Transparent;
+            this.grid_sum.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
+            this.grid_sum.Size = new System.Drawing.Size(1884, 831);
             this.grid_sum.TabIndex = 0;
             // 
             // uiDatePicker_s
@@ -239,12 +254,26 @@
             // uiLabel5
             // 
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLabel5.Location = new System.Drawing.Point(10, 11);
+            this.uiLabel5.Location = new System.Drawing.Point(4, 11);
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(61, 25);
             this.uiLabel5.TabIndex = 18;
             this.uiLabel5.Text = "日期从";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.导出到excelToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // 导出到excelToolStripMenuItem
+            // 
+            this.导出到excelToolStripMenuItem.Name = "导出到excelToolStripMenuItem";
+            this.导出到excelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.导出到excelToolStripMenuItem.Text = "导出到excel";
+            this.导出到excelToolStripMenuItem.Click += new System.EventHandler(this.导出到excelToolStripMenuItem_Click);
             // 
             // Form_SumChild
             // 
@@ -271,6 +300,7 @@
             this.Name = "Form_SumChild";
             this.Text = "Form_SumChild";
             this.Load += new System.EventHandler(this.Form_SumChild_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -292,5 +322,7 @@
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel uiLabel5;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 导出到excelToolStripMenuItem;
     }
 }

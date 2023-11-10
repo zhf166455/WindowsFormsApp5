@@ -38,14 +38,15 @@
             // 
             this.uiTabControl1.Controls.Add(this.tabPage1);
             this.uiTabControl1.Controls.Add(this.tabPage2);
+            this.uiTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uiTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.uiTabControl1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTabControl1.ItemSize = new System.Drawing.Size(100, 25);
-            this.uiTabControl1.Location = new System.Drawing.Point(5, 6);
+            this.uiTabControl1.Location = new System.Drawing.Point(0, 4);
             this.uiTabControl1.MainPage = "";
             this.uiTabControl1.Name = "uiTabControl1";
             this.uiTabControl1.SelectedIndex = 0;
-            this.uiTabControl1.Size = new System.Drawing.Size(1899, 908);
+            this.uiTabControl1.Size = new System.Drawing.Size(1910, 922);
             this.uiTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.uiTabControl1.TabIndex = 0;
             this.uiTabControl1.TabSelectedHighColorSize = 0;
@@ -53,22 +54,24 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Gray;
+            this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage1.Location = new System.Drawing.Point(0, 25);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1899, 883);
+            this.tabPage1.Size = new System.Drawing.Size(1910, 897);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "采购业务";
-            this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Gray;
+            this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabPage2.Location = new System.Drawing.Point(0, 25);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1772, 881);
+            this.tabPage2.Size = new System.Drawing.Size(1910, 897);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "销售业务";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form_Summary
             // 
@@ -78,6 +81,7 @@
             this.Controls.Add(this.uiTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Summary";
+            this.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.Text = "Form_Summary";
             this.Load += new System.EventHandler(this.Form_Summary_Load);
             this.uiTabControl1.ResumeLayout(false);
