@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiTextBox_kwd = new Sunny.UI.UITextBox();
             this.grid1 = new FlexCell.Grid();
             this.uiLabel2 = new Sunny.UI.UILabel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.导出到excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiLabel1
@@ -67,13 +72,15 @@
             // 
             // grid1
             // 
+            this.grid1.AllowUserResizing = FlexCell.ResizeEnum.Columns;
             this.grid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grid1.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid1.BackColorActiveCellSel = System.Drawing.Color.Blue;
             this.grid1.BackColorBkg = System.Drawing.Color.White;
-            this.grid1.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid1.BackColorSel = System.Drawing.Color.Blue;
             this.grid1.Cols = 10;
+            this.grid1.ContextMenuStrip = this.contextMenuStrip1;
             this.grid1.DefaultFont = new System.Drawing.Font("宋体", 9F);
             this.grid1.DisplayFocusRect = false;
             this.grid1.DisplayRowArrow = true;
@@ -97,6 +104,25 @@
             this.uiLabel2.Text = "(输入后回车，可输入4位以上)";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.导出到excelToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 26);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "xls";
+            this.saveFileDialog1.Filter = "表格文件|*.xls";
+            // 
+            // 导出到excelToolStripMenuItem
+            // 
+            this.导出到excelToolStripMenuItem.Name = "导出到excelToolStripMenuItem";
+            this.导出到excelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.导出到excelToolStripMenuItem.Text = "导出到excel";
+            this.导出到excelToolStripMenuItem.Click += new System.EventHandler(this.导出到excelToolStripMenuItem_Click);
+            // 
             // Form_Track
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -112,6 +138,7 @@
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Text = "Form_Track";
             this.Load += new System.EventHandler(this.Form_Track_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -122,5 +149,8 @@
         private Sunny.UI.UITextBox uiTextBox_kwd;
         private FlexCell.Grid grid1;
         private Sunny.UI.UILabel uiLabel2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 导出到excelToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grid_sum = new FlexCell.Grid();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.导出到excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uiDatePicker_s = new Sunny.UI.UIDatePicker();
             this.uiDatePicker_e = new Sunny.UI.UIDatePicker();
             this.uiComboBox1 = new Sunny.UI.UIComboBox();
@@ -44,19 +46,20 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel5 = new Sunny.UI.UILabel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.导出到excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grid_sum
             // 
+            this.grid_sum.AllowUserResizing = FlexCell.ResizeEnum.Columns;
             this.grid_sum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grid_sum.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid_sum.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.grid_sum.BackColorActiveCellSel = System.Drawing.Color.Blue;
             this.grid_sum.BackColorBkg = System.Drawing.Color.White;
-            this.grid_sum.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid_sum.BackColorSel = System.Drawing.Color.Blue;
             this.grid_sum.ClearBlankArea = true;
             this.grid_sum.Cols = 18;
             this.grid_sum.ContextMenuStrip = this.contextMenuStrip1;
@@ -71,8 +74,23 @@
             this.grid_sum.Rows = 3;
             this.grid_sum.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_sum.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
-            this.grid_sum.Size = new System.Drawing.Size(1884, 831);
+            this.grid_sum.Size = new System.Drawing.Size(1547, 831);
             this.grid_sum.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.导出到excelToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 26);
+            // 
+            // 导出到excelToolStripMenuItem
+            // 
+            this.导出到excelToolStripMenuItem.Name = "导出到excelToolStripMenuItem";
+            this.导出到excelToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.导出到excelToolStripMenuItem.Text = "导出到excel";
+            this.导出到excelToolStripMenuItem.Click += new System.EventHandler(this.导出到excelToolStripMenuItem_Click);
             // 
             // uiDatePicker_s
             // 
@@ -186,12 +204,13 @@
             // 
             // uiButton2
             // 
+            this.uiButton2.AllowDrop = true;
             this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton2.Location = new System.Drawing.Point(1206, 10);
+            this.uiButton2.Location = new System.Drawing.Point(1165, 6);
             this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton2.Name = "uiButton2";
-            this.uiButton2.Size = new System.Drawing.Size(87, 22);
+            this.uiButton2.Size = new System.Drawing.Size(69, 29);
             this.uiButton2.TabIndex = 12;
             this.uiButton2.Text = "打印";
             this.uiButton2.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -200,10 +219,10 @@
             // 
             this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton3.Location = new System.Drawing.Point(1342, 10);
+            this.uiButton3.Location = new System.Drawing.Point(1265, 6);
             this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton3.Name = "uiButton3";
-            this.uiButton3.Size = new System.Drawing.Size(87, 22);
+            this.uiButton3.Size = new System.Drawing.Size(69, 29);
             this.uiButton3.TabIndex = 13;
             this.uiButton3.Text = "汇总";
             this.uiButton3.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -213,10 +232,10 @@
             // 
             this.uiButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiButton4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton4.Location = new System.Drawing.Point(1473, 10);
+            this.uiButton4.Location = new System.Drawing.Point(1364, 6);
             this.uiButton4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiButton4.Name = "uiButton4";
-            this.uiButton4.Size = new System.Drawing.Size(102, 22);
+            this.uiButton4.Size = new System.Drawing.Size(117, 29);
             this.uiButton4.TabIndex = 14;
             this.uiButton4.Text = "按日期汇总";
             this.uiButton4.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -261,25 +280,17 @@
             this.uiLabel5.Text = "日期从";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // contextMenuStrip1
+            // saveFileDialog1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.导出到excelToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
-            // 
-            // 导出到excelToolStripMenuItem
-            // 
-            this.导出到excelToolStripMenuItem.Name = "导出到excelToolStripMenuItem";
-            this.导出到excelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.导出到excelToolStripMenuItem.Text = "导出到excel";
-            this.导出到excelToolStripMenuItem.Click += new System.EventHandler(this.导出到excelToolStripMenuItem_Click);
+            this.saveFileDialog1.DefaultExt = "xls";
+            this.saveFileDialog1.Filter = "表格文件|*.xls";
+            this.saveFileDialog1.Title = "导出到excel";
             // 
             // Form_SumChild
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1899, 883);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.uiLabel5);
             this.Controls.Add(this.uiLabel4);
             this.Controls.Add(this.uiLabel3);
@@ -324,5 +335,6 @@
         private Sunny.UI.UILabel uiLabel5;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 导出到excelToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

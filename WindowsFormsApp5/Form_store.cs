@@ -113,14 +113,68 @@ namespace WindowsFormsApp5
                     }
 
                     grid_store.Locked = true;
+                    CalculateSummary_grid();
                     grid_store.AutoRedraw = true;
                     grid_store.Refresh();
                 }
             }
         }
+
+        private void CalculateSummary_grid()
+        {
+            grid_store.Range(grid_store.Rows - 1, 1, grid_store.Rows - 1, grid_store.Cols - 1).BackColor = Color.White;
+
+            int n = grid_store.Rows - 2;
+            int sum_n = 0;
+            int sum_num = 0;
+            float sum_sum = 0;
+
+            int ls_zs = 0;
+            float ls_xs = 0;
+            string tx = "";
+            for (int i = 0; i < n; i++)
+            {
+                tx = grid_store.Cell(i + 1, 1).Text;
+                if (tx != "")
+                {
+                    sum_n++;
+                    tx = grid_store.Cell(i + 1, 7).Text;
+                    ls_zs = Convert.ToInt32(tx);
+                    sum_num += ls_zs;
+                    tx = grid_store.Cell(i + 1, 8).Text;
+                    ls_xs = Convert.ToSingle(tx);
+                    sum_sum += ls_xs;
+                }
+
+            }
+
+            n = grid_store.Rows - 1;
+            grid_store.Cell(n, 2).Text = "记录数:" + sum_n.ToString();
+            grid_store.Cell(n, 7).Text = sum_num.ToString();
+            grid_store.Cell(n, 8).Text = sum_sum.ToString();
+        }
+
+
         private void uiButton1_Click(object sender, EventArgs e)
         {
             getstorecla();
+        }
+
+        private void 导出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string ti = Util.getNowDate() + Util.getNowTime();
+            ti = ti.Replace("-", "");
+            ti = ti.Replace(":", "");
+            saveFileDialog1.FileName = "商品库存" + ti;
+            saveFileDialog1.InitialDirectory = path;
+            DialogResult rel = saveFileDialog1.ShowDialog(this);
+            if (rel == DialogResult.OK)
+            {
+                path = saveFileDialog1.FileName;
+                grid_store.ExportToExcel(path, true, false);
+                MessageBox.Show("导出成功");
+            }
         }
     }
 }

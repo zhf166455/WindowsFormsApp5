@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiDatePicker_e = new Sunny.UI.UIDatePicker();
             this.uiDatePicker_s = new Sunny.UI.UIDatePicker();
@@ -40,8 +41,12 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.grid_store = new FlexCell.Grid();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.导出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uiPanel1.SuspendLayout();
             this.uiPanel2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiPanel1
@@ -210,11 +215,14 @@
             // 
             // grid_store
             // 
-            this.grid_store.BackColorActiveCellSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid_store.AllowUserResizing = FlexCell.ResizeEnum.Columns;
+            this.grid_store.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.grid_store.BackColorActiveCellSel = System.Drawing.Color.Blue;
             this.grid_store.BackColorBkg = System.Drawing.Color.White;
-            this.grid_store.BackColorSel = System.Drawing.SystemColors.ActiveCaption;
+            this.grid_store.BackColorSel = System.Drawing.Color.Blue;
             this.grid_store.ClearBlankArea = true;
             this.grid_store.Cols = 9;
+            this.grid_store.ContextMenuStrip = this.contextMenuStrip1;
             this.grid_store.DefaultFont = new System.Drawing.Font("宋体", 9F);
             this.grid_store.DisplayFocusRect = false;
             this.grid_store.DisplayRowArrow = true;
@@ -229,6 +237,25 @@
             this.grid_store.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid_store.Size = new System.Drawing.Size(1550, 822);
             this.grid_store.TabIndex = 2;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "xls";
+            this.saveFileDialog1.Filter = "表格文件|*.xls";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.导出ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 26);
+            // 
+            // 导出ToolStripMenuItem
+            // 
+            this.导出ToolStripMenuItem.Name = "导出ToolStripMenuItem";
+            this.导出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.导出ToolStripMenuItem.Text = "导出到excel";
+            this.导出ToolStripMenuItem.Click += new System.EventHandler(this.导出ToolStripMenuItem_Click);
             // 
             // Form_store
             // 
@@ -245,6 +272,7 @@
             this.Load += new System.EventHandler(this.Form_store_Load);
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -263,5 +291,8 @@
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIPanel uiPanel2;
         private FlexCell.Grid grid_store;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 导出ToolStripMenuItem;
     }
 }

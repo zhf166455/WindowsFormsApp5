@@ -287,6 +287,7 @@
             this.grid1.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
             this.grid1.Size = new System.Drawing.Size(603, 311);
             this.grid1.TabIndex = 16;
+            this.grid1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid1_MouseDoubleClick);
             // 
             // uiLine1
             // 
@@ -375,6 +376,7 @@
             this.uiButton_color_del.TabIndex = 23;
             this.uiButton_color_del.Text = "删除";
             this.uiButton_color_del.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton_color_del.Click += new System.EventHandler(this.uiButton_color_del_Click);
             // 
             // uiButton6_color_update
             // 
@@ -387,6 +389,7 @@
             this.uiButton6_color_update.TabIndex = 24;
             this.uiButton6_color_update.Text = "修改";
             this.uiButton6_color_update.TipsFont = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiButton6_color_update.Click += new System.EventHandler(this.uiButton6_color_update_Click);
             // 
             // uiLabel9
             // 

@@ -527,5 +527,10 @@ namespace WindowsFormsApp5
         {
 
         }
+
+        private void statusStrip1_Resize(object sender, EventArgs e)
+        {
+            //MessageBox.Show(statusStrip1.Width.ToString());
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using FlexCell;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -84,7 +85,9 @@ namespace WindowsFormsApp5
                     grid1.AutoRedraw = false;
                     grid1.InsertRow(1, n - 1);
 
-                    for(int i = 0; i < n; i++)
+                    grid1.Column(4).CellType = FlexCell.CellTypeEnum.CheckBox;
+
+                    for (int i = 0; i < n; i++)
                     {
                         string itnid= (string)job["items"][i]["nid"];
                         string itname = (string)job["items"][i]["name"];
@@ -95,7 +98,7 @@ namespace WindowsFormsApp5
                         grid1.Cell(i + 1, 1).Text = itnid;
                         grid1.Cell(i + 1, 2).Text = itname;
                         grid1.Cell(i + 1, 3).Text = itcode;
-                        grid1.Cell(i + 1, 4).Text = itstate?"真":"假";
+                        grid1.Cell(i + 1, 4).Text = itstate?"true":"false";
                         grid1.Cell(i + 1, 5).Text = itimg;
                     }
 
@@ -132,7 +135,7 @@ namespace WindowsFormsApp5
 
         private void uiButton4_Click(object sender, EventArgs e)
         {
-            Form_Color mainfrom= new Form_Color(this);
+            Form_Color mainfrom= new Form_Color(this,from_type,"","");
             mainfrom.Text = "商品颜色详细--新增";
             mainfrom.Show();
         }
@@ -141,7 +144,10 @@ namespace WindowsFormsApp5
         {
             JObject job = new JObject();
             JArray jArray = new JArray();
-            job["custom_id"] = uiLabel_cid.Text;
+            if(pro_code=="")
+                job["custom_id"] = uiLabel_cid.Text;
+            else
+                job["custom_id"] = pro_code;
             job["name"] = uiTextBox_name.Text;
             job["oname"] = uiTextBox_oname.Text;
             job["bit"] = uiTextBox_bit.Text;
@@ -164,36 +170,114 @@ namespace WindowsFormsApp5
 
             string body = job.ToString();
             string rel = "";
-            if (from_type == "串码")
+
+            if(pro_code=="")
             {
-                rel=Util.httppost("/special/add", ref body, Util.G_token);
+                if (from_type == "串码")
+                {
+                    rel = Util.httppost("/special/add", ref body, Util.G_token);
+                }
+                else
+                {
+                    rel = Util.httppost("/normal/add", ref body, Util.G_token);
+                }
+
+                JObject rjob = (JObject)JsonConvert.DeserializeObject(rel);
+
+                int code = ((int)rjob["code"]);
+                string msg = ((string)rjob["msg"]);
+
+                if (code == -1)
+                {
+                    MessageBox.Show(msg);
+                }
+                else
+                {
+                    string cid = ((string)rjob["custom_id"]);
+                    uiTextBox_cid.Text = cid;
+                    uiButton_save.Enabled = false;
+                    MessageBox.Show("新建成功");
+                }
             }
             else
             {
-                rel = Util.httppost("/normal/add", ref body, Util.G_token);
+                if (from_type == "串码")
+                {
+                    rel = Util.httppost("/special/update", ref body, Util.G_token);
+                }
+                else
+                {
+                    rel = Util.httppost("/normal/update", ref body, Util.G_token);
+                }
+
+                JObject rjob = (JObject)JsonConvert.DeserializeObject(rel);
+
+                int code = ((int)rjob["code"]);
+                string msg = ((string)rjob["msg"]);
+
+                if (code == -1)
+                {
+                    MessageBox.Show(msg);
+                }
+                else
+                {
+                    string cid = ((string)rjob["custom_id"]);
+                    uiTextBox_cid.Text = cid;
+                    uiButton_save.Enabled = false;
+                    MessageBox.Show("修改成功");
+                }
             }
 
-            JObject rjob = (JObject)JsonConvert.DeserializeObject(rel);
-
-            int code = ((int)rjob["code"]);
-            string msg = ((string)rjob["msg"]);
-
-            if (code == -1)
-            {
-                MessageBox.Show(msg);
-            }
-            else
-            {
-                string cid = ((string)rjob["custom_id"]);
-                uiTextBox_cid.Text= cid;
-                uiButton_save.Enabled = false;
-                MessageBox.Show("新建成功");
-            }
+            
         }
 
         private void uiButton3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void uiButton_color_del_Click(object sender, EventArgs e)
+        {
+            Cell ac = grid1.ActiveCell;
+            int n = ac.Row;
+            if(n>0)
+            {
+                DialogResult asw = MessageBox.Show("确定要删除颜色吗");
+                if (asw == DialogResult.OK)
+                {
+                    //删除颜色
+                    grid1.Row(n).Delete();
+                }
+            }
+
+            
+        }
+
+
+        private void color_update()
+        {
+            Cell ac = grid1.ActiveCell;
+            int n = ac.Row;
+            if (n > 0)
+            {
+                string cname;
+                string ccode;
+                cname = grid1.Cell(n, 2).Text;
+                ccode = grid1.Cell(n, 3).Text;
+                Form_Color fc=new Form_Color(this,from_type, cname, ccode);
+                fc.Show();
+
+            }
+        }
+
+        private void uiButton6_color_update_Click(object sender, EventArgs e)
+        {
+            color_update();
+        }
+
+        private void grid1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            color_update();
         }
     }
 }

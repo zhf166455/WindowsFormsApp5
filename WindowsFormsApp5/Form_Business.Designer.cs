@@ -43,8 +43,8 @@
             this.uiTabControl1.Controls.Add(this.tabPage1);
             this.uiTabControl1.Controls.Add(this.tabPage2);
             this.uiTabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
-            this.uiTabControl1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiTabControl1.ItemSize = new System.Drawing.Size(80, 20);
+            this.uiTabControl1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiTabControl1.ItemSize = new System.Drawing.Size(100, 30);
             this.uiTabControl1.Location = new System.Drawing.Point(9, 47);
             this.uiTabControl1.MainPage = "";
             this.uiTabControl1.Name = "uiTabControl1";
@@ -58,9 +58,9 @@
             // tabPage1
             // 
             this.tabPage1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage1.Location = new System.Drawing.Point(0, 20);
+            this.tabPage1.Location = new System.Drawing.Point(0, 30);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1903, 982);
+            this.tabPage1.Size = new System.Drawing.Size(1903, 972);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "按供应商汇总";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -70,7 +70,7 @@
             this.tabPage2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage2.Location = new System.Drawing.Point(0, 20);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1903, 922);
+            this.tabPage2.Size = new System.Drawing.Size(1903, 982);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "按商品汇总";
             this.tabPage2.UseVisualStyleBackColor = true;

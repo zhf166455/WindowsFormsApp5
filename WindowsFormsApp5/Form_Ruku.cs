@@ -216,7 +216,7 @@ namespace WindowsFormsApp5
 
         private void uiButton3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(from_type);
+            del_danju();
         }
 
         private void uiButton2_Click(object sender, EventArgs e)
@@ -241,6 +241,37 @@ namespace WindowsFormsApp5
             {
                 Form_Danju form_Danju = new Form_Danju(this, from_type, tx);
                 form_Danju.ShowDialog();
+            }
+        }
+
+        //删除单据
+        private void del_danju()
+        {
+            Cell ac=grid_ruku.ActiveCell;
+            int n = ac.Row;
+            string tx = grid_ruku.Cell(n, 5).Text;
+            if(tx!="")
+            {
+                DialogResult aws=MessageBox.Show("确定要删除吗","确认操作",MessageBoxButtons.YesNo);
+                if(aws==DialogResult.Yes)
+                {
+                    string rel = Util.httpget("/stock/v2/del?id="+tx,Util.G_token);
+
+                    JObject rjob = (JObject)JsonConvert.DeserializeObject(rel);
+
+                    int code = ((int)rjob["code"]);
+                    string msg = ((string)rjob["msg"]);
+
+                    if (code == -1)
+                    {
+                        MessageBox.Show(msg);
+                    }
+                    else
+                    {
+                        MessageBox.Show("删除成功");
+                    }
+                    
+                }
             }
         }
 
@@ -304,5 +335,22 @@ namespace WindowsFormsApp5
             return pram+pram2;
         }
 
+        private void 导出到excelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string path=Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string ti = Util.getNowDate()+Util.getNowTime();
+            ti = ti.Replace("-", "");
+            ti = ti.Replace(":", "");
+            saveFileDialog1.FileName = from_type + ti;
+            saveFileDialog1.InitialDirectory = path;
+            DialogResult rel= saveFileDialog1.ShowDialog(this);
+            if (rel == DialogResult.OK)
+            {
+                path= saveFileDialog1.FileName;
+                grid_ruku.ExportToExcel(path, true, false);
+                MessageBox.Show("导出成功");
+            }
+
+        }
     }
 }

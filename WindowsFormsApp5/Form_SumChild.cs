@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlexCell;
 
 namespace WindowsFormsApp5
 {
@@ -233,9 +234,15 @@ namespace WindowsFormsApp5
                     CalculateSummary_grid();
                     grid_sum.AutoRedraw = true;
                     grid_sum.Locked=true;
+                    setbotomrowcolor();
                     grid_sum.Refresh();
                 }
             }
+        }
+
+        private void setbotomrowcolor()
+        {
+            grid_sum.Range(grid_sum.Rows - 1, 1, grid_sum.Rows - 1, grid_sum.Cols - 1).BackColor = Color.White;
         }
 
         private void uiButton3_Click(object sender, EventArgs e)
@@ -259,8 +266,19 @@ namespace WindowsFormsApp5
 
         private void 导出到excelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            grid_sum.ExportToExcel("C:\\Users\\Administrator\\Desktop\\导出.xls",true,false);
-            MessageBox.Show("导出成功");
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string ti = Util.getNowDate() + Util.getNowTime();
+            ti = ti.Replace("-", "");
+            ti = ti.Replace(":", "");
+            saveFileDialog1.FileName = from_type=="采购"?"采购业务汇总": "零售业务汇总" + ti;
+            saveFileDialog1.InitialDirectory = path;
+            DialogResult rel = saveFileDialog1.ShowDialog(this);
+            if (rel == DialogResult.OK)
+            {
+                path = saveFileDialog1.FileName;
+                grid_sum.ExportToExcel(path, true, false);
+                MessageBox.Show("导出成功");
+            }
         }
     }
 }

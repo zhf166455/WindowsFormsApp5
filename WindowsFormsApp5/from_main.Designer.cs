@@ -131,6 +131,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
@@ -153,6 +154,7 @@
             this.statusStrip1.Size = new System.Drawing.Size(1918, 26);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.Resize += new System.EventHandler(this.statusStrip1_Resize);
             // 
             // toolStripStatusLabel1
             // 
@@ -165,7 +167,8 @@
             this.toolStripStatusLabel_ad.AutoSize = false;
             this.toolStripStatusLabel_ad.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_ad.Name = "toolStripStatusLabel_ad";
-            this.toolStripStatusLabel_ad.Size = new System.Drawing.Size(600, 21);
+            this.toolStripStatusLabel_ad.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
+            this.toolStripStatusLabel_ad.Size = new System.Drawing.Size(340, 21);
             this.toolStripStatusLabel_ad.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // toolStripStatusLabel3
@@ -177,10 +180,11 @@
             // 
             // toolStripStatusLabel_der
             // 
-            this.toolStripStatusLabel_der.AutoSize = false;
             this.toolStripStatusLabel_der.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_der.Name = "toolStripStatusLabel_der";
-            this.toolStripStatusLabel_der.Size = new System.Drawing.Size(140, 21);
+            this.toolStripStatusLabel_der.Overflow = System.Windows.Forms.ToolStripItemOverflow.Always;
+            this.toolStripStatusLabel_der.Size = new System.Drawing.Size(178, 21);
+            this.toolStripStatusLabel_der.Spring = true;
             this.toolStripStatusLabel_der.Click += new System.EventHandler(this.toolStripStatusLabel4_Click);
             // 
             // toolStripStatusLabel5
@@ -192,10 +196,10 @@
             // 
             // toolStripStatusLabel_uid
             // 
-            this.toolStripStatusLabel_uid.AutoSize = false;
             this.toolStripStatusLabel_uid.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_uid.Name = "toolStripStatusLabel_uid";
-            this.toolStripStatusLabel_uid.Size = new System.Drawing.Size(135, 21);
+            this.toolStripStatusLabel_uid.Size = new System.Drawing.Size(178, 21);
+            this.toolStripStatusLabel_uid.Spring = true;
             // 
             // toolStripStatusLabel7
             // 
@@ -206,10 +210,10 @@
             // 
             // toolStripStatusLabel_name
             // 
-            this.toolStripStatusLabel_name.AutoSize = false;
             this.toolStripStatusLabel_name.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_name.Name = "toolStripStatusLabel_name";
-            this.toolStripStatusLabel_name.Size = new System.Drawing.Size(135, 21);
+            this.toolStripStatusLabel_name.Size = new System.Drawing.Size(178, 21);
+            this.toolStripStatusLabel_name.Spring = true;
             // 
             // toolStripStatusLabel9
             // 
@@ -220,10 +224,10 @@
             // 
             // toolStripStatusLabel_lv
             // 
-            this.toolStripStatusLabel_lv.AutoSize = false;
             this.toolStripStatusLabel_lv.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_lv.Name = "toolStripStatusLabel_lv";
-            this.toolStripStatusLabel_lv.Size = new System.Drawing.Size(122, 21);
+            this.toolStripStatusLabel_lv.Size = new System.Drawing.Size(178, 21);
+            this.toolStripStatusLabel_lv.Spring = true;
             // 
             // toolStripStatusLabel11
             // 
@@ -237,14 +241,14 @@
             this.toolStripStatusLabel_time1.AutoSize = false;
             this.toolStripStatusLabel_time1.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_time1.Name = "toolStripStatusLabel_time1";
-            this.toolStripStatusLabel_time1.Size = new System.Drawing.Size(250, 21);
+            this.toolStripStatusLabel_time1.Size = new System.Drawing.Size(220, 21);
             // 
             // toolStripStatusLabel_time2
             // 
-            this.toolStripStatusLabel_time2.AutoSize = false;
             this.toolStripStatusLabel_time2.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_time2.Name = "toolStripStatusLabel_time2";
-            this.toolStripStatusLabel_time2.Size = new System.Drawing.Size(102, 21);
+            this.toolStripStatusLabel_time2.Size = new System.Drawing.Size(178, 21);
+            this.toolStripStatusLabel_time2.Spring = true;
             // 
             // toolStripStatusLabel14
             // 
@@ -255,10 +259,10 @@
             // 
             // toolStripStatusLabel_ver
             // 
-            this.toolStripStatusLabel_ver.AutoSize = false;
             this.toolStripStatusLabel_ver.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel_ver.Name = "toolStripStatusLabel_ver";
-            this.toolStripStatusLabel_ver.Size = new System.Drawing.Size(147, 21);
+            this.toolStripStatusLabel_ver.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
+            this.toolStripStatusLabel_ver.Size = new System.Drawing.Size(178, 21);
             this.toolStripStatusLabel_ver.Spring = true;
             // 
             // timer1

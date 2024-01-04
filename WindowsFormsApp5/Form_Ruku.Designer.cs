@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiLabel2 = new Sunny.UI.UILabel();
@@ -40,8 +41,12 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.grid_ruku = new FlexCell.Grid();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.导出到excelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.uiPanel1.SuspendLayout();
             this.uiPanel2.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiPanel1
@@ -63,13 +68,14 @@
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
             this.uiPanel1.Padding = new System.Windows.Forms.Padding(3);
-            this.uiPanel1.Size = new System.Drawing.Size(1111, 43);
+            this.uiPanel1.Size = new System.Drawing.Size(1390, 43);
             this.uiPanel1.TabIndex = 5;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // uiTextBox1
             // 
+            this.uiTextBox1.BackColor = System.Drawing.Color.Yellow;
             this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.uiTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTextBox1.Location = new System.Drawing.Point(1081, 15);
@@ -212,7 +218,7 @@
             this.uiPanel2.Name = "uiPanel2";
             this.uiPanel2.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.uiPanel2.RectColor = System.Drawing.Color.White;
-            this.uiPanel2.Size = new System.Drawing.Size(1111, 588);
+            this.uiPanel2.Size = new System.Drawing.Size(1390, 747);
             this.uiPanel2.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel2.TabIndex = 6;
             this.uiPanel2.Text = "uiPanel2";
@@ -222,6 +228,7 @@
             // 
             this.grid_ruku.AllowUserResizing = FlexCell.ResizeEnum.Columns;
             this.grid_ruku.AllowUserSort = true;
+            this.grid_ruku.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.grid_ruku.BackColorActiveCellSel = System.Drawing.Color.Blue;
             this.grid_ruku.BackColorBkg = System.Drawing.Color.White;
             this.grid_ruku.BackColorSel = System.Drawing.Color.Blue;
@@ -229,6 +236,7 @@
             this.grid_ruku.CellBorderColor = System.Drawing.Color.Empty;
             this.grid_ruku.ClearBlankArea = true;
             this.grid_ruku.Cols = 15;
+            this.grid_ruku.ContextMenuStrip = this.contextMenuStrip1;
             this.grid_ruku.DefaultFont = new System.Drawing.Font("宋体", 9F);
             this.grid_ruku.DisplayFocusRect = false;
             this.grid_ruku.DisplayRowArrow = true;
@@ -242,16 +250,37 @@
             this.grid_ruku.Rows = 4;
             this.grid_ruku.SelectionBorderColor = System.Drawing.Color.Transparent;
             this.grid_ruku.SelectionMode = FlexCell.SelectionModeEnum.ByRow;
-            this.grid_ruku.Size = new System.Drawing.Size(1111, 585);
+            this.grid_ruku.Size = new System.Drawing.Size(1390, 744);
             this.grid_ruku.SortIndicatorColor = System.Drawing.Color.Green;
             this.grid_ruku.TabIndex = 4;
             this.grid_ruku.TopRow = 2;
+            this.grid_ruku.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grid_ruku_MouseDoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.导出到excelToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 26);
+            // 
+            // 导出到excelToolStripMenuItem
+            // 
+            this.导出到excelToolStripMenuItem.Name = "导出到excelToolStripMenuItem";
+            this.导出到excelToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.导出到excelToolStripMenuItem.Text = "导出到excel";
+            this.导出到excelToolStripMenuItem.Click += new System.EventHandler(this.导出到excelToolStripMenuItem_Click);
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.DefaultExt = "xlsx";
+            this.saveFileDialog1.Filter = "表格文件|*.xls";
+            this.saveFileDialog1.Title = "导出到ecxel";
             // 
             // Form_Ruku
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1117, 637);
+            this.ClientSize = new System.Drawing.Size(1396, 796);
             this.Controls.Add(this.uiPanel2);
             this.Controls.Add(this.uiPanel1);
             this.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -263,6 +292,7 @@
             this.Load += new System.EventHandler(this.Form_Ruku_Load);
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel2.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +311,8 @@
         private Sunny.UI.UITextBox uiTextBox1;
         private Sunny.UI.UIPanel uiPanel2;
         public FlexCell.Grid grid_ruku;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 导出到excelToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

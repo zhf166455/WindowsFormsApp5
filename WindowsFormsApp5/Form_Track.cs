@@ -115,5 +115,21 @@ namespace WindowsFormsApp5
             }
         }
 
+        private void 导出到excelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string ti = Util.getNowDate() + Util.getNowTime();
+            ti = ti.Replace("-", "");
+            ti = ti.Replace(":", "");
+            saveFileDialog1.FileName = "串码追踪" + ti;
+            saveFileDialog1.InitialDirectory = path;
+            DialogResult rel = saveFileDialog1.ShowDialog(this);
+            if (rel == DialogResult.OK)
+            {
+                path = saveFileDialog1.FileName;
+                grid1.ExportToExcel(path, true, false);
+                MessageBox.Show("导出成功");
+            }
+        }
     }
 }

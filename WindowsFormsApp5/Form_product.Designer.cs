@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("刷新");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("新建");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("删除");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("修改");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("手机");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("笔记本");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("电视");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("空调");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("全部串码商品", new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode15,
-            treeNode16,
-            treeNode17});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("刷新");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("新建");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("删除");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("修改");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("手机");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("笔记本");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("电视");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("空调");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("全部串码商品", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8});
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
@@ -84,6 +84,7 @@
             // uiTextBox1
             // 
             this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.uiTextBox1.FillColor = System.Drawing.Color.Yellow;
             this.uiTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiTextBox1.Location = new System.Drawing.Point(915, 31);
             this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -93,6 +94,7 @@
             this.uiTextBox1.Radius = 0;
             this.uiTextBox1.ShowText = false;
             this.uiTextBox1.Size = new System.Drawing.Size(176, 23);
+            this.uiTextBox1.Style = Sunny.UI.UIStyle.Custom;
             this.uiTextBox1.TabIndex = 7;
             this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTextBox1.Watermark = "";
@@ -197,19 +199,19 @@
             this.uiNavMenu1.Location = new System.Drawing.Point(140, 30);
             this.uiNavMenu1.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             this.uiNavMenu1.Name = "uiNavMenu1";
-            treeNode10.Name = "节点0";
-            treeNode10.Text = "刷新";
-            treeNode11.Name = "节点1";
-            treeNode11.Text = "新建";
-            treeNode12.Name = "节点2";
-            treeNode12.Text = "删除";
-            treeNode13.Name = "节点3";
-            treeNode13.Text = "修改";
+            treeNode1.Name = "节点0";
+            treeNode1.Text = "刷新";
+            treeNode2.Name = "节点1";
+            treeNode2.Text = "新建";
+            treeNode3.Name = "节点2";
+            treeNode3.Text = "删除";
+            treeNode4.Name = "节点3";
+            treeNode4.Text = "修改";
             this.uiNavMenu1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode11,
-            treeNode12,
-            treeNode13});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4});
             this.uiNavMenu1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiNavMenu1.ScrollBarHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.uiNavMenu1.ScrollBarPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
@@ -248,7 +250,6 @@
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
             this.uiPanel3.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.uiPanel3.RectColor = System.Drawing.Color.White;
             this.uiPanel3.Size = new System.Drawing.Size(1668, 839);
             this.uiPanel3.Style = Sunny.UI.UIStyle.Custom;
             this.uiPanel3.TabIndex = 4;
@@ -287,18 +288,18 @@
             this.uiTreeView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiTreeView1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTreeView1.Name = "uiTreeView1";
-            treeNode14.Name = "节点1";
-            treeNode14.Text = "手机";
-            treeNode15.Name = "节点3";
-            treeNode15.Text = "笔记本";
-            treeNode16.Name = "节点4";
-            treeNode16.Text = "电视";
-            treeNode17.Name = "节点5";
-            treeNode17.Text = "空调";
-            treeNode18.Name = "节点0";
-            treeNode18.Text = "全部串码商品";
+            treeNode5.Name = "节点1";
+            treeNode5.Text = "手机";
+            treeNode6.Name = "节点3";
+            treeNode6.Text = "笔记本";
+            treeNode7.Name = "节点4";
+            treeNode7.Text = "电视";
+            treeNode8.Name = "节点5";
+            treeNode8.Text = "空调";
+            treeNode9.Name = "节点0";
+            treeNode9.Text = "全部串码商品";
             this.uiTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode18});
+            treeNode9});
             this.uiTreeView1.ShowLines = true;
             this.uiTreeView1.ShowText = false;
             this.uiTreeView1.Size = new System.Drawing.Size(236, 839);
